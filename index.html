@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#173f32">
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("ktoll-theme");
+          const theme = savedTheme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          document.documentElement.dataset.theme = theme;
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+    <meta
+      name="description"
+      content="Kirk Tolleshaug is a senior backend software engineer specializing in C#/.NET, APIs, distributed systems, architecture, and performance."
+    >
+    <meta property="og:title" content="Kirk Tolleshaug | Senior Backend Software Engineer">
+    <meta
+      property="og:description"
+      content="Backend systems, APIs, distributed architecture, and performance."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ktoll.dev">
+    <title>Kirk Tolleshaug | Senior Backend Software Engineer</title>
+    <link rel="canonical" href="https://ktoll.dev">
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23173f32'/%3E%3Cpath d='M17 14h7v17l15-17h9L31 33l18 17h-10L24 35v15h-7z' fill='%23f5f1e8'/%3E%3C/svg%3E"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <main class="page-shell">
+      <article class="profile-card" aria-labelledby="profile-name">
+        <aside class="identity-panel">
+          <div class="identity-copy">
+            <p class="eyebrow">Vancouver, Washington</p>
+            <h1 id="profile-name">Kirk<br>Tolleshaug</h1>
+            <p class="role">Senior Backend<br>Software Engineer</p>
+          </div>
+
+          <div class="status-group">
+            <p class="availability availability-positive">
+              <span aria-hidden="true"></span> Open to senior backend roles
+            </p>
+            <p class="availability availability-negative" tabindex="0">
+              <span aria-hidden="true"></span>
+              <span>Not open to </span><span class="status-message-stack" aria-live="off">Wizards wandering off mid-quest</span>
+            </p>
+          </div>
+        </aside>
+
+        <section class="profile-content" aria-label="About Kirk Tolleshaug">
+          <div class="intro">
+            <h2>I build backend systems that stay fast as the work gets complex.</h2>
+            <p class="summary">
+              Senior software engineer focused on C#/.NET, APIs, distributed systems,
+              architecture, and performance. I turn demanding workloads and legacy
+              services into reliable systems built to scale.
+            </p>
+          </div>
+
+          <ul class="specialties" aria-label="Areas of expertise">
+            <li>.NET &amp; APIs</li>
+            <li>Distributed systems</li>
+            <li>Architecture</li>
+            <li>Performance</li>
+          </ul>
+
+          <nav class="actions" aria-label="Contact and profile links">
+            <a
+              class="action-link"
+              href="https://www.linkedin.com/in/ktolleshaug"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.5 8.2H3.2V21h3.3V8.2ZM4.8 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 5.2H9.6V21h3.3v-6.3c0-1.7.3-3.4 2.5-3.4 2.1 0 2.2 2 2.2 3.5V21h3.3v-7c0-3.5-.7-6.1-4.7-6.1-1.8 0-3 .9-3.5 1.7h-.1V8.2Z"/>
+              </svg>
+              <span>LinkedIn</span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              class="action-link"
+              href="https://github.com/ktoll2"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.9c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 0 1.6 1 1.6 1 .9 1.6 2.4 1.1 2.9.9.1-.7.4-1.1.7-1.3-2.3-.3-4.7-1.1-4.7-5A3.9 3.9 0 0 1 6.7 8.7c-.1-.3-.5-1.3.1-2.7 0 0 .9-.3 2.8 1.1A9.7 9.7 0 0 1 12 6.8c.9 0 1.7.1 2.5.3 1.9-1.4 2.8-1.1 2.8-1.1.6 1.4.2 2.4.1 2.7a3.9 3.9 0 0 1 1.1 2.7c0 3.9-2.4 4.7-4.7 5 .4.3.7 1 .7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/>
+              </svg>
+              <span>GitHub</span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="action-link" href="mailto:kirk@ktoll.dev">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3.8 5h16.4A1.8 1.8 0 0 1 22 6.8v10.4a1.8 1.8 0 0 1-1.8 1.8H3.8A1.8 1.8 0 0 1 2 17.2V6.8A1.8 1.8 0 0 1 3.8 5Zm8.2 7 7.2-4.7H4.8L12 12Zm0 2.2L4 9v8h16V9l-8 5.2Z"/>
+              </svg>
+              <span>Email</span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <details class="resume-menu">
+              <summary class="action-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 2h8l5 5v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1Zm7 2H7v16h10V8h-4V4Zm-3 8h4v-2l3 3-3 3v-2h-4v-2Z"/>
+                </svg>
+                <span>Resume</span>
+                <span class="chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="resume-options">
+                <a href="Kirk_Tolleshaug_Resume.pdf" download="Kirk_Tolleshaug_Resume.pdf">PDF <span>.pdf</span></a>
+                <a href="Kirk_Tolleshaug_Resume.docx" download="Kirk_Tolleshaug_Resume.docx">Word <span>.docx</span></a>
+                <a href="Kirk_Tolleshaug_Resume.md" download="Kirk_Tolleshaug_Resume.md">Markdown <span>.md</span></a>
+              </div>
+            </details>
+          </nav>
+
+          <footer>
+            <span>ktoll.dev</span>
+            <button class="theme-toggle" type="button" aria-pressed="false">
+              <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="3.5"/>
+                <path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/>
+              </svg>
+              <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.7 15.1A8.7 8.7 0 0 1 8.9 3.3 8.7 8.7 0 1 0 20.7 15.1Z"/>
+              </svg>
+              <span class="toggle-thumb" aria-hidden="true"></span>
+              <span class="visually-hidden">Switch to dark mode</span>
+            </button>
+          </footer>
+        </section>
+      </article>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

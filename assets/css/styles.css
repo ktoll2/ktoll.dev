@@ -154,6 +154,15 @@ h3 { margin-bottom: 12px; font-size: 25px; line-height: 1.04; }
 .focus { border-bottom: 1px solid var(--line); }
 .focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; }
 .focus-grid h3 { font-size: 25px; }
+.resume { border-bottom: 1px solid var(--line); }
+.resume-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.resume-grid article { min-height: 230px; padding: 30px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.resume-label { margin-bottom: 42px; color: var(--forest-light); font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.resume-grid h3 { font-size: 25px; }
+.resume-grid p:last-child { margin-bottom: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.resume-downloads { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 32px; }
+.resume-downloads > p { margin: 0; color: var(--muted); font-size: 14px; }
+.resume-downloads > div { display: flex; flex-wrap: wrap; gap: 10px; }
 .contact { max-width: 800px; margin-left: max(32px, calc((100% - 1180px) / 2)); }
 .contact h2 { margin: 18px 0 25px; }
 .contact > p:not(.section-label) { max-width: 570px; margin-bottom: 36px; color: var(--muted); font-size: 16px; line-height: 1.7; }
@@ -186,6 +195,9 @@ h3 { margin-bottom: 12px; font-size: 25px; line-height: 1.04; }
   .timeline-summary { grid-column: 2; }
   .case-study-featured { grid-template-columns: 70px 1fr; }
   .case-study-featured > p:not(.case-number):not(.case-kicker), .case-study-featured .tags { grid-column: 2; }
+  .resume-grid { grid-template-columns: 1fr; }
+  .resume-grid article { min-height: 0; }
+  .resume-downloads { align-items: flex-start; flex-direction: column; }
 }
 
 @media (max-width: 560px) {
@@ -214,6 +226,8 @@ h3 { margin-bottom: 12px; font-size: 25px; line-height: 1.04; }
   .case-study h3 { font-size: 29px; }
   .case-study > .tags { margin-top: 28px; }
   .focus-grid { grid-template-columns: 1fr; gap: 34px; }
+  .resume-downloads > div { display: grid; width: 100%; }
+  .resume-downloads .button { justify-content: space-between; }
   .contact { width: calc(100% - 32px); margin-left: auto; }
   .site-footer { align-items: flex-start; flex-direction: column; justify-content: center; gap: 14px; }
 }

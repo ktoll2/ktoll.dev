@@ -1,8 +1,8 @@
 const themeToggle = document.querySelector(".theme-toggle");
 const themeLabel = themeToggle.querySelector(".visually-hidden");
-const resumeMenu = document.querySelector(".resume-menu");
 const statusLine = document.querySelector(".availability-negative");
 const statusStack = document.querySelector(".status-message-stack");
+const showPersonality = new URLSearchParams(window.location.search).get("personality") === "on";
 const statusOptions = [
   "Wizards wandering off mid-quest",
   "Coffee hiding inside nebulas",
@@ -26,19 +26,9 @@ const statusOptions = [
   "Sudden but inevitable betrayals"
 ];
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
-const statusMessages = statusOptions.map((status) => {
-  const message = document.createElement("span");
-  message.className = "status-message";
-  message.textContent = status;
-  message.dataset.status = status;
-  return message;
-});
 let statusQueue = [];
 let currentStatus = "";
-let currentStatusMessage;
 let statusTimer;
-
-statusStack.replaceChildren(...statusMessages);
 
 function shuffle(items) {
   const shuffled = [...items];
@@ -51,7 +41,7 @@ function shuffle(items) {
   return shuffled;
 }
 
-function getNextStatus() {
+function showNextStatus() {
   if (statusQueue.length === 0) {
     statusQueue = shuffle(statusOptions);
 
@@ -60,23 +50,8 @@ function getNextStatus() {
     }
   }
 
-  return statusQueue.shift();
-}
-
-function showNextStatus() {
-  const nextStatus = getNextStatus();
-  const nextStatusMessage = statusMessages.find((message) => message.dataset.status === nextStatus);
-
-  if (reducedMotion || !currentStatusMessage) {
-    currentStatusMessage?.classList.remove("is-active");
-    nextStatusMessage.classList.add("is-active");
-  } else {
-    currentStatusMessage.classList.remove("is-active");
-    nextStatusMessage.classList.add("is-active");
-  }
-
-  currentStatus = nextStatus;
-  currentStatusMessage = nextStatusMessage;
+  currentStatus = statusQueue.shift();
+  statusStack.textContent = `Not open to ${currentStatus}`;
 }
 
 function pauseStatusCycle() {
@@ -85,7 +60,7 @@ function pauseStatusCycle() {
 }
 
 function resumeStatusCycle() {
-  if (!statusTimer && !document.hidden) {
+  if (!statusTimer && !document.hidden && !reducedMotion) {
     statusTimer = window.setInterval(showNextStatus, 6000);
   }
 }
@@ -94,7 +69,7 @@ function setTheme(theme, persist = false) {
   document.documentElement.dataset.theme = theme;
   themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
   themeLabel.textContent = `Switch to ${theme === "dark" ? "light" : "dark"} mode`;
-  document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#111b17" : "#dfded5";
+  document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#111b17" : "#b8bab0";
 
   if (persist) {
     try {
@@ -112,23 +87,26 @@ themeToggle.addEventListener("click", () => {
   setTheme(nextTheme, true);
 });
 
-document.addEventListener("pointerdown", (event) => {
-  if (resumeMenu.open && !resumeMenu.contains(event.target)) {
-    resumeMenu.open = false;
-  }
-});
+if (showPersonality) {
+  document.documentElement.dataset.personality = "on";
+  const funFont = document.createElement("link");
+  funFont.rel = "stylesheet";
+  funFont.href = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap";
+  document.head.append(funFont);
 
-showNextStatus();
-resumeStatusCycle();
+  statusLine.hidden = false;
+  showNextStatus();
+  resumeStatusCycle();
 
-statusLine.addEventListener("pointerenter", pauseStatusCycle);
-statusLine.addEventListener("pointerleave", resumeStatusCycle);
-statusLine.addEventListener("focusin", pauseStatusCycle);
-statusLine.addEventListener("focusout", resumeStatusCycle);
-document.addEventListener("visibilitychange", () => {
-  if (document.hidden) {
-    pauseStatusCycle();
-  } else {
-    resumeStatusCycle();
-  }
-});
+  statusLine.addEventListener("pointerenter", pauseStatusCycle);
+  statusLine.addEventListener("pointerleave", resumeStatusCycle);
+  statusLine.addEventListener("focusin", pauseStatusCycle);
+  statusLine.addEventListener("focusout", resumeStatusCycle);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      pauseStatusCycle();
+    } else {
+      resumeStatusCycle();
+    }
+  });
+}

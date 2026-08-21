@@ -9,10 +9,11 @@
     <circle cx="-52" cy="150" r="234"/>
     <circle cx="-52" cy="150" r="278" opacity=".45"/>
   </g>
-  <text x="82" y="89" fill="#2f6752" font-family="Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="4">KTOLL.DEV  /  BACKEND ENGINEERING</text>
+  <text x="82" y="89" fill="#2f6752" font-family="Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="4">KTOLL.DEV  |  BACKEND ENGINEERING</text>
   <text x="82" y="268" fill="#173f32" font-family="Georgia, serif" font-size="104" letter-spacing="-6">Kirk</text>
   <text x="82" y="362" fill="#173f32" font-family="Georgia, serif" font-size="104" letter-spacing="-6">Tolleshaug</text>
   <text x="84" y="426" fill="#45534c" font-family="Arial, sans-serif" font-size="26">Senior Backend Software Engineer</text>
+  <text x="84" y="465" fill="#2f6752" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">12+ YEARS EXPERIENCE | HANDS-ON | MEASURABLE RESULTS</text>
   <g transform="translate(862 78)">
     <rect width="258" height="258" rx="34" fill="#173f32"/>
     <g transform="scale(4.03125)">
@@ -25,5 +26,5 @@
   <text x="864" y="494" fill="#173f32" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">ARCHITECTURE</text>
   <text x="864" y="533" fill="#173f32" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">PERFORMANCE</text>
   <circle cx="88" cy="568" r="6" fill="#2f6752"/>
-  <text x="108" y="575" fill="#2f6752" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">VANCOUVER, WASHINGTON</text>
+  <text x="108" y="575" fill="#2f6752" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">VANCOUVER, WASHINGTON, UNITED STATES</text>
 </svg>

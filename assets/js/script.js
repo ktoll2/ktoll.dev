@@ -2,7 +2,7 @@ const themeToggle = document.querySelector(".theme-toggle");
 const themeLabel = themeToggle.querySelector(".visually-hidden");
 const statusLine = document.querySelector(".availability-negative");
 const statusStack = document.querySelector(".status-message-stack");
-const showPersonality = new URLSearchParams(window.location.search).get("personality") === "on";
+const showPersonality = new URLSearchParams(window.location.search).get("personality") === "on" && statusLine && statusStack;
 const statusOptions = [
   "Wizards wandering off mid-quest",
   "Coffee hiding inside nebulas",

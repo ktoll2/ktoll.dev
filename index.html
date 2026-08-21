@@ -20,11 +20,19 @@
     <meta property="og:description" content="Backend systems, APIs, distributed architecture, and performance.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ktoll.dev">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://ktoll.dev/assets/images/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Kirk Tolleshaug, Senior Backend Software Engineer">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kirk Tolleshaug | Senior Backend Software Engineer">
+    <meta name="twitter:description" content="Backend systems, APIs, distributed architecture, and performance.">
+    <meta name="twitter:image" content="https://ktoll.dev/assets/images/social-preview.png">
+    <meta name="twitter:image:alt" content="Kirk Tolleshaug, Senior Backend Software Engineer">
     <title>Kirk Tolleshaug | Senior Backend Software Engineer</title>
     <link rel="canonical" href="https://ktoll.dev">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -41,7 +49,11 @@
   <body>
     <header class="site-header">
       <a class="wordmark" href="#top">
-        <img src="favicon.svg" alt="" aria-hidden="true">
+        <svg class="wordmark-icon" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#173f32"/>
+          <path fill="#f5f1e8" d="M16 19h5v10l10-10h7L25 32l14 13h-7L21 35v10h-5z"/>
+          <path fill="#91c9a5" d="M40 42h12v4H40z"/>
+        </svg>
         <span class="wordmark-copy">
           <span>Kirk Tolleshaug</span>
           <span class="wordmark-subtitle">Senior Backend Software Engineer</span>
@@ -69,13 +81,16 @@
           <p class="hero-summary">I am Kirk Tolleshaug, a senior backend software engineer who turns demanding workloads and aging services into reliable systems built to scale.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="mailto:kirk@ktoll.dev">Start a conversation <span aria-hidden="true">&#8599;</span></a>
-            <a class="button button-secondary" href="Kirk_Tolleshaug_Resume.pdf" target="_blank">View resume <span aria-hidden="true">&#8599;</span></a>
+            <a class="button button-secondary" href="assets/documents/Kirk_Tolleshaug_Resume.pdf" target="_blank">View resume <span aria-hidden="true">&#8599;</span></a>
           </div>
         </div>
         <aside class="hero-aside" aria-label="Professional profile">
           <div class="hero-profile">
             <p class="hero-name">Kirk Tolleshaug</p>
-            <img class="hero-photo" src="profile.jpg" alt="Portrait of Kirk Tolleshaug">
+            <picture>
+              <source srcset="assets/images/profile.webp" type="image/webp">
+              <img class="hero-photo" src="assets/images/profile.jpg" alt="Portrait of Kirk Tolleshaug">
+            </picture>
             <div class="hero-role">
               <p>Senior Backend<br>Software Engineer</p>
               <p>C# / .NET<br>Distributed systems<br>Architecture &amp; performance</p>
@@ -197,14 +212,18 @@
         <p class="section-label">Get in touch</p>
         <h2 id="contact-heading">Building a backend team that needs a steady hand?</h2>
         <p>For senior backend roles involving architecture, modernization, performance, and high-volume systems, I would be glad to talk.</p>
-        <a class="button button-primary" href="mailto:kirk@ktoll.dev">kirk@ktoll.dev <span aria-hidden="true">&#8599;</span></a>
+        <p class="contact-note">Email is the best way to reach me.</p>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:kirk@ktoll.dev">kirk@ktoll.dev <span aria-hidden="true">&#8599;</span></a>
+          <a class="button button-secondary" href="assets/documents/Kirk_Tolleshaug.vcf" download="Kirk_Tolleshaug.vcf">Download vCard <span aria-hidden="true">&#8599;</span></a>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <span>&copy; 2026 Kirk Tolleshaug</span>
-      <div><a href="Kirk_Tolleshaug_Resume.pdf" target="_blank">Resume</a><a href="https://www.linkedin.com/in/ktolleshaug" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/ktoll2" target="_blank" rel="noreferrer">GitHub</a></div>
+      <div><a href="assets/documents/Kirk_Tolleshaug_Resume.pdf" target="_blank">Resume</a><a href="https://www.linkedin.com/in/ktolleshaug" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/ktoll2" target="_blank" rel="noreferrer">GitHub</a></div>
     </footer>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

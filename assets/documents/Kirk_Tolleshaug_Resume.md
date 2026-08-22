@@ -6,27 +6,29 @@ Vancouver, Washington, United States · kirk@ktoll.dev · [LinkedIn](https://www
 
 ## Summary
 
-I'm a senior software engineer focused on backend systems, APIs, architecture, and performance.
+I'm a senior backend software engineer focused on building reliable, high-performance systems, APIs, and architecture.
 
-My technical career started in high school with hands-on IT support and deployment work and grew into 12+ years of professional software development across C#/.NET, REST APIs, distributed and event-driven systems, relational databases, cloud-hosted applications, and legacy modernization.
+My technical career began with hands-on IT support and deployment work and grew into 12+ years of professional software development across C#/.NET, REST APIs, distributed and event-driven systems, relational databases, cloud-hosted applications, and legacy modernization.
 
-Recent work has focused heavily on .NET and SQL Server backend services supporting web, mobile, external integrations, and high-volume event processing across systems serving tens of thousands of users and millions of devices.
+Recent work has focused on .NET backend services supporting web, mobile, external integrations, and high-volume event processing across systems serving tens of thousands of users and millions of devices. I work across API design and versioning, secure authentication, distributed processing, observability, and production reliability.
 
-I've improved API response times from several seconds to sub-second performance, reduced long-running processing from hours to minutes and minutes to seconds, modernized legacy .NET services, and built event-driven and parallel processing workflows.
+I've improved API response times from several seconds to sub-second performance, reduced long-running processing from hours to minutes and minutes to seconds, modernized legacy .NET services, and built resilient event-driven workflows.
 
-I've also contributed through architecture ownership, technical design, project decomposition, mentoring, and end-to-end delivery.
-
-I'm primarily interested in senior backend roles with opportunities to stay hands-on while contributing to architecture, technical direction, and modernization.
+I contribute through architecture ownership, technical design, project decomposition, mentoring, and end-to-end delivery. I'm most interested in senior backend roles where I can remain hands-on while helping shape technical direction, modernization, and reliable systems at scale.
 
 ## Technical Skills
 
 **Languages & Frameworks:** C#, .NET, ASP.NET, Go, Java, Angular, React
 
-**Backend & Architecture:** REST APIs, Distributed Systems, Event-Driven Architecture, gRPC, Background Services, Multithreading, Parallel Processing, Technical Leadership
+**APIs & Distributed Systems:** REST APIs, API Versioning, OpenAPI/Swagger, Azure API Management, Distributed Systems, Event-Driven Architecture, gRPC, RabbitMQ, Background Services, Multithreading, Parallel Processing, Technical Leadership
 
-**Data & Messaging:** Microsoft SQL Server, PostgreSQL, Entity Framework, RabbitMQ, Redis, Distributed Caching
+**Reliability & Observability:** Idempotency, Retries, Dead-Letter Queues, Serilog, New Relic, Structured Logging, Metrics, Service Health Monitoring
 
-**Cloud & Delivery:** Azure, AWS, Infrastructure as Code, CI/CD, Azure App Services, Azure SQL, Key Vault, Azure Functions, IIS
+**Data & Messaging:** Microsoft SQL Server, PostgreSQL, Entity Framework, Schema Migrations, Redis, Distributed Caching
+
+**Cloud & Delivery:** Azure, AWS, Docker, Docker Compose, Infrastructure as Code, CI/CD, Azure App Services, Azure SQL, Key Vault, Azure Functions, Pulumi, Bicep, IIS
+
+**Security & Quality:** OAuth/SSO, JWT, Roles and Claims, Service-to-Service Authentication, Test-Driven Development, NUnit, xUnit, Unit Testing, Integration Testing, End-to-End Testing, Performance Testing
 
 ## Professional Experience
 
@@ -38,33 +40,31 @@ December 2022 - Present · Springfield, MO
 Work across backend services, APIs, distributed processing, device integrations, delivery automation, and web applications.
 
 - Design and optimize C#/.NET backend services and REST APIs supporting internal web and mobile applications, external integrations, tens of thousands of users, and millions of security devices.
-- Diagnose performance bottlenecks involving memory, request processing, concurrency, and workload distribution, reducing some operations from hours to minutes, others from minutes to seconds, and select API paths from several seconds to sub-second response times.
-- Build event driven and distributed workflows using RabbitMQ, background services, Redis, distributed caching, and parallel processing for device events and job coordination.
-- Modernize legacy services from .NET Framework 4.x and .NET Core 3 to modern .NET, while improving CI/CD automation and deployment reliability.
-- Design SQL queries, stored procedures, and indexes in both MS SQL Server and PostgreSQL relational and time-series databases.
-- Developed React based user interfaces and application workflows.
-- Designed a Go based integration running directly on security cameras, using REST APIs and bidirectional gRPC for configuration, management, and delivery of events triggered by on camera AI detection.
-- Prototyped mesh communication allowing cameras to relay messages when direct connectivity was unavailable.
-- Provide technical leadership through architecture, design discussions, project decomposition, mentoring, and coordination across engineering and QA.
+- Design and version public REST APIs, introducing v2 routes and schemas while deprecating v1 endpoints; maintain OpenAPI/Swagger documentation and configure Azure API Management with JWT validation, subscription keys, rate limits, and request transformations.
+- Implement authentication services and standardize JWT handling through internal libraries, establishing Azure Key Vault usage for secure application secret management.
+- Diagnose performance bottlenecks across memory, request processing, concurrency, and workload distribution, reducing operations from hours to minutes, minutes to seconds, and selected API paths to sub-second response times.
+- Build resilient RabbitMQ event and job workflows using dead-letter queues, duplicate-event protection, retry logic, pending-message validation, and idempotent API handling.
+- Modernize legacy .NET services and containerize local dependencies with Docker Compose, improving CI/CD reliability and cross-team development compatibility.
+- Design SQL queries, stored procedures, and indexes across SQL Server and PostgreSQL; manage PostgreSQL schema migrations, backward-compatible changes, data backfills, and production rollouts.
+- Build observability with Serilog and New Relic, publishing metrics and dashboards for service performance and health.
+- Design a Go-based security-camera integration using REST APIs and bidirectional gRPC; prototype mesh communication for relaying messages during connectivity loss.
+- Provide technical leadership through architecture, design discussions, project decomposition, mentoring, and engineering/QA coordination.
 
 ### Vizient, Inc
 
 **Senior Software Engineer**  
 June 2014 - December 2022 · Cape Girardeau, MO
 
-Progressed from software engineering intern to senior software engineer over eight years, taking on increasing responsibility for architecture, technical ownership, team leadership, and end to end delivery.
+Progressed from software engineering intern to senior software engineer, taking on architecture ownership, technical leadership, and end-to-end delivery across identity, reporting, modernization, and Azure-hosted applications.
 
-Worked across identity/SSO, reporting, legacy modernization, and Azure hosted applications.
-
-- Led technical design and delivery across multiple initiatives, decomposing complex work, mentoring engineers, coordinating with QA, and helping set implementation direction for the team.
-- Architected and owned specialized projects end to end, serving as the primary technical owner for requirements, system design, implementation, deployment, and ongoing support.
+- Led technical design and owned delivery across multiple initiatives, decomposing complex work, mentoring engineers, coordinating with QA, and setting implementation direction.
 - Built cloud spend and usage reporting that identified unnecessary services and optimization opportunities, contributing to approximately $30M in realized annual infrastructure savings.
-- Designed and developed C#/.NET applications and backend services across multiple generations of .NET, with Angular front ends and SQL Server-backed data stores.
+- Developed C#/.NET applications and backend services with Angular front ends and SQL Server data stores; designed Entity Framework migrations for greenfield Azure applications and contributed to Flyway-based legacy migrations.
+- Applied TDD with NUnit and xUnit across new features, bug fixes, and modernization, using unit, integration, end-to-end, and performance testing in local and CI validation; built Docker-based test environments for dependent services.
 - Improved backend and API performance, reducing select response times from several seconds to sub-second performance.
-- Built Azure hosted applications using App Services, Azure SQL, Key Vault, Functions, and infrastructure as code, including Pulumi and early Bicep adoption.
-- Developed reusable infrastructure components and CI/CD automation to standardize application provisioning and deployment.
-- Developed and supported OAuth/SSO integrations and user management capabilities across multiple applications and integration scenarios.
-- Designed and delivered a complex reporting system that combined data across multiple domains and schemas, performed extensive transformation and customer specific formatting, and processed datasets containing millions of records.
+- Built Azure-hosted applications using App Services, Azure SQL, Key Vault, Functions, Pulumi, and early Bicep; developed reusable infrastructure components and CI/CD automation for consistent provisioning and deployment.
+- Designed internal authentication services and OAuth/SSO integrations managing JWT lifecycle, roles and claims, service-to-service authentication, user management, Key Vault-backed secret rotation, API documentation, versioning, and backward compatibility.
+- Designed and delivered a reporting system combining multiple domains and schemas, performing customer-specific transformations and processing datasets containing millions of records.
 
 ### Southeast Missouri State University
 

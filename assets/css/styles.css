@@ -101,10 +101,12 @@ h3 { margin-bottom: 12px; font-size: 25px; line-height: 1.04; }
 .status-message-stack { min-width: 0; flex: 1; white-space: normal; }
 .hero-profile { margin-bottom: 32px; }
 .hero-name { margin: 0 0 12px; color: rgba(245,241,232,.95); font-family: var(--serif); font-size: 32px; letter-spacing: -.03em; }
+.hero-email { margin: -5px 0 18px; font-size: 12px; }
 .hero-photo { display: block; width: 132px; aspect-ratio: 1; margin: 0 0 24px; border: 1px solid rgba(255,255,255,.22); object-fit: cover; object-position: center top; }
 .hero-role { padding: 0 0 34px; }
 .hero-role p:first-child { margin-bottom: 19px; font-family: var(--serif); font-size: 28px; line-height: .98; }
-.hero-role p:last-child { margin-bottom: 0; color: rgba(245,241,232,.68); font-size: 12px; line-height: 1.7; }
+.hero-email, .hero-role p:last-child { color: #adb8ae; }
+.hero-role p:last-child { margin-bottom: 0; font-size: 12px; line-height: 1.7; }
 .hero-links { display: flex; gap: 20px; margin-top: auto; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.2); }
 .hero-links a { color: rgba(245,241,232,.8); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
 .hero-links a:hover, .hero-links a:focus-visible { color: white; }
@@ -162,7 +164,10 @@ h3 { margin-bottom: 12px; font-size: 25px; line-height: 1.04; }
 .resume-grid article { min-height: 230px; padding: 30px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .resume-label { margin-bottom: 42px; color: var(--forest-light); font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .resume-grid h3 { font-size: 25px; }
-.resume-grid p:last-child { margin-bottom: 0; color: var(--copy); font-size: 14px; line-height: 1.65; }
+.resume-grid article > p:not(.resume-label) { margin-bottom: 0; color: var(--copy); font-size: 14px; line-height: 1.65; }
+.certification-date { margin-top: -6px !important; margin-bottom: 12px !important; color: var(--muted) !important; font-size: 11px !important; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.credential-link { display: inline-flex; gap: 8px; margin-top: 20px; color: var(--forest-light); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; }
+.credential-link:hover, .credential-link:focus-visible { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 .resume-downloads { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 32px; }
 .resume-downloads > p { margin: 0; color: var(--copy); font-size: 14px; }
 .resume-downloads > div { display: flex; flex-wrap: wrap; gap: 10px; }

@@ -107,4 +107,4 @@ Bachelor of Science - BS, General Studies · 2011 - 2015
 
 ## Certification
 
-**[Azure Fundamentals ↗](https://learn.microsoft.com/en-us/users/kirktolleshaug-2111/credentials/d66a995f4a1b47c5)** - December 2021
+**[Azure Fundamentals](https://learn.microsoft.com/en-us/users/kirktolleshaug-2111/credentials/d66a995f4a1b47c5)** - December 2021

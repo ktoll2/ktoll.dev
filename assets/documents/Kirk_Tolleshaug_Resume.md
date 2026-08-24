@@ -41,7 +41,7 @@ Work across backend services, APIs, distributed processing, device integrations,
 
 **Relevant Skills:** C# in .NET, REST APIs, RabbitMQ, Azure API Management, Docker, PostgreSQL, New Relic, Technical Leadership
 
-- Design and optimize C#/.NET backend services and REST APIs supporting internal web and mobile applications, external integrations, tens of thousands of users, and millions of security devices.
+- Design and optimize C#/.NET backend services and REST APIs for internal web and mobile applications and external integrations, supporting tens of thousands of users and handling more than 100M API requests each month.
 - Design and version public REST APIs, introducing v2 routes and schemas while deprecating v1 endpoints; maintain OpenAPI/Swagger documentation and configure Azure API Management with JWT validation, subscription keys, rate limits, and request transformations.
 - Implement authentication services and standardize JWT handling through internal libraries, establishing Azure Key Vault usage for secure application secret management.
 - Diagnose performance bottlenecks across memory, request processing, concurrency, and workload distribution, reducing operations from hours to minutes, minutes to seconds, and selected API paths to sub-second response times.

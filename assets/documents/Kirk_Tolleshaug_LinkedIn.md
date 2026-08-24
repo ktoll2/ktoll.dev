@@ -9,7 +9,7 @@ December 2022 - Present · Springfield, MO
 
 Build backend APIs and distributed workflows for device integrations and delivery automation.
 
-• Design C#/.NET backend services and REST APIs for web/mobile applications, external integrations, tens of thousands of users, and millions of security devices.
+• Design C#/.NET backend services and REST APIs for web/mobile applications and external integrations, supporting tens of thousands of users and handling more than 100M API requests each month.
 
 • Design and version public REST APIs; maintain OpenAPI/Swagger and Azure API Management with JWT validation, subscription keys, and rate limits.
 

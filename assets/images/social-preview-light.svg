@@ -9,22 +9,24 @@
     <circle cx="-52" cy="150" r="234"/>
     <circle cx="-52" cy="150" r="278" opacity=".45"/>
   </g>
-  <text x="82" y="89" fill="#2f6752" font-family="Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="4">KTOLL.DEV  |  BACKEND ENGINEERING</text>
+  <text x="82" y="89" fill="#2f6752" font-family="Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="4">KTOLL.DEV  |  HANDS-ON SOFTWARE ENGINEERING</text>
   <text x="82" y="268" fill="#173f32" font-family="Georgia, serif" font-size="104" letter-spacing="-6">Kirk</text>
   <text x="82" y="362" fill="#173f32" font-family="Georgia, serif" font-size="104" letter-spacing="-6">Tolleshaug</text>
   <text x="84" y="426" fill="#45534c" font-family="Arial, sans-serif" font-size="26">Senior Backend Software Engineer</text>
-  <text x="84" y="465" fill="#2f6752" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">12+ YEARS EXPERIENCE | HANDS-ON | MEASURABLE RESULTS</text>
+  <text x="84" y="465" fill="#2f6752" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">SINCE 2014 | PERFORMANCE | MEASURABLE RESULTS</text>
   <g transform="translate(862 78)">
     <rect width="258" height="258" rx="34" fill="#173f32"/>
     <g transform="scale(4.03125)">
       <path fill="#f5f1e8" d="M16 19h5v10l10-10h7L25 32l14 13h-7L21 35v10h-5z"/>
-       <path fill="#91c9a5" d="M40 41h12v4H40z"/>
+      <path fill="#91c9a5" d="M40 41h12v4H40z"/>
     </g>
   </g>
   <text x="864" y="416" fill="#173f32" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">C# / .NET</text>
-  <text x="864" y="455" fill="#173f32" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">DISTRIBUTED SYSTEMS</text>
-  <text x="864" y="494" fill="#173f32" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">ARCHITECTURE</text>
-  <text x="864" y="533" fill="#173f32" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">PERFORMANCE</text>
-  <circle cx="88" cy="568" r="6" fill="#2f6752"/>
+  <text x="864" y="455" fill="#173f32" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">APIs</text>
+  <text x="864" y="494" fill="#173f32" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">DISTRIBUTED SYSTEMS</text>
+  <text x="864" y="533" fill="#173f32" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">CLOUD &amp; AUTOMATION</text>
+  <g transform="translate(78 561) scale(.75)">
+    <path fill="#2f6752" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/>
+  </g>
   <text x="108" y="575" fill="#2f6752" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">VANCOUVER, WASHINGTON, UNITED STATES</text>
 </svg>

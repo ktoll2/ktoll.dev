@@ -11,8 +11,17 @@
   <path fill="#91c9a5" opacity=".2" d="M800 0h325v675H800z"/>
   <path fill="#f5f1e8" d="M88 115h54v108l108-108h76L184 259l153 146h-76L142 293v112H88z"/>
   <path fill="#91c9a5" d="M346 381h130v24H346z"/>
+  <text x="830" y="218" fill="#91c9a5" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="27" font-weight="700" letter-spacing="2">SINCE 2014</text>
+  <path d="M830 239h216" stroke="#f5f1e8" stroke-opacity=".34" stroke-width="2"/>
+  <text x="830" y="292" fill="#f5f1e8" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="27" font-weight="700" letter-spacing="1">HANDS-ON</text>
+  <text x="830" y="326" fill="#f5f1e8" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="27" font-weight="700" letter-spacing="1">SOFTWARE</text>
+  <text x="830" y="360" fill="#f5f1e8" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="27" font-weight="700" letter-spacing="1">ENGINEERING</text>
+  <text x="830" y="418" fill="#f5f1e8" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="27" font-weight="700" letter-spacing="1">PERFORMANCE</text>
+  <text x="830" y="476" fill="#f5f1e8" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="27" font-weight="700" letter-spacing="1">MEASURABLE</text>
+  <text x="830" y="510" fill="#f5f1e8" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="27" font-weight="700" letter-spacing="1">RESULTS</text>
   <text x="90" y="492" fill="#f5f1e8" font-family="Iowan Old Style, Baskerville, Georgia, serif" font-size="84" letter-spacing="-3">Kirk Tolleshaug</text>
   <text x="94" y="540" fill="#91c9a5" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="26" font-weight="700" letter-spacing="3">SENIOR BACKEND SOFTWARE ENGINEER</text>
-  <path d="M94 580h188" stroke="#f5f1e8" stroke-opacity=".38" stroke-width="2"/>
-  <text x="94" y="613" fill="#f5f1e8" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="20" font-weight="700" letter-spacing="2">C# / .NET · DISTRIBUTED SYSTEMS · ARCHITECTURE</text>
+  <path d="M94 570h188" stroke="#f5f1e8" stroke-opacity=".38" stroke-width="2"/>
+  <text x="94" y="594" fill="#f5f1e8" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="17" font-weight="700" letter-spacing="1.5">C# / .NET · APIs</text>
+  <text x="94" y="619" fill="#f5f1e8" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="17" font-weight="700" letter-spacing="1.5">DISTRIBUTED SYSTEMS · CLOUD &amp; AUTOMATION</text>
 </svg>

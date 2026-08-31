@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3.75in" height="2.25in" viewBox="0 0 1125 675" role="img" aria-labelledby="title description">
+  <title id="title">Kirk Tolleshaug business card front</title>
+  <desc id="description">Senior Backend Software Engineer business card with Kirk Tolleshaug's name and KT mark.</desc>
+  <!-- Artwork includes 0.125 inch bleed; final trim is x=37.5–1087.5, y=37.5–637.5. -->
+  <rect width="1125" height="675" fill="#173f32"/>
+  <g fill="none" stroke="#91c9a5" opacity=".18">
+    <circle cx="-65" cy="108" r="176"/>
+    <circle cx="-65" cy="108" r="228"/>
+    <circle cx="-65" cy="108" r="280" opacity=".45"/>
+  </g>
+  <path fill="#91c9a5" opacity=".2" d="M800 0h325v675H800z"/>
+  <path fill="#f5f1e8" d="M88 115h54v108l108-108h76L184 259l153 146h-76L142 293v112H88z"/>
+  <path fill="#91c9a5" d="M346 381h130v24H346z"/>
+  <text x="90" y="492" fill="#f5f1e8" font-family="Iowan Old Style, Baskerville, Georgia, serif" font-size="84" letter-spacing="-3">Kirk Tolleshaug</text>
+  <text x="94" y="540" fill="#91c9a5" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="26" font-weight="700" letter-spacing="3">SENIOR BACKEND SOFTWARE ENGINEER</text>
+  <path d="M94 580h188" stroke="#f5f1e8" stroke-opacity=".38" stroke-width="2"/>
+  <text x="94" y="613" fill="#f5f1e8" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="20" font-weight="700" letter-spacing="2">C# / .NET · DISTRIBUTED SYSTEMS · ARCHITECTURE</text>
+</svg>

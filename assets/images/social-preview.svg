@@ -18,7 +18,7 @@
     <rect width="258" height="258" rx="34" fill="#173f32"/>
     <g transform="scale(4.03125)">
       <path fill="#f5f1e8" d="M16 19h5v10l10-10h7L25 32l14 13h-7L21 35v10h-5z"/>
-      <path fill="#91c9a5" d="M40 42h12v4H40z"/>
+       <path fill="#91c9a5" d="M40 41h12v4H40z"/>
     </g>
   </g>
   <text x="864" y="416" fill="#173f32" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">C# / .NET</text>

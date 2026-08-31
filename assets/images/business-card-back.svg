@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3.75in" height="2.25in" viewBox="0 0 1125 675" role="img" aria-labelledby="title description">
+  <title id="title">Kirk Tolleshaug business card back</title>
+  <desc id="description">Contact details and a QR code that links to https://ktoll.dev.</desc>
+  <!-- Artwork includes 0.125 inch bleed; final trim is x=37.5–1087.5, y=37.5–637.5. -->
+  <rect width="1125" height="675" fill="#c9cbc1"/>
+  <path d="M0 0h1125v675H0zM0 75h1125M0 150h1125M0 225h1125M0 300h1125M0 375h1125M0 450h1125M0 525h1125M0 600h1125M75 0v675M150 0v675M225 0v675M300 0v675M375 0v675M450 0v675M525 0v675M600 0v675M675 0v675M750 0v675M825 0v675M900 0v675M975 0v675M1050 0v675" fill="none" stroke="#173f32" stroke-opacity=".045" stroke-width="1"/>
+  <g transform="translate(88 94)">
+    <rect width="58" height="58" rx="13" fill="#173f32"/>
+    <g transform="scale(.90625)">
+      <path fill="#f5f1e8" d="M16 19h5v10l10-10h7L25 32l14 13h-7L21 35v10h-5z"/>
+      <path fill="#91c9a5" d="M40 41h12v4H40z"/>
+    </g>
+  </g>
+  <text x="164" y="122" fill="#173f32" font-family="Iowan Old Style, Baskerville, Georgia, serif" font-size="44" font-weight="700" letter-spacing="-1.5">Kirk Tolleshaug</text>
+  <text x="166" y="149" fill="#2f6752" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="15" font-weight="700" letter-spacing="2">BACKEND ENGINEERING</text>
+  <path d="M88 188h598" stroke="#849188" stroke-width="2"/>
+  <text x="90" y="246" fill="#536058" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="18" font-weight="700" letter-spacing="2">EMAIL</text>
+  <text x="90" y="281" fill="#173f32" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="33">kirk@ktoll.dev</text>
+  <text x="90" y="350" fill="#536058" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="18" font-weight="700" letter-spacing="2">WEB</text>
+  <text x="90" y="385" fill="#173f32" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="33">ktoll.dev</text>
+  <text x="90" y="454" fill="#536058" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="18" font-weight="700" letter-spacing="2">LINKEDIN</text>
+  <text x="90" y="489" fill="#173f32" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="28">linkedin.com/in/ktolleshaug</text>
+  <circle cx="96" cy="555" r="6" fill="#2f6752"/>
+  <text x="114" y="561" fill="#536058" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="18" font-weight="700" letter-spacing="1">VANCOUVER, WASHINGTON, UNITED STATES</text>
+  <rect x="755" y="130" width="290" height="290" rx="10" fill="#f5f1e8"/>
+  <g transform="translate(765 140) scale(9.3103448276)" aria-label="QR code for https://ktoll.dev">
+    <path fill="#173f32" d="M4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM7 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM13 4h1v1h-1zM14 4h1v1h-1zM18 4h1v1h-1zM19 4h1v1h-1zM20 4h1v1h-1zM21 4h1v1h-1zM22 4h1v1h-1zM23 4h1v1h-1zM24 4h1v1h-1zM4 5h1v1h-1zM10 5h1v1h-1zM18 5h1v1h-1zM24 5h1v1h-1zM4 6h1v1h-1zM6 6h1v1h-1zM7 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM13 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM21 6h1v1h-1zM22 6h1v1h-1zM24 6h1v1h-1zM4 7h1v1h-1zM6 7h1v1h-1zM7 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1zM14 7h1v1h-1zM18 7h1v1h-1zM20 7h1v1h-1zM21 7h1v1h-1zM22 7h1v1h-1zM24 7h1v1h-1zM4 8h1v1h-1zM6 8h1v1h-1zM7 8h1v1h-1zM8 8h1v1h-1zM10 8h1v1h-1zM13 8h1v1h-1zM14 8h1v1h-1zM18 8h1v1h-1zM20 8h1v1h-1zM21 8h1v1h-1zM22 8h1v1h-1zM24 8h1v1h-1zM4 9h1v1h-1zM10 9h1v1h-1zM13 9h1v1h-1zM14 9h1v1h-1zM18 9h1v1h-1zM24 9h1v1h-1zM4 10h1v1h-1zM5 10h1v1h-1zM6 10h1v1h-1zM7 10h1v1h-1zM8 10h1v1h-1zM9 10h1v1h-1zM10 10h1v1h-1zM12 10h1v1h-1zM14 10h1v1h-1zM16 10h1v1h-1zM18 10h1v1h-1zM19 10h1v1h-1zM20 10h1v1h-1zM21 10h1v1h-1zM22 10h1v1h-1zM23 10h1v1h-1zM24 10h1v1h-1zM12 11h1v1h-1zM13 11h1v1h-1zM15 11h1v1h-1zM16 11h1v1h-1zM4 12h1v1h-1zM5 12h1v1h-1zM6 12h1v1h-1zM8 12h1v1h-1zM9 12h1v1h-1zM10 12h1v1h-1zM11 12h1v1h-1zM12 12h1v1h-1zM14 12h1v1h-1zM15 12h1v1h-1zM17 12h1v1h-1zM18 12h1v1h-1zM22 12h1v1h-1zM5 13h1v1h-1zM6 13h1v1h-1zM8 13h1v1h-1zM12 13h1v1h-1zM13 13h1v1h-1zM15 13h1v1h-1zM16 13h1v1h-1zM18 13h1v1h-1zM19 13h1v1h-1zM20 13h1v1h-1zM24 13h1v1h-1zM4 14h1v1h-1zM5 14h1v1h-1zM6 14h1v1h-1zM8 14h1v1h-1zM10 14h1v1h-1zM13 14h1v1h-1zM14 14h1v1h-1zM16 14h1v1h-1zM17 14h1v1h-1zM20 14h1v1h-1zM22 14h1v1h-1zM23 14h1v1h-1zM24 14h1v1h-1zM4 15h1v1h-1zM5 15h1v1h-1zM6 15h1v1h-1zM8 15h1v1h-1zM9 15h1v1h-1zM11 15h1v1h-1zM13 15h1v1h-1zM15 15h1v1h-1zM20 15h1v1h-1zM23 15h1v1h-1zM6 16h1v1h-1zM8 16h1v1h-1zM10 16h1v1h-1zM13 16h1v1h-1zM14 16h1v1h-1zM15 16h1v1h-1zM19 16h1v1h-1zM21 16h1v1h-1zM12 17h1v1h-1zM13 17h1v1h-1zM14 17h1v1h-1zM15 17h1v1h-1zM16 17h1v1h-1zM17 17h1v1h-1zM18 17h1v1h-1zM19 17h1v1h-1zM20 17h1v1h-1zM23 17h1v1h-1zM24 17h1v1h-1zM4 18h1v1h-1zM5 18h1v1h-1zM6 18h1v1h-1zM7 18h1v1h-1zM8 18h1v1h-1zM9 18h1v1h-1zM10 18h1v1h-1zM12 18h1v1h-1zM15 18h1v1h-1zM16 18h1v1h-1zM17 18h1v1h-1zM20 18h1v1h-1zM22 18h1v1h-1zM23 18h1v1h-1zM24 18h1v1h-1zM4 19h1v1h-1zM10 19h1v1h-1zM12 19h1v1h-1zM15 19h1v1h-1zM19 19h1v1h-1zM20 19h1v1h-1zM4 20h1v1h-1zM6 20h1v1h-1zM7 20h1v1h-1zM8 20h1v1h-1zM10 20h1v1h-1zM12 20h1v1h-1zM14 20h1v1h-1zM15 20h1v1h-1zM17 20h1v1h-1zM21 20h1v1h-1zM24 20h1v1h-1zM4 21h1v1h-1zM6 21h1v1h-1zM7 21h1v1h-1zM8 21h1v1h-1zM10 21h1v1h-1zM13 21h1v1h-1zM15 21h1v1h-1zM16 21h1v1h-1zM20 21h1v1h-1zM21 21h1v1h-1zM4 22h1v1h-1zM6 22h1v1h-1zM7 22h1v1h-1zM8 22h1v1h-1zM10 22h1v1h-1zM12 22h1v1h-1zM13 22h1v1h-1zM15 22h1v1h-1zM16 22h1v1h-1zM18 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM24 22h1v1h-1zM4 23h1v1h-1zM10 23h1v1h-1zM12 23h1v1h-1zM13 23h1v1h-1zM14 23h1v1h-1zM16 23h1v1h-1zM20 23h1v1h-1zM23 23h1v1h-1zM4 24h1v1h-1zM5 24h1v1h-1zM6 24h1v1h-1zM7 24h1v1h-1zM8 24h1v1h-1zM9 24h1v1h-1zM10 24h1v1h-1zM12 24h1v1h-1zM15 24h1v1h-1zM20 24h1v1h-1zM21 24h1v1h-1zM23 24h1v1h-1zM24 24h1v1h-1z"/>
+  </g>
+  <text x="900" y="470" fill="#536058" font-family="Inter, Avenir, Segoe UI, sans-serif" font-size="19" text-anchor="middle">ktoll.dev</text>
+</svg>

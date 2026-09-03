@@ -1,280 +1,308 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#173f32">
-    <script>
-      (() => {
-        try {
-          const savedTheme = localStorage.getItem("ktoll-theme");
-          const theme = savedTheme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-          document.documentElement.dataset.theme = theme;
-        } catch {
-          document.documentElement.dataset.theme = "light";
-        }
-      })();
-    </script>
-    <meta name="description" content="Kirk Tolleshaug is a senior backend software engineer specializing in reliable C#/.NET systems, versioned APIs, distributed processing, observability, and performance.">
-    <meta property="og:title" content="Kirk Tolleshaug | Senior Backend Software Engineer">
-    <meta property="og:description" content="Reliable C#/.NET backend systems, versioned APIs, distributed processing, observability, and performance.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ktoll.dev">
-    <meta property="og:image" content="https://ktoll.dev/assets/images/social-preview-light.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Kirk Tolleshaug, Senior Backend Software Engineer">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kirk Tolleshaug | Senior Backend Software Engineer">
-    <meta name="twitter:description" content="Reliable C#/.NET backend systems, versioned APIs, distributed processing, observability, and performance.">
-    <meta name="twitter:image" content="https://ktoll.dev/assets/images/social-preview-light.png">
-    <meta name="twitter:image:alt" content="Kirk Tolleshaug, Senior Backend Software Engineer">
-    <title>Kirk Tolleshaug | Senior Backend Software Engineer</title>
-    <link rel="canonical" href="https://ktoll.dev">
-    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Kirk Tolleshaug",
-        "jobTitle": "Senior Backend Software Engineer",
-        "url": "https://ktoll.dev",
-        "email": "mailto:kirk@ktoll.dev",
-        "sameAs": ["https://www.linkedin.com/in/ktolleshaug", "https://github.com/ktoll2"],
-        "address": { "@type": "PostalAddress", "addressLocality": "Vancouver", "addressRegion": "WA", "addressCountry": "US" }
-      }
-    </script>
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="wordmark" href="#top">
-        <svg class="wordmark-icon" viewBox="0 0 64 64" aria-hidden="true">
-          <rect width="64" height="64" rx="14" fill="#173f32"/>
-          <path fill="#f5f1e8" d="M16 19h5v10l10-10h7L25 32l14 13h-7L21 35v10h-5z"/>
-          <path fill="#91c9a5" d="M40 41h12v4H40z"/>
-        </svg>
-        <span class="wordmark-copy">
-          <span>Kirk Tolleshaug</span>
-          <span class="wordmark-subtitle">Senior Backend Software Engineer</span>
-          <span class="wordmark-location">Vancouver, Washington, United States</span>
-        </span>
-      </a>
-      <nav aria-label="Primary navigation">
-        <a href="#impact">Impact</a>
-        <a href="#experience">Experience</a>
-        <a href="#work">Work</a>
-        <a href="#focus">Skills</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="theme-toggle" type="button" aria-pressed="false">
-        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>
-        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.7 15.1A8.7 8.7 0 0 1 8.9 3.3 8.7 8.7 0 1 0 20.7 15.1Z"/></svg>
-        <span class="toggle-thumb" aria-hidden="true"></span>
-        <span class="visually-hidden">Switch to dark mode</span>
-      </button>
-    </header>
+---
+layout: default
+title: Kirk Tolleshaug | Senior Backend Software Engineer
+description: Kirk Tolleshaug is a senior backend software engineer specializing in reliable C#/.NET systems, versioned APIs, distributed processing, observability, and performance.
+social_description: Reliable C#/.NET backend systems, versioned APIs, distributed processing, observability, and performance.
+canonical_url: https://ktoll.dev
+social_image: /assets/images/social-preview-light.png
+social_image_alt: Kirk Tolleshaug, Senior Backend Software Engineer
+---
 
-    <main id="top">
-      <section class="hero page-section" aria-labelledby="hero-heading">
-        <div class="hero-copy">
-          <h1 id="hero-heading">Systems that stay fast<br>as the work gets complex.</h1>
-          <p class="hero-summary">I am Kirk Tolleshaug, a senior backend software engineer who builds reliable, high-performance systems, versioned APIs, and distributed services that scale. Since 2014, I have stayed hands-on, delivering measurable performance and business results.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="mailto:kirk@ktoll.dev">Start a conversation <span class="button-icon button-icon-email" aria-hidden="true"></span></a>
-            <a class="button button-secondary" href="assets/documents/Kirk_Tolleshaug_Resume.pdf" target="_blank">View resume <span class="button-icon button-icon-external" aria-hidden="true"></span></a>
-          </div>
+<main id="top">
+  <section class="hero page-section" aria-labelledby="hero-heading">
+    <div class="hero-copy">
+      <h1 id="hero-heading">Systems that stay fast<br>as the work gets complex.</h1>
+      <p class="hero-summary">I am Kirk Tolleshaug, a senior backend software engineer who builds reliable,
+        high-performance systems, versioned APIs, and distributed services that scale. Since 2014, I have stayed
+        hands-on, delivering measurable performance and business results.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="mailto:kirk@ktoll.dev">Start a conversation <span
+            class="button-icon button-icon-email" aria-hidden="true"></span></a>
+        <a class="button button-secondary" href="assets/documents/Kirk_Tolleshaug_Resume.pdf" target="_blank">View
+          resume <span class="button-icon button-icon-external" aria-hidden="true"></span></a>
+      </div>
+    </div>
+    <aside class="hero-aside" aria-label="Professional profile">
+      <div class="hero-profile">
+        <p class="hero-name">Kirk Tolleshaug</p>
+        <p class="hero-email">kirk@ktoll.dev</p>
+        <picture>
+          <source srcset="assets/images/profile.webp" type="image/webp">
+          <img class="hero-photo" src="assets/images/profile.jpg" alt="Portrait of Kirk Tolleshaug">
+        </picture>
+        <div class="hero-role">
+          <p>Senior Backend<br>Software Engineer</p>
+          <p>C# / .NET<br>APIs<br>Distributed Systems<br>Cloud &amp; Automation</p>
         </div>
-        <aside class="hero-aside" aria-label="Professional profile">
-          <div class="hero-profile">
-            <p class="hero-name">Kirk Tolleshaug</p>
-            <p class="hero-email">kirk@ktoll.dev</p>
-            <picture>
-              <source srcset="assets/images/profile.webp" type="image/webp">
-              <img class="hero-photo" src="assets/images/profile.jpg" alt="Portrait of Kirk Tolleshaug">
-            </picture>
-            <div class="hero-role">
-              <p>Senior Backend<br>Software Engineer</p>
-              <p>C# / .NET<br>APIs<br>Distributed Systems<br>Cloud &amp; Automation</p>
-            </div>
-          </div>
-          <p class="aside-label">Location</p>
-          <p class="hero-location"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path fill="#91c9a5" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg> Vancouver, Washington, United States</p>
-          <p class="aside-label">Currently</p>
-          <p class="availability"><span aria-hidden="true"></span> Open to senior backend roles</p>
-          <p class="availability availability-negative" tabindex="0" hidden>
-            <span aria-hidden="true"></span>
-            <span class="status-message-stack" aria-live="off">Not open to wizards wandering off mid-quest</span>
-          </p>
-          <div class="hero-links">
-            <a href="mailto:kirk@ktoll.dev"><span class="button-icon button-icon-email" aria-hidden="true"></span> Email</a>
-            <a href="https://www.linkedin.com/in/ktolleshaug" target="_blank" rel="noreferrer"><span class="button-icon button-icon-linkedin" aria-hidden="true"></span> LinkedIn</a>
-            <a href="https://github.com/ktoll2" target="_blank" rel="noreferrer"><span class="button-icon button-icon-github" aria-hidden="true"></span> GitHub</a>
-          </div>
-        </aside>
-      </section>
+      </div>
+      <p class="aside-label">Location</p>
+      <p class="hero-location"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#91c9a5"
+            d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z" />
+        </svg> Vancouver, Washington, United States</p>
+      <p class="aside-label">Currently</p>
+      <p class="availability"><span aria-hidden="true"></span> Open to senior backend roles</p>
+      <p class="availability availability-negative" tabindex="0" hidden>
+        <span aria-hidden="true"></span>
+        <span class="status-message-stack" aria-live="off">Not open to wizards wandering off mid-quest</span>
+      </p>
+      <div class="hero-links">
+        <a href="mailto:kirk@ktoll.dev"><span class="button-icon button-icon-email" aria-hidden="true"></span> Email</a>
+        <a href="https://www.linkedin.com/in/ktolleshaug" target="_blank" rel="noreferrer"><span
+            class="button-icon button-icon-linkedin" aria-hidden="true"></span> LinkedIn</a>
+        <a href="https://github.com/ktoll2" target="_blank" rel="noreferrer"><span
+            class="button-icon button-icon-github" aria-hidden="true"></span> GitHub</a>
+      </div>
+    </aside>
+  </section>
 
-      <section class="impact page-section" id="impact" aria-labelledby="impact-heading">
-        <div class="section-intro">
-          <p class="section-label">Impact</p>
-          <h2 id="impact-heading">Engineering outcomes, not just implementation.</h2>
-        </div>
-        <div class="impact-grid">
-          <article>
-            <p class="impact-number">100M+</p>
-            <h3>API requests each month</h3>
-            <p>Built backend services, APIs, integrations, reporting workflows, and distributed processing across platforms serving tens of thousands of users and handling more than 100M API requests each month.</p>
-          </article>
-          <article>
-            <p class="impact-number">Hours <i>&rarr;</i> minutes</p>
-            <h3>and minutes down to seconds</h3>
-            <p>Found and removed bottlenecks in memory use, request processing, concurrency, and workload distribution.</p>
-          </article>
-          <article>
-            <p class="impact-number">~$30M</p>
-            <h3>in annual infrastructure savings</h3>
-            <p>Built reporting that exposed cloud spend and usage opportunities, enabling meaningful optimization decisions.</p>
-          </article>
-        </div>
-      </section>
+  <section class="impact page-section" id="impact" aria-labelledby="impact-heading">
+    <div class="section-intro">
+      <p class="section-label">Impact</p>
+      <h2 id="impact-heading">Engineering outcomes, not just implementation.</h2>
+    </div>
+    <div class="impact-grid">
+      <article>
+        <p class="impact-number">100M+</p>
+        <h3>API requests each month</h3>
+        <p>Built backend services, APIs, integrations, reporting workflows, and distributed processing across platforms
+          serving tens of thousands of users and handling more than 100M API requests each month.</p>
+      </article>
+      <article>
+        <p class="impact-number">Hours <i>&rarr;</i> minutes</p>
+        <h3>and minutes down to seconds</h3>
+        <p>Found and removed bottlenecks in memory use, request processing, concurrency, and workload distribution.</p>
+      </article>
+      <article>
+        <p class="impact-number">~$30M</p>
+        <h3>in annual infrastructure savings</h3>
+        <p>Built reporting that exposed cloud spend and usage opportunities, enabling meaningful optimization decisions.
+        </p>
+      </article>
+    </div>
+  </section>
 
-      <section class="experience page-section" id="experience" aria-labelledby="experience-heading">
-        <div class="section-intro">
-          <p class="section-label">Experience</p>
-          <h2 id="experience-heading">Hands-on delivery with room to lead.</h2>
-          <p>I stay close to implementation while shaping technical direction, mentoring engineers, breaking down complex work, and delivering reliable systems across APIs, integrations, data, and cloud infrastructure.</p>
+  <section class="experience page-section" id="experience" aria-labelledby="experience-heading">
+    <div class="section-intro">
+      <p class="section-label">Experience</p>
+      <h2 id="experience-heading">Hands-on delivery with room to lead.</h2>
+      <p>I stay close to implementation while shaping technical direction, mentoring engineers, breaking down complex
+        work, and delivering reliable systems across APIs, integrations, data, and cloud infrastructure.</p>
+    </div>
+    <ol class="timeline">
+      <li>
+        <div class="timeline-period">2022 <span>&mdash;</span> Present</div>
+        <div class="timeline-role">
+          <h3>Software Engineer</h3>
+          <p class="company">Digital Monitoring Products</p>
+          <ul class="tags" aria-label="Technologies used">
+            <li>C# / .NET</li>
+            <li>Versioned APIs</li>
+            <li>RabbitMQ</li>
+            <li>Docker</li>
+            <li>New Relic</li>
+            <li>PostgreSQL</li>
+            <li>gRPC</li>
+            <li>AI-assisted engineering</li>
+          </ul>
         </div>
-        <ol class="timeline">
-          <li>
-            <div class="timeline-period">2022 <span>&mdash;</span> Present</div>
-            <div class="timeline-role">
-              <h3>Software Engineer</h3>
-              <p class="company">Digital Monitoring Products</p>
-              <ul class="tags" aria-label="Technologies used"><li>C# / .NET</li><li>Versioned APIs</li><li>RabbitMQ</li><li>Docker</li><li>New Relic</li><li>PostgreSQL</li><li>gRPC</li><li>AI-assisted engineering</li></ul>
-            </div>
-            <p class="timeline-summary">Design and optimize C#/.NET services and versioned public APIs for web, mobile, external integrations, tens of thousands of users, and millions of connected security devices. Build resilient RabbitMQ workflows, modernize legacy services, and improve performance and observability with Docker and New Relic. Use AI-assisted engineering tools to accelerate codebase analysis, defect investigation, and legacy modernization, with developer-owned validation through tests and code review.</p>
-          </li>
-          <li>
-            <div class="timeline-period">2014 <span>&mdash;</span> 2022</div>
-            <div class="timeline-role">
-              <h3>Senior Software Engineer</h3>
-              <p class="company">Vizient, Inc.</p>
-              <ul class="tags" aria-label="Technologies used"><li>C# / .NET</li><li>Azure</li><li>SQL Server</li><li>OAuth / SSO</li><li>Entity Framework</li><li>Terraform</li><li>CI/CD</li></ul>
-            </div>
-            <p class="timeline-summary">Progressed from intern to senior engineer while owning delivery, mentoring engineers, and contributing across authentication, reporting, modernization, and Azure-hosted applications. Built internal OAuth/SSO services, cloud reporting that contributed to approximately $30M in annual savings, and reusable infrastructure and delivery automation.</p>
-          </li>
-          <li>
-            <div class="timeline-period">2014 <span>&mdash;</span> 2015</div>
-            <div class="timeline-role">
-              <h3>Teaching Assistant &amp; WebParaprofessional</h3>
-              <p class="company">Southeast Missouri State University</p>
-              <ul class="tags" aria-label="Technologies used"><li>ASP.NET</li><li>C#</li><li>SQL Server</li><li>Entity Framework</li><li>IIS</li><li>Linux</li><li>Mentoring</li></ul>
-            </div>
-            <p class="timeline-summary">Supported computer science instruction and students while building ASP.NET/C# applications for university departments. Delivered a writing-lab sign-in and usage-tracking application and supported Moodle and instructional technology systems.</p>
-          </li>
-        </ol>
-      </section>
+        <p class="timeline-summary">Design and optimize C#/.NET services and versioned public APIs for web, mobile,
+          external integrations, tens of thousands of users, and millions of connected security devices. Build resilient
+          RabbitMQ workflows, modernize legacy services, and improve performance and observability with Docker and New
+          Relic. Use AI-assisted engineering tools to accelerate codebase analysis, defect investigation, and legacy
+          modernization, with developer-owned validation through tests and code review.</p>
+      </li>
+      <li>
+        <div class="timeline-period">2014 <span>&mdash;</span> 2022</div>
+        <div class="timeline-role">
+          <h3>Senior Software Engineer</h3>
+          <p class="company">Vizient, Inc.</p>
+          <ul class="tags" aria-label="Technologies used">
+            <li>C# / .NET</li>
+            <li>Azure</li>
+            <li>SQL Server</li>
+            <li>OAuth / SSO</li>
+            <li>Entity Framework</li>
+            <li>Terraform</li>
+            <li>CI/CD</li>
+          </ul>
+        </div>
+        <p class="timeline-summary">Progressed from intern to senior engineer while owning delivery, mentoring
+          engineers, and contributing across authentication, reporting, modernization, and Azure-hosted applications.
+          Built internal OAuth/SSO services, cloud reporting that contributed to approximately $30M in annual savings,
+          and reusable infrastructure and delivery automation.</p>
+      </li>
+      <li>
+        <div class="timeline-period">2014 <span>&mdash;</span> 2015</div>
+        <div class="timeline-role">
+          <h3>Teaching Assistant &amp; WebParaprofessional</h3>
+          <p class="company">Southeast Missouri State University</p>
+          <ul class="tags" aria-label="Technologies used">
+            <li>ASP.NET</li>
+            <li>C#</li>
+            <li>SQL Server</li>
+            <li>Entity Framework</li>
+            <li>IIS</li>
+            <li>Linux</li>
+            <li>Mentoring</li>
+          </ul>
+        </div>
+        <p class="timeline-summary">Supported computer science instruction and students while building ASP.NET/C#
+          applications for university departments. Delivered a writing-lab sign-in and usage-tracking application and
+          supported Moodle and instructional technology systems.</p>
+      </li>
+    </ol>
+  </section>
 
-      <section class="work page-section" id="work" aria-labelledby="work-heading">
-        <div class="section-intro">
-          <p class="section-label">Work</p>
-          <h2 id="work-heading">A record of making complicated systems more useful.</h2>
+  <section class="work page-section" id="work" aria-labelledby="work-heading">
+    <div class="section-intro">
+      <p class="section-label">Work</p>
+      <h2 id="work-heading">A record of making complicated systems more useful.</h2>
+    </div>
+    <div class="case-studies">
+      <article class="case-study case-study-featured">
+        <p class="case-number">01</p>
+        <div>
+          <p class="case-kicker">Modernization &amp; performance</p>
+          <h3>Modernizing legacy systems with AI-assisted engineering.</h3>
         </div>
-        <div class="case-studies">
-          <article class="case-study case-study-featured">
-            <p class="case-number">01</p>
-            <div>
-              <p class="case-kicker">Modernization &amp; performance</p>
-              <h3>Modernizing legacy systems with AI-assisted engineering.</h3>
-            </div>
-            <p>Modernized legacy .NET services with Docker-based local stacks and New Relic observability. AI-assisted analysis helped map dependencies and guide refactoring, while developer-owned tests and code review kept changes safe. The work improved deployment reliability and reduced selected API response times from several seconds to sub-second performance.</p>
-            <ul class="tags"><li>Modern .NET</li><li>AI-assisted engineering</li><li>Docker</li><li>New Relic</li><li>CI/CD</li></ul>
-          </article>
-          <article class="case-study">
-            <p class="case-number">02</p>
-            <p class="case-kicker">High-volume event processing</p>
-            <h3>Making real-time device workflows dependable at scale.</h3>
-            <p>Built resilient event-driven device and job workflows using RabbitMQ, dead-letter queues, retries, idempotent API handling, distributed caching, and purpose-built integrations.</p>
-            <ul class="tags"><li>RabbitMQ</li><li>Event processing</li><li>API reliability</li><li>Distributed systems</li></ul>
-          </article>
-          <article class="case-study">
-            <p class="case-number">03</p>
-            <p class="case-kicker">Cloud intelligence</p>
-            <h3>Turning cloud-usage data into business decisions.</h3>
-            <p>Architected reporting that combined usage and cost data to identify unnecessary services and optimization opportunities across cloud infrastructure.</p>
-            <ul class="tags"><li>Azure</li><li>Reporting</li><li>Infrastructure</li><li>Technical ownership</li></ul>
-          </article>
-        </div>
-      </section>
+        <p>Modernized legacy .NET services with Docker-based local stacks and New Relic observability. AI-assisted
+          analysis helped map dependencies and guide refactoring, while developer-owned tests and code review kept
+          changes safe. The work improved deployment reliability and reduced selected API response times from several
+          seconds to sub-second performance.</p>
+        <ul class="tags">
+          <li>Modern .NET</li>
+          <li>AI-assisted engineering</li>
+          <li>Docker</li>
+          <li>New Relic</li>
+          <li>CI/CD</li>
+        </ul>
+      </article>
+      <article class="case-study">
+        <p class="case-number">02</p>
+        <p class="case-kicker">High-volume event processing</p>
+        <h3>Making real-time device workflows dependable at scale.</h3>
+        <p>Built resilient event-driven device and job workflows using RabbitMQ, dead-letter queues, retries, idempotent
+          API handling, distributed caching, and purpose-built integrations.</p>
+        <ul class="tags">
+          <li>RabbitMQ</li>
+          <li>Event processing</li>
+          <li>API reliability</li>
+          <li>Distributed systems</li>
+        </ul>
+      </article>
+      <article class="case-study">
+        <p class="case-number">03</p>
+        <p class="case-kicker">Cloud intelligence</p>
+        <h3>Turning cloud-usage data into business decisions.</h3>
+        <p>Architected reporting that combined usage and cost data to identify unnecessary services and optimization
+          opportunities across cloud infrastructure.</p>
+        <ul class="tags">
+          <li>Azure</li>
+          <li>Reporting</li>
+          <li>Infrastructure</li>
+          <li>Technical ownership</li>
+        </ul>
+      </article>
+    </div>
+  </section>
 
-      <section class="focus page-section" id="focus" aria-labelledby="focus-heading">
-        <div class="section-intro">
-          <p class="section-label">Technical focus</p>
-          <h2 id="focus-heading">Built for the systems behind the interface.</h2>
-        </div>
-        <div class="focus-grid">
-          <article><h3>Languages &amp; frameworks</h3><p>C#, .NET, ASP.NET, Go, and Java for backend development; Angular and React for web application workflows.</p></article>
-          <article><h3>APIs &amp; distributed systems</h3><p>REST APIs, API versioning, OpenAPI/Swagger, Azure API Management, event-driven architecture, gRPC, background services, multithreading, and parallel processing.</p></article>
-          <article><h3>Reliability &amp; observability</h3><p>Idempotency, retries, dead-letter queues, structured logging with Serilog, New Relic, service-health metrics, and production diagnostics.</p></article>
-          <article><h3>Data &amp; messaging</h3><p>SQL Server, PostgreSQL, Entity Framework, schema migrations, RabbitMQ, Redis, distributed caching, query tuning, and large transformations.</p></article>
-          <article><h3>Cloud &amp; delivery</h3><p>Azure, AWS, Docker, App Services, Azure SQL, Functions, Key Vault, infrastructure as code with Terraform and Bicep, and CI/CD.</p></article>
-          <article><h3>Security &amp; quality</h3><p>OAuth/SSO, JWT, roles and claims, service-to-service authentication, TDD, NUnit, xUnit, and unit, integration, end-to-end, and performance testing.</p></article>
-        </div>
-      </section>
+  <section class="focus page-section" id="focus" aria-labelledby="focus-heading">
+    <div class="section-intro">
+      <p class="section-label">Technical focus</p>
+      <h2 id="focus-heading">Built for the systems behind the interface.</h2>
+    </div>
+    <div class="focus-grid">
+      <article>
+        <h3>Languages &amp; frameworks</h3>
+        <p>C#, .NET, ASP.NET, Go, and Java for backend development; Angular and React for web application workflows.</p>
+      </article>
+      <article>
+        <h3>APIs &amp; distributed systems</h3>
+        <p>REST APIs, API versioning, OpenAPI/Swagger, Azure API Management, event-driven architecture, gRPC, background
+          services, multithreading, and parallel processing.</p>
+      </article>
+      <article>
+        <h3>Reliability &amp; observability</h3>
+        <p>Idempotency, retries, dead-letter queues, structured logging with Serilog, New Relic, service-health metrics,
+          and production diagnostics.</p>
+      </article>
+      <article>
+        <h3>Data &amp; messaging</h3>
+        <p>SQL Server, PostgreSQL, Entity Framework, schema migrations, RabbitMQ, Redis, distributed caching, query
+          tuning, and large transformations.</p>
+      </article>
+      <article>
+        <h3>Cloud &amp; delivery</h3>
+        <p>Azure, AWS, Docker, App Services, Azure SQL, Functions, Key Vault, infrastructure as code with Terraform and
+          Bicep, and CI/CD.</p>
+      </article>
+      <article>
+        <h3>Security &amp; quality</h3>
+        <p>OAuth/SSO, JWT, roles and claims, service-to-service authentication, TDD, NUnit, xUnit, and unit,
+          integration, end-to-end, and performance testing.</p>
+      </article>
+    </div>
+  </section>
 
-      <section class="resume page-section" id="resume" aria-labelledby="resume-heading">
-        <div class="section-intro">
-          <p class="section-label">Resume</p>
-          <h2 id="resume-heading">The essentials, in one place.</h2>
-          <p>Since 2014, I have built backend systems, APIs, cloud-hosted applications, distributed processing, observability, and legacy modernization.</p>
-        </div>
-        <div class="resume-grid">
-          <article>
-            <p class="resume-label">Career focus</p>
-            <h3>Hands-on software engineering.</h3>
-            <p>Most interested in roles that combine implementation with architecture, technical direction, modernization, and end-to-end delivery.</p>
-          </article>
-          <article>
-            <p class="resume-label">Education</p>
-            <h3>Southeast Missouri State University</h3>
-            <p>Bachelor of Science, General Studies<br>2011 &mdash; 2015</p>
-          </article>
-          <article>
-            <p class="resume-label">Certification</p>
-            <h3>Azure Fundamentals</h3>
-            <p class="certification-date">December 2021</p>
-            <p>Cloud-platform foundation across Azure-hosted applications, infrastructure, and delivery automation.</p>
-            <a class="credential-link" href="https://learn.microsoft.com/en-us/users/kirktolleshaug-2111/credentials/d66a995f4a1b47c5" target="_blank" rel="noreferrer">View credential <span aria-hidden="true">&#8599;</span></a>
-          </article>
-        </div>
-        <div class="resume-downloads">
-          <p>Find the full picture</p>
-        </div>
-        <div class="resume-download-buttons">
-            <a class="button button-secondary" href="assets/documents/Kirk_Tolleshaug_Resume.pdf" download="Kirk_Tolleshaug_Resume.pdf" target="_blank">PDF <span class="button-icon button-icon-download" aria-hidden="true"></span></a>
-            <a class="button button-secondary" href="assets/documents/Kirk_Tolleshaug_Resume.docx" download="Kirk_Tolleshaug_Resume.docx" target="_blank">Word <span class="button-icon button-icon-download" aria-hidden="true"></span></a>
-            <a class="button button-secondary" href="assets/documents/Kirk_Tolleshaug_Resume.md" download="Kirk_Tolleshaug_Resume.md" target="_blank">Markdown <span class="button-icon button-icon-download" aria-hidden="true"></span></a>
-            <a class="button button-secondary" href="https://www.linkedin.com/in/ktolleshaug" target="_blank" rel="noreferrer">LinkedIn <span class="button-icon button-icon-linkedin" aria-hidden="true"></span></a>
-          </div>
-      </section>
+  <section class="resume page-section" id="resume" aria-labelledby="resume-heading">
+    <div class="section-intro">
+      <p class="section-label">Resume</p>
+      <h2 id="resume-heading">The essentials, in one place.</h2>
+      <p>Since 2014, I have built backend systems, APIs, cloud-hosted applications, distributed processing,
+        observability, and legacy modernization.</p>
+    </div>
+    <div class="resume-grid">
+      <article>
+        <p class="resume-label">Career focus</p>
+        <h3>Hands-on software engineering.</h3>
+        <p>Most interested in roles that combine implementation with architecture, technical direction, modernization,
+          and end-to-end delivery.</p>
+      </article>
+      <article>
+        <p class="resume-label">Education</p>
+        <h3>Southeast Missouri State University</h3>
+        <p>Bachelor of Science, General Studies<br>2011 &mdash; 2015</p>
+      </article>
+      <article>
+        <p class="resume-label">Certification</p>
+        <h3>Azure Fundamentals</h3>
+        <p class="certification-date">December 2021</p>
+        <p>Cloud-platform foundation across Azure-hosted applications, infrastructure, and delivery automation.</p>
+        <a class="credential-link"
+          href="https://learn.microsoft.com/en-us/users/kirktolleshaug-2111/credentials/d66a995f4a1b47c5"
+          target="_blank" rel="noreferrer">View credential <span aria-hidden="true">&#8599;</span></a>
+      </article>
+    </div>
+    <div class="resume-downloads">
+      <p>Find the full picture</p>
+    </div>
+    <div class="resume-download-buttons">
+      <a class="button button-secondary" href="assets/documents/Kirk_Tolleshaug_Resume.pdf"
+        download="Kirk_Tolleshaug_Resume.pdf" target="_blank">PDF <span class="button-icon button-icon-download"
+          aria-hidden="true"></span></a>
+      <a class="button button-secondary" href="assets/documents/Kirk_Tolleshaug_Resume.docx"
+        download="Kirk_Tolleshaug_Resume.docx" target="_blank">Word <span class="button-icon button-icon-download"
+          aria-hidden="true"></span></a>
+      <a class="button button-secondary" href="assets/documents/Kirk_Tolleshaug_Resume.md"
+        download="Kirk_Tolleshaug_Resume.md" target="_blank">Markdown <span class="button-icon button-icon-download"
+          aria-hidden="true"></span></a>
+      <a class="button button-secondary" href="https://www.linkedin.com/in/ktolleshaug" target="_blank"
+        rel="noreferrer">LinkedIn <span class="button-icon button-icon-linkedin" aria-hidden="true"></span></a>
+    </div>
+  </section>
 
-      <section class="contact page-section" id="contact" aria-labelledby="contact-heading">
-        <p class="section-label">Get in touch</p>
-        <h2 id="contact-heading">Building a backend team that needs a steady hand?</h2>
-        <p>For senior backend roles involving architecture, modernization, performance, and high-volume systems, I would be glad to talk.</p>
-        <p class="contact-note">Email is the best way to reach me.</p>
-        <div class="contact-actions">
-          <a class="button button-primary" href="mailto:kirk@ktoll.dev">kirk@ktoll.dev <span class="button-icon button-icon-email" aria-hidden="true"></span></a>
-          <a class="button button-secondary" href="assets/documents/Kirk_Tolleshaug.vcf" download="Kirk_Tolleshaug.vcf" target="_blank">Download vCard <span class="button-icon button-icon-download" aria-hidden="true"></span></a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <span>&copy; 2026 Kirk Tolleshaug</span>
-      <div><a href="assets/documents/Kirk_Tolleshaug_Resume.pdf" target="_blank">Resume</a><a class="footer-social" href="https://www.linkedin.com/in/ktolleshaug" target="_blank" rel="noreferrer">LinkedIn <span class="footer-icon footer-icon-linkedin" aria-hidden="true"></span></a><a class="footer-social" href="https://github.com/ktoll2" target="_blank" rel="noreferrer">GitHub <span class="footer-icon footer-icon-github" aria-hidden="true"></span></a></div>
-    </footer>
-    <script src="assets/js/script.js"></script>
-  </body>
-</html>
+  <section class="contact page-section" id="contact" aria-labelledby="contact-heading">
+    <p class="section-label">Get in touch</p>
+    <h2 id="contact-heading">Building a backend team that needs a steady hand?</h2>
+    <p>For senior backend roles involving architecture, modernization, performance, and high-volume systems, I would be
+      glad to talk.</p>
+    <p class="contact-note">Email is the best way to reach me.</p>
+    <div class="contact-actions">
+      <a class="button button-primary" href="mailto:kirk@ktoll.dev">kirk@ktoll.dev <span
+          class="button-icon button-icon-email" aria-hidden="true"></span></a>
+      <a class="button button-secondary" href="assets/documents/Kirk_Tolleshaug.vcf" download="Kirk_Tolleshaug.vcf"
+        target="_blank">Download vCard <span class="button-icon button-icon-download" aria-hidden="true"></span></a>
+    </div>
+  </section>
+</main>

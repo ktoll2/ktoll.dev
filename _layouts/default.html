@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include site-header.html %}
+    {{ content }}
+    {% include site-footer.html %}
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+  </body>
+</html>

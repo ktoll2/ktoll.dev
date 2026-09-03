@@ -2,7 +2,7 @@
 
 Personal portfolio site for Kirk Tolleshaug, a senior backend software engineer.
 
-The site is intentionally dependency-free: plain HTML, CSS, and JavaScript served as static files.
+The site is a Jekyll-generated static site using plain HTML, CSS, and JavaScript.
 
 ## About
 
@@ -10,21 +10,42 @@ Visit [ktoll.dev](https://ktoll.dev) for experience, selected work, technical fo
 
 For senior backend engineering opportunities involving architecture, modernization, performance, and high-volume systems, reach out at [kirk@ktoll.dev](mailto:kirk@ktoll.dev).
 
-## Local Preview
+## Local Development
 
-Run a static web server from the repository root:
+Requires Ruby and Bundler. Install the project dependencies once:
 
 ```bash
-python3 -m http.server 8000
+./scripts/install.sh
 ```
 
-Open [http://localhost:8000](http://localhost:8000).
+Start the local server with LiveReload:
+
+```bash
+./scripts/launch.sh
+```
+
+Open [http://localhost:4000](http://localhost:4000). The install script stores Bundler configuration in the ignored `.bundle/` directory and gems in `~/.local/share/ktoll.dev-bundle` by default.
+
+To create a production-style local build without starting a server:
+
+```bash
+bundle exec jekyll build
+```
+
+Jekyll writes rendered files to `_site/`; that directory is generated locally and ignored by Git.
 
 ## Structure
 
 ```text
-index.html              Main site
+_config.yml             Jekyll configuration
+_layouts/               Shared page layouts
+_includes/              Shared head, header, and footer markup
+index.html              Homepage source
 404.html                GitHub Pages not-found page
+Gemfile                 Local GitHub Pages/Jekyll dependencies
+scripts/
+  install.sh            Configure Bundler and install dependencies
+  launch.sh             Start Jekyll with LiveReload
 CNAME                   Custom domain configuration
 robots.txt              Crawler policy
 sitemap.xml             Search-engine sitemap
@@ -45,4 +66,4 @@ https://ktoll.dev/?personality=on
 
 ## Deployment
 
-Deploy with GitHub Pages from the `master` branch root. The `CNAME` file preserves the `ktoll.dev` custom domain.
+Deploy with GitHub Pages from the `master` branch root. GitHub Pages builds the Jekyll source and deploys its generated output; `_site/` is not committed. The `CNAME` file preserves the `ktoll.dev` custom domain.

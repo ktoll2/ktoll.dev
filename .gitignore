@@ -1,0 +1,15 @@
+_site/
+.bundle/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+vendor/bundle/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.fleet/
+*.swp
+*~
+.DS_Store
+Thumbs.db

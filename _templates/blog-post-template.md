@@ -3,6 +3,7 @@ layout: post
 blog_post: true
 title: Article title
 date: YYYY-MM-DD
+# last_modified_at: YYYY-MM-DD
 permalink: /blog/YYYY/MM/DD/post-slug/
 reading_time: 5
 published: false

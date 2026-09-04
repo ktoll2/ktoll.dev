@@ -15,24 +15,42 @@ For senior backend engineering opportunities involving architecture, modernizati
 Requires Ruby and Bundler. Install the project dependencies once:
 
 ```bash
-./scripts/install.sh
+make install
 ```
 
 Start the local server with LiveReload:
 
 ```bash
-./scripts/launch.sh
+make serve
 ```
 
-Open [http://localhost:4000](http://localhost:4000). The install script stores Bundler configuration in the ignored `.bundle/` directory and gems in `~/.local/share/ktoll.dev-bundle` by default.
+Open [http://localhost:4000](http://localhost:4000). `make install` stores Bundler configuration in the ignored `.bundle/` directory and gems in `~/.local/share/ktoll.dev-bundle` by default.
 
-To create a production-style local build without starting a server:
+To create a local build without starting a server:
 
 ```bash
-bundle exec jekyll build
+make build
 ```
 
 Jekyll writes rendered files to `_site/`; that directory is generated locally and ignored by Git.
+
+Validate formatting and create a local build with:
+
+```bash
+make check
+```
+
+Create a clean production-style build with:
+
+```bash
+make clean-build
+```
+
+Remove generated Jekyll output with:
+
+```bash
+make clean
+```
 
 ## Publishing Blog Posts
 
@@ -43,7 +61,7 @@ published: false
 reading_time: 4
 ```
 
-Set `reading_time` to the intended whole-minute estimate. Jekyll excludes unpublished posts from the blog index, post URLs, and sitemap. Change `published` to `true` and push to `master` to release the post.
+Set `reading_time` to the intended whole-minute estimate. Add `last_modified_at` when published content changes so the sitemap can report its modification date. Jekyll excludes unpublished posts from the blog index, post URLs, and sitemap. Change `published` to `true` and push to `master` to release the post.
 
 Unpublished posts remain visible in this public repository.
 
@@ -62,14 +80,15 @@ blog/
 index.html              Homepage source
 404.html                GitHub Pages not-found page
 Gemfile                 Local GitHub Pages/Jekyll dependencies
-scripts/
-  install.sh            Configure Bundler and install dependencies
-  launch.sh             Start Jekyll with LiveReload
+Makefile                Local install, build, validation, cleanup, and server commands
 CNAME                   Custom domain configuration
 robots.txt              Crawler policy
 sitemap.xml             Search-engine sitemap
 assets/
-  css/styles.css         Site styles
+  css/styles.css         Shared site and homepage styles
+  css/header.css         Header, navigation, and menu styles
+  css/footer.css         Footer styles
+  css/blog.css           Blog index and post styles
   js/script.js           Theme and optional fun-mode behavior
   images/                Profile, favicon, and social-preview assets
   documents/             Resume formats and vCard

@@ -11,19 +11,27 @@
       <span class="wordmark-location">Vancouver, Washington, United States</span>
     </span>
   </a>
-  <nav aria-label="Primary navigation">
-    <a href="{{ '/' | relative_url }}#impact">Impact</a>
-    <a href="{{ '/' | relative_url }}#experience">Experience</a>
-    <a href="{{ '/' | relative_url }}#work">Work</a>
-    <a href="{{ '/' | relative_url }}#focus">Skills</a>
-    <a href="{{ '/' | relative_url }}#resume">Resume</a>
-    <a href="{{ '/' | relative_url }}#contact">Contact</a>
-    <a href="{{ '/blog/' | relative_url }}">Blog</a>
-  </nav>
-  <button class="theme-toggle" type="button" aria-pressed="false">
-    <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>
-    <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.7 15.1A8.7 8.7 0 0 1 8.9 3.3 8.7 8.7 0 1 0 20.7 15.1Z"/></svg>
-    <span class="toggle-thumb" aria-hidden="true"></span>
-    <span class="visually-hidden">Switch to dark mode</span>
+  <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+    <span class="menu-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    <span>Menu</span>
   </button>
+  <nav id="primary-navigation" aria-label="Primary navigation">
+    <ul class="primary-navigation-list">
+      <li class="nav-item"><a href="{{ '/' | relative_url }}#impact">Impact</a></li>
+      <li class="nav-item"><a href="{{ '/' | relative_url }}#experience">Experience</a></li>
+      <li class="nav-item"><a href="{{ '/' | relative_url }}#work">Work</a></li>
+      <li class="nav-item"><a href="{{ '/' | relative_url }}#focus">Skills</a></li>
+      <li class="nav-item"><a href="{{ '/' | relative_url }}#resume">Resume</a></li>
+      <li class="nav-item"><a href="{{ '/' | relative_url }}#contact">Contact</a></li>
+      <li class="nav-item"><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+      <li class="nav-theme">
+        <button class="theme-toggle" type="button" aria-pressed="false">
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.7 15.1A8.7 8.7 0 0 1 8.9 3.3 8.7 8.7 0 1 0 20.7 15.1Z"/></svg>
+          <span class="toggle-thumb" aria-hidden="true"></span>
+          <span class="visually-hidden">Switch to dark mode</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
 </header>

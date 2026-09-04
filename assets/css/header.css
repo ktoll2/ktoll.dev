@@ -1,0 +1,41 @@
+.site-header { position: sticky; top: 0; z-index: 10; display: flex; width: 100%; align-items: center; justify-content: space-between; min-height: 86px; padding: 0 max(var(--content-gutter), calc((100% - var(--site-width)) / 2)); border-bottom: 1px solid var(--line); background: var(--chrome); }
+.wordmark { display: flex; align-items: center; gap: 10px; color: var(--forest); font-family: var(--serif); font-size: 22px; font-weight: 700; letter-spacing: -.04em; line-height: .9; text-decoration: none; }
+.wordmark-icon { width: 44px; height: 44px; flex: none; }
+.wordmark-copy { display: flex; flex-direction: column; }
+.wordmark-subtitle { margin-top: 5px; color: var(--muted); font-family: var(--sans); font-size: 8px; font-weight: 700; letter-spacing: .09em; line-height: 1; text-transform: uppercase; }
+.wordmark-location { margin-top: 3px; color: var(--muted); font-family: var(--sans); font-size: 8px; font-weight: 700; letter-spacing: .09em; line-height: 1; text-transform: uppercase; }
+:root[data-theme="dark"] .wordmark { color: var(--forest-light); }
+.primary-navigation-list { display: flex; align-items: center; gap: clamp(16px, 2.4vw, 32px); margin: 0 0 0 auto; padding: 0; list-style: none; }
+.primary-navigation-list a { color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+.primary-navigation-list a:hover, .primary-navigation-list a:focus-visible { color: var(--forest-light); }
+.menu-toggle { display: none; align-items: center; gap: 8px; padding: 0; border: 0; color: var(--forest-light); background: transparent; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+.menu-toggle-icon { display: grid; width: 18px; gap: 4px; }
+.menu-toggle-icon span { display: block; height: 1px; background: currentColor; }
+.menu-toggle:hover, .menu-toggle:focus-visible { color: var(--forest-light); outline: 2px solid var(--forest-light); outline-offset: 4px; }
+
+.theme-toggle { position: relative; display: flex; width: 54px; height: 26px; align-items: center; justify-content: space-between; padding: 0; border: 1px solid var(--control-line); border-radius: 999px; color: var(--forest-light); background: var(--soft); cursor: pointer; }
+.theme-toggle svg { z-index: 1; width: 12px; margin: 0 7px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.65; }
+.toggle-thumb { position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: var(--panel); box-shadow: 0 2px 5px rgba(0,0,0,.2); transition: transform 180ms ease; }
+.moon-icon { opacity: .58; }
+:root[data-theme="dark"] .sun-icon { opacity: .58; }
+:root[data-theme="dark"] .moon-icon { opacity: 1; }
+:root[data-theme="dark"] .toggle-thumb { transform: translateX(28px); }
+.theme-toggle:hover, .theme-toggle:focus-visible { outline: 2px solid var(--forest-light); outline-offset: 3px; }
+
+@media (max-width: 800px) {
+  .js .menu-toggle { display: inline-flex; margin-left: auto; }
+  .site-header nav { position: absolute; top: 100%; left: 0; display: grid; width: 100%; margin: 0; padding: 8px var(--content-gutter) 20px; border-bottom: 1px solid var(--line); background: var(--chrome); }
+  .js .site-header nav { display: none; }
+  .js .site-header nav.is-open { display: grid; }
+  .primary-navigation-list { display: grid; gap: 0; margin: 0; }
+  .primary-navigation-list .nav-item { margin: 0 -10px; border-bottom: 1px solid var(--line); transition: background-color 160ms ease; }
+  .primary-navigation-list .nav-item:hover, .primary-navigation-list .nav-item:focus-within, .primary-navigation-list .nav-item:active { background: var(--forest-light); }
+  .primary-navigation-list .nav-item a { display: block; padding: 13px 10px; color: var(--ink); font-size: 12px; transition: color 160ms ease; }
+  .primary-navigation-list .nav-item:hover a, .primary-navigation-list .nav-item:focus-within a, .primary-navigation-list .nav-item:active a { color: var(--paper); }
+  .primary-navigation-list .nav-item a:focus-visible { outline: 2px solid var(--forest-light); outline-offset: -2px; }
+  .primary-navigation-list .nav-theme .theme-toggle { margin-top: 14px; }
+}
+
+@media (max-width: 560px) {
+  .site-header { min-height: 70px; }
+}

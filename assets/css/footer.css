@@ -1,0 +1,13 @@
+.site-footer { position: relative; z-index: 1; display: flex; width: 100%; align-items: center; justify-content: space-between; min-height: 100px; padding: 0 max(var(--content-gutter), calc((100% - var(--site-width)) / 2)); border-top: 1px solid var(--line); color: var(--muted); background: var(--chrome); font-size: 11px; }
+.site-footer div { display: flex; gap: 20px; }
+.site-footer a { font-weight: 700; text-decoration: none; }
+.footer-social { display: inline-flex; align-items: center; gap: 5px; }
+.footer-icon { display: block; width: 12px; height: 12px; background-color: currentColor; }
+.footer-icon-linkedin { -webkit-mask: url("../images/linkedin.svg") center / contain no-repeat; mask: url("../images/linkedin.svg") center / contain no-repeat; transform: translateY(-1px); }
+.footer-icon-email { -webkit-mask: url("../images/resume-email-icon.svg") center / contain no-repeat; mask: url("../images/resume-email-icon.svg") center / contain no-repeat; }
+.footer-icon-github { -webkit-mask: url("../images/github.svg") center / contain no-repeat; mask: url("../images/github.svg") center / contain no-repeat; }
+.site-footer a:hover, .site-footer a:focus-visible { color: var(--forest-light); }
+
+@media (max-width: 560px) {
+  .site-footer { align-items: flex-start; flex-direction: column; justify-content: center; gap: 14px; }
+}

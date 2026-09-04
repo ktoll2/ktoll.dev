@@ -6,7 +6,6 @@ layout: null
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>{{ '/' | absolute_url }}</loc>
-    <lastmod>2026-08-20</lastmod>
   </url>
   <url>
     <loc>{{ '/blog/' | absolute_url }}</loc>
@@ -14,7 +13,9 @@ layout: null
   {% for post in published_posts %}
     <url>
       <loc>{{ post.url | absolute_url }}</loc>
-      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      {% if post.last_modified_at %}
+        <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
+      {% endif %}
     </url>
   {% endfor %}
 </urlset>

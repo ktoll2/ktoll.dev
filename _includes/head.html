@@ -2,14 +2,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#173f32">
+  {% if page.noindex %}
+    <meta name="robots" content="noindex">
+  {% endif %}
   <script>
     (() => {
+      document.documentElement.classList.add("js");
+
       try {
         const savedTheme = localStorage.getItem("ktoll-theme");
         const theme = savedTheme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
         document.documentElement.dataset.theme = theme;
+        document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#111b17" : "#b8bab0";
       } catch {
         document.documentElement.dataset.theme = "light";
+        document.querySelector('meta[name="theme-color"]').content = "#b8bab0";
       }
     })();
   </script>
@@ -34,6 +41,11 @@
   <link rel="canonical" href="{{ page.canonical_url | default: page.url | absolute_url }}">
   <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
+  {% if page.blog_page or page.layout == "post" %}
+    <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
+  {% endif %}
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -46,4 +58,21 @@
       "address": { "@type": "PostalAddress", "addressLocality": "Vancouver", "addressRegion": "WA", "addressCountry": "US" }
     }
   </script>
+  {% if page.layout == "post" %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": {{ page.title | jsonify }},
+        "description": {{ page.description | default: site.description | jsonify }},
+        "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+        {% if page.last_modified_at %}
+          "dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }},
+        {% endif %}
+        "mainEntityOfPage": { "@type": "WebPage", "@id": {{ page.canonical_url | default: page.url | absolute_url | jsonify }} },
+        "image": {{ page.social_image | default: '/assets/images/social-preview-light.png' | absolute_url | jsonify }},
+        "author": { "@type": "Person", "name": {{ page.author | default: "Kirk Tolleshaug" | jsonify }} }
+      }
+    </script>
+  {% endif %}
 </head>

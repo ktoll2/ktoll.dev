@@ -34,12 +34,31 @@ bundle exec jekyll build
 
 Jekyll writes rendered files to `_site/`; that directory is generated locally and ignored by Git.
 
+## Publishing Blog Posts
+
+Blog posts live in `blog/YYYY/MM/DD/post-slug/` and use Jekyll front matter in `index.md`. To keep a completed post out of the published site until it is ready, set:
+
+```yaml
+published: false
+reading_time: 4
+```
+
+Set `reading_time` to the intended whole-minute estimate. Jekyll excludes unpublished posts from the blog index, post URLs, and sitemap. Change `published` to `true` and push to `master` to release the post.
+
+Unpublished posts remain visible in this public repository.
+
+Create `blog/YYYY/MM/DD/post-slug/`, then copy `_templates/blog-post-template.md` to its `index.md`. Store all post-specific images and social-preview assets in that same folder. Copy `_templates/blog-social-preview-template.svg` into the folder, customize it, and export a 1200×630 PNG for the post's `social_image` field.
+
 ## Structure
 
 ```text
 _config.yml             Jekyll configuration
 _layouts/               Shared page layouts
 _includes/              Shared head, header, and footer markup
+_templates/             Reusable Markdown and social-preview templates
+blog/
+  index.html            Blog index source
+  YYYY/MM/DD/slug/      Self-contained post Markdown and assets
 index.html              Homepage source
 404.html                GitHub Pages not-found page
 Gemfile                 Local GitHub Pages/Jekyll dependencies

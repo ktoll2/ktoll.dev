@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<main class="post">
+  <article>
+    <header class="post-header">
+      <p class="section-label">Blog</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}
+        <p class="post-description">{{ page.description }}</p>
+      {% endif %}
+      <div class="post-meta">
+        <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+        {% include read-time.html reading_time=page.reading_time %}
+      </div>
+    </header>
+    <div class="post-body">
+      <aside class="post-sidebar">
+        <a class="post-back" href="{{ '/blog/' | relative_url }}">Back to blog</a>
+        <nav class="post-outline" aria-labelledby="post-outline-heading" hidden>
+          <p class="section-label" id="post-outline-heading">On this page</p>
+          <ol class="post-outline-list"></ol>
+        </nav>
+      </aside>
+      <div class="post-content">
+        {{ content }}
+      </div>
+    </div>
+  </article>
+</main>

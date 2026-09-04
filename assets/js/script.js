@@ -2,6 +2,9 @@ const themeToggle = document.querySelector(".theme-toggle");
 const themeLabel = themeToggle.querySelector(".visually-hidden");
 const statusLine = document.querySelector(".availability-negative");
 const statusStack = document.querySelector(".status-message-stack");
+const postOutline = document.querySelector(".post-outline");
+const postOutlineList = document.querySelector(".post-outline-list");
+const postContent = document.querySelector(".post-content");
 const showPersonality = new URLSearchParams(window.location.search).get("personality") === "on" && statusLine && statusStack;
 const statusOptions = [
   "Wizards wandering off mid-quest",
@@ -65,6 +68,71 @@ function resumeStatusCycle() {
   }
 }
 
+function createHeadingId(heading, index) {
+  if (heading.id) {
+    return heading.id;
+  }
+
+  const baseId = heading.textContent
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/[\s-]+/g, "-") || `section-${index + 1}`;
+  let headingId = baseId;
+  let suffix = 2;
+
+  while (document.getElementById(headingId)) {
+    headingId = `${baseId}-${suffix}`;
+    suffix += 1;
+  }
+
+  heading.id = headingId;
+  return headingId;
+}
+
+function buildPostOutline() {
+  if (!postOutline || !postOutlineList || !postContent) {
+    return;
+  }
+
+  const headings = [...postContent.querySelectorAll("h2, h3")];
+
+  if (headings.length === 0) {
+    return;
+  }
+
+  let currentTopLevelItem;
+
+  headings.forEach((heading, index) => {
+    const item = document.createElement("li");
+    const link = document.createElement("a");
+
+    link.href = `#${createHeadingId(heading, index)}`;
+    link.textContent = heading.textContent;
+    item.append(link);
+
+    if (heading.tagName === "H3" && currentTopLevelItem) {
+      let nestedList = currentTopLevelItem.querySelector(".post-outline-list-nested");
+
+      if (!nestedList) {
+        nestedList = document.createElement("ol");
+        nestedList.className = "post-outline-list-nested";
+        currentTopLevelItem.append(nestedList);
+      }
+
+      nestedList.append(item);
+    } else {
+      postOutlineList.append(item);
+
+      if (heading.tagName === "H2") {
+        currentTopLevelItem = item;
+      }
+    }
+  });
+
+  postOutline.hidden = false;
+}
+
 function setTheme(theme, persist = false) {
   document.documentElement.dataset.theme = theme;
   themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
@@ -81,6 +149,7 @@ function setTheme(theme, persist = false) {
 }
 
 setTheme(document.documentElement.dataset.theme);
+buildPostOutline();
 
 themeToggle.addEventListener("click", () => {
   const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";

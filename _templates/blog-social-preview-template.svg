@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Article title | Kirk Tolleshaug</title>
+  <desc id="description">Reusable social-preview template for Kirk Tolleshaug engineering articles.</desc>
+  <rect width="1200" height="630" fill="#b8bab0"/>
+  <path d="M0 0h818v630H0z" fill="#c9cbc1"/>
+  <path d="M0 100h818M0 530h818" stroke="#849188" stroke-width="2"/>
+  <g fill="none" stroke="#235543" opacity=".2">
+    <circle cx="-52" cy="150" r="190"/>
+    <circle cx="-52" cy="150" r="234"/>
+    <circle cx="-52" cy="150" r="278" opacity=".45"/>
+  </g>
+  <text x="82" y="89" fill="#2f6752" font-family="Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="4">KTOLL.DEV  |  BLOG</text>
+  <text x="82" y="222" fill="#173f32" font-family="Georgia, serif" font-size="78" letter-spacing="-4">ARTICLE TITLE</text>
+  <text x="82" y="300" fill="#173f32" font-family="Georgia, serif" font-size="78" letter-spacing="-4">SECOND TITLE LINE</text>
+  <text x="82" y="378" fill="#173f32" font-family="Georgia, serif" font-size="78" letter-spacing="-4">OPTIONAL THIRD LINE</text>
+  <text x="84" y="435" fill="#45534c" font-family="Arial, sans-serif" font-size="24">A concise article summary goes here.</text>
+  <text x="84" y="507" fill="#2f6752" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">MMM DD, YYYY | N MIN READ</text>
+  <g transform="translate(862 78)">
+    <rect width="258" height="258" rx="34" fill="#173f32"/>
+    <g transform="scale(4.03125)">
+      <path fill="#f5f1e8" d="M16 19h5v10l10-10h7L25 32l14 13h-7L21 35v10h-5z"/>
+      <path fill="#91c9a5" d="M40 41h12v4H40z"/>
+    </g>
+  </g>
+  <text x="864" y="416" fill="#173f32" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">TOPIC / CATEGORY</text>
+  <text x="864" y="455" fill="#173f32" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">SECONDARY TOPIC</text>
+  <text x="864" y="494" fill="#173f32" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">THIRD TOPIC</text>
+  <text x="864" y="533" fill="#173f32" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">FOURTH TOPIC</text>
+  <g transform="translate(78 561) scale(.75)">
+    <path fill="#2f6752" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/>
+  </g>
+  <text x="108" y="575" fill="#2f6752" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">VANCOUVER, WASHINGTON, UNITED STATES</text>
+</svg>

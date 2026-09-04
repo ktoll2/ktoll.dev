@@ -1,5 +1,5 @@
 <header class="site-header">
-  <a class="wordmark" href="#top">
+  <a class="wordmark" href="{{ '/' | relative_url }}#top">
     <svg class="wordmark-icon" viewBox="0 0 64 64" aria-hidden="true">
       <rect width="64" height="64" rx="14" fill="#173f32"/>
       <path fill="#f5f1e8" d="M16 19h5v10l10-10h7L25 32l14 13h-7L21 35v10h-5z"/>
@@ -12,12 +12,13 @@
     </span>
   </a>
   <nav aria-label="Primary navigation">
-    <a href="#impact">Impact</a>
-    <a href="#experience">Experience</a>
-    <a href="#work">Work</a>
-    <a href="#focus">Skills</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
+    <a href="{{ '/' | relative_url }}#impact">Impact</a>
+    <a href="{{ '/' | relative_url }}#experience">Experience</a>
+    <a href="{{ '/' | relative_url }}#work">Work</a>
+    <a href="{{ '/' | relative_url }}#focus">Skills</a>
+    <a href="{{ '/' | relative_url }}#resume">Resume</a>
+    <a href="{{ '/' | relative_url }}#contact">Contact</a>
+    <a href="{{ '/blog/' | relative_url }}">Blog</a>
   </nav>
   <button class="theme-toggle" type="button" aria-pressed="false">
     <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>

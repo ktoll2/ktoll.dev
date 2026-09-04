@@ -1,0 +1,61 @@
+---
+layout: default
+title: Blog | Kirk Tolleshaug
+description: Notes on systems, stories, and other things from Kirk Tolleshaug.
+canonical_url: https://ktoll.dev/blog/
+---
+
+<main class="blog">
+  <div class="blog-shell">
+    <header class="blog-header">
+      <p class="section-label">Blog</p>
+      <h1>Notes on systems, stories, and other things</h1>
+      <p>Writing on backend engineering, stories, and anything else worth putting into words.</p>
+    </header>
+
+    {% assign published_posts = site.pages | where: "blog_post", true | where_exp: "post", "post.published != false" | sort: "date" | reverse %}
+    {% if published_posts.size > 0 %}
+      <div class="blog-body">
+        <aside class="blog-sidebar">
+          <nav class="blog-tree" aria-labelledby="blog-tree-heading">
+            <p class="section-label" id="blog-tree-heading">Posts</p>
+            {% assign posts_by_year = published_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+            <ol class="blog-tree-years">
+              {% for year in posts_by_year %}
+                <li class="blog-tree-year">
+                  <span>{{ year.name }}</span>
+                  <ol class="blog-tree-branches">
+                    {% for post in year.items %}
+                      <li><a href="{{ post.url | relative_url }}"><time class="blog-tree-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time> - {{ post.title }}</a></li>
+                    {% endfor %}
+                  </ol>
+                </li>
+              {% endfor %}
+            </ol>
+          </nav>
+        </aside>
+        <section class="blog-articles" aria-labelledby="blog-articles-heading">
+          <h2 id="blog-articles-heading">All posts</h2>
+          {% for post in published_posts %}
+            <article class="blog-entry">
+              <div class="post-meta">
+                <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+                {% include read-time.html reading_time=post.reading_time %}
+              </div>
+              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+              {% if post.description %}
+                <p>{{ post.description }}</p>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </section>
+      </div>
+    {% else %}
+      <section class="blog-empty" aria-labelledby="blog-empty-heading">
+        <p class="section-label">Coming soon</p>
+        <h2 id="blog-empty-heading">Posts are in progress.</h2>
+        <p>Check back soon.</p>
+      </section>
+    {% endif %}
+  </div>
+</main>

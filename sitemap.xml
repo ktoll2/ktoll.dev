@@ -1,7 +1,20 @@
+---
+layout: null
+---
+{% assign published_posts = site.pages | where: "blog_post", true | where_exp: "post", "post.published != false" | sort: "date" | reverse -%}
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ktoll.dev/</loc>
+    <loc>{{ '/' | absolute_url }}</loc>
     <lastmod>2026-08-20</lastmod>
   </url>
+  <url>
+    <loc>{{ '/blog/' | absolute_url }}</loc>
+  </url>
+  {% for post in published_posts %}
+    <url>
+      <loc>{{ post.url | absolute_url }}</loc>
+      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    </url>
+  {% endfor %}
 </urlset>

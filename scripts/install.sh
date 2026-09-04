@@ -7,9 +7,14 @@ readonly bundle_path="${BUNDLE_PATH:-${HOME}/.local/share/ktoll.dev-bundle}"
 
 cd "${project_root}"
 
-if ! command -v bundle >/dev/null 2>&1; then
-  printf 'Bundler is not installed. Install Ruby and Bundler before running this script.\n' >&2
-  exit 1
+if ! command -v ruby >/dev/null 2>&1 || ! command -v bundle >/dev/null 2>&1; then
+  if ! command -v apt-get >/dev/null 2>&1; then
+    printf 'Ruby and Bundler must be installed before running this script.\n' >&2
+    exit 1
+  fi
+
+  sudo apt-get update
+  sudo apt-get install --yes ruby-full ruby-bundler build-essential
 fi
 
 bundle config set --local path "${bundle_path}"

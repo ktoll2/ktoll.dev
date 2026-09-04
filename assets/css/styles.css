@@ -241,7 +241,7 @@ h3 { margin-bottom: 12px; font-size: 25px; line-height: 1.04; }
 .post-content h3 { font-size: 28px; }
 .post-content p, .post-content ul, .post-content ol { margin-bottom: 26px; }
 .post-content figure.post-media { margin: 0 0 26px; margin-inline: 0; padding-inline: 0; text-align: left; }
-.post-content .post-media img { display: block; max-width: 100%; height: auto; }
+.post-content .post-media img, .post-content .post-media video { display: block; max-width: 100%; height: auto; }
 .post-content .post-media figcaption { margin-top: 8px; color: var(--muted); font-size: 12px; line-height: 1.5; text-align: left; }
 .post-content a { color: var(--forest-light); font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .post-content pre { overflow-x: auto; padding: 20px; color: var(--ink); background: var(--panel); font-size: 14px; line-height: 1.55; }

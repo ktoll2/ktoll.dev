@@ -28,7 +28,7 @@ const statusOptions = [
   "Parallel universes with unnecessary facial hair",
   "Sudden but inevitable betrayals"
 ];
-const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reducedMotionQuery = matchMedia("(prefers-reduced-motion: reduce)");
 let statusQueue = [];
 let currentStatus = "";
 let statusTimer;
@@ -63,9 +63,28 @@ function pauseStatusCycle() {
 }
 
 function resumeStatusCycle() {
-  if (!statusTimer && !document.hidden && !reducedMotion) {
+  if (!statusTimer && !document.hidden && !reducedMotionQuery.matches) {
     statusTimer = window.setInterval(showNextStatus, 6000);
   }
+}
+
+function setPostAnimationPlayback() {
+  const animations = document.querySelectorAll(".post-animation");
+
+  animations.forEach((animation) => {
+    if (reducedMotionQuery.matches) {
+      animation.pause();
+      animation.currentTime = 0;
+      animation.controls = true;
+      return;
+    }
+
+    animation.controls = false;
+    animation.play().catch(() => {
+      // Native controls let the reader start playback when the browser blocks it.
+      animation.controls = true;
+    });
+  });
 }
 
 function createHeadingId(heading, index) {
@@ -150,6 +169,7 @@ function setTheme(theme, persist = false) {
 
 setTheme(document.documentElement.dataset.theme);
 buildPostOutline();
+setPostAnimationPlayback();
 
 themeToggle.addEventListener("click", () => {
   const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
@@ -179,3 +199,15 @@ if (showPersonality) {
     }
   });
 }
+
+reducedMotionQuery.addEventListener("change", () => {
+  if (showPersonality) {
+    if (reducedMotionQuery.matches) {
+      pauseStatusCycle();
+    } else {
+      resumeStatusCycle();
+    }
+  }
+
+  setPostAnimationPlayback();
+});

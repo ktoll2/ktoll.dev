@@ -23,11 +23,7 @@ const statusOptions = [
 ];
 
 function onMediaQueryChange(query, listener) {
-  if (query.addEventListener) {
-    query.addEventListener("change", listener);
-  } else {
-    query.addListener(listener);
-  }
+  query.addEventListener("change", listener);
 }
 
 function initTheme() {
@@ -178,21 +174,44 @@ function initPostAnimations() {
     return;
   }
 
+  let observer = null;
+
+  function playAnimation(animation) {
+    animation.controls = false;
+    animation.play().catch(() => {
+      // Native controls let the reader start playback when the browser blocks it.
+      animation.controls = true;
+    });
+  }
+
   function setPlayback() {
-    animations.forEach((animation) => {
-      if (reducedMotionQuery.matches) {
+    if (observer) {
+      observer.disconnect();
+      observer = null;
+    }
+
+    if (reducedMotionQuery.matches) {
+      animations.forEach((animation) => {
         animation.pause();
         animation.currentTime = 0;
         animation.controls = true;
-        return;
-      }
-
-      animation.controls = false;
-      animation.play().catch(() => {
-        // Native controls let the reader start playback when the browser blocks it.
-        animation.controls = true;
       });
-    });
+      return;
+    }
+
+    // Only fetch/play each clip once it is near the viewport, so off-screen
+    // videos don't front-load their full source on page load.
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          playAnimation(entry.target);
+        } else {
+          entry.target.pause();
+        }
+      });
+    }, { rootMargin: "200px" });
+
+    animations.forEach((animation) => observer.observe(animation));
   }
 
   setPlayback();

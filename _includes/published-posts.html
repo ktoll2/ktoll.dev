@@ -1,0 +1,1 @@
+{% assign published_posts = site.pages | where: "blog_post", true | where_exp: "post", "post.published != false" | sort: "date" | reverse %}

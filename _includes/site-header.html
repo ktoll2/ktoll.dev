@@ -1,14 +1,14 @@
 <header class="site-header">
-  <a class="wordmark" href="{{ '/' | relative_url }}#top">
+  <a class="wordmark" href="{{ '/' | relative_url }}#main-content">
     <svg class="wordmark-icon" viewBox="0 0 64 64" aria-hidden="true">
       <rect width="64" height="64" rx="14" fill="#173f32"/>
       <path fill="#f5f1e8" d="M16 19h5v10l10-10h7L25 32l14 13h-7L21 35v10h-5z"/>
       <path fill="#91c9a5" d="M40 41h12v4H40z"/>
     </svg>
     <span class="wordmark-copy">
-      <span>Kirk Tolleshaug</span>
-      <span class="wordmark-subtitle">Senior Backend Software Engineer</span>
-      <span class="wordmark-location">Vancouver, Washington, United States</span>
+      <span>{{ site.author.name }}</span>
+      <span class="wordmark-subtitle">{{ site.author.job_title }}</span>
+      <span class="wordmark-location">{{ site.author.location }}</span>
     </span>
   </a>
   <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">

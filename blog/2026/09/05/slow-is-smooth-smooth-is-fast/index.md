@@ -2,9 +2,9 @@
 layout: post
 blog_post: true
 title: Slow Is Smooth, Smooth Is Fast
-date: 2026-09-03
-permalink: /blog/2026/09/03/slow-is-smooth-smooth-is-fast/
-reading_time: 9
+date: 2026-09-05
+permalink: /blog/2026/09/05/slow-is-smooth-smooth-is-fast/
+reading_time: 8
 published: true
 author: Kirk Tolleshaug
 categories:
@@ -16,7 +16,7 @@ tags:
   - reliability
 description: Taking time to clarify the work, align the people involved, and surface failure modes makes delivery faster where it matters.
 social_description: Deliberate planning reduces coordination overhead, defects, and rework, creating the fastest reliable path to production.
-social_image: /blog/2026/09/03/slow-is-smooth-smooth-is-fast/social-preview.png
+social_image: /blog/2026/09/05/slow-is-smooth-smooth-is-fast/social-preview.png
 social_image_alt: Slow Is Smooth, Smooth Is Fast, a blog post by Kirk Tolleshaug.
 ---
 
@@ -30,7 +30,7 @@ The goal is not to make every task a ceremony. It is to spend a small, deliberat
 
 Something new and exciting appears: a capability to build, a customer request to chase, an incident to solve, or a chance to finally replace a frustrating part of the system. The instinct is to engage the hyperjets and go straight to ludicrous speed.
 <figure class="post-media">
-  <video class="post-animation" loop muted playsinline preload="metadata" poster="ludicrousspeedgo-still.png" aria-label="Ludicrous speed scene">
+  <video class="post-animation" loop muted playsinline preload="metadata" poster="ludicrousspeedgo-still.jpg" aria-label="Ludicrous speed scene">
     <source src="ludicrousspeedgo.webm" type="video/webm">
     <source src="ludicrousspeedgo.mp4" type="video/mp4">
   </video>
@@ -55,7 +55,7 @@ What follows is not one correction, but a cascade:
 
 Each correction adds more assumptions, more coordination, and more momentum in the wrong direction. Before long, “We can’t stop, we have to slow down first” stops being a joke and becomes the project’s operating condition.
 <figure class="post-media">
-  <video class="post-animation" loop muted playsinline preload="metadata" poster="emergencystop-still.png" aria-label="Emergency stop scene">
+  <video class="post-animation" loop muted playsinline preload="metadata" poster="emergencystop-still.jpg" aria-label="Emergency stop scene">
     <source src="emergencystop.webm" type="video/webm">
     <source src="emergencystop.mp4" type="video/mp4">
   </video>
@@ -99,7 +99,7 @@ The artifact matters less than the confirmation it creates: the people involved 
 Good planning also makes quality cheaper, but it does not mean predicting every possible failure. The aim is to identify the pain points most likely to affect users, operators, and the team's ability to deliver.
 
 <figure class="post-media">
-  <video class="post-animation" loop muted playsinline preload="metadata" poster="whatwhatandthewhat-still.png" aria-label="Dark Helmet looks confused beside Colonel Sandurz, with the caption: What? What? What?">
+  <video class="post-animation" loop muted playsinline preload="metadata" poster="whatwhatandthewhat-still.jpg" aria-label="Dark Helmet looks confused beside Colonel Sandurz, with the caption: What? What? What?">
     <source src="whatwhatandthewhat.webm" type="video/webm">
     <source src="whatwhatandthewhat.mp4" type="video/mp4">
   </video>
@@ -129,7 +129,7 @@ For many changes, those answers fit in a few paragraphs, a ticket, or a short co
 This preparation takes real effort. It may mean bringing people together for a meeting, tracking down an answer from another team, reading unfamiliar code, or waiting for someone to validate an assumption. Those activities can feel slower than opening an editor and starting immediately.
 
 <figure class="post-media">
-  <video class="post-animation" loop muted playsinline preload="metadata" poster="spaceballs-preparing-still.png" aria-label="Dark Helmet looks through binoculars beside Colonel Sandurz, with the caption: What are you preparing? Just go!">
+  <video class="post-animation" loop muted playsinline preload="metadata" poster="spaceballs-preparing-still.jpg" aria-label="Dark Helmet looks through binoculars beside Colonel Sandurz, with the caption: What are you preparing? Just go!">
     <source src="spaceballs-preparing.webm" type="video/webm">
     <source src="spaceballs-preparing.mp4" type="video/mp4">
   </video>
@@ -150,7 +150,7 @@ That is the speed worth optimizing for: not the fastest possible start, but the 
 
 Slow is smooth. Smooth is fast.
 <figure class="post-media">
-  <video class="post-animation" loop muted playsinline preload="metadata" poster="everybodygotthat-still.png" aria-label="Dark Helmet addresses the crew and says, Everybody got that? Good!">
+  <video class="post-animation" loop muted playsinline preload="metadata" poster="everybodygotthat-still.jpg" aria-label="Dark Helmet addresses the crew and says, Everybody got that? Good!">
     <source src="everybodygotthat.webm" type="video/webm">
     <source src="everybodygotthat.mp4" type="video/mp4">
   </video>

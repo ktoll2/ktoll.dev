@@ -1,7 +1,7 @@
 ---
 layout: null
 ---
-{% assign published_posts = site.pages | where: "blog_post", true | where_exp: "post", "post.published != false" | sort: "date" | reverse -%}
+{% include published-posts.html -%}
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>

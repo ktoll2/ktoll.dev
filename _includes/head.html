@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#173f32">
+  <meta name="theme-color" content="#b8bab0">
   {% if page.noindex %}
     <meta name="robots" content="noindex">
   {% endif %}
@@ -50,12 +50,12 @@
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Kirk Tolleshaug",
-      "jobTitle": "Senior Backend Software Engineer",
-      "url": "https://ktoll.dev",
-      "email": "mailto:kirk@ktoll.dev",
-      "sameAs": ["https://www.linkedin.com/in/ktolleshaug", "https://github.com/ktoll2"],
-      "address": { "@type": "PostalAddress", "addressLocality": "Vancouver", "addressRegion": "WA", "addressCountry": "US" }
+      "name": {{ site.author.name | jsonify }},
+      "jobTitle": {{ site.author.job_title | jsonify }},
+      "url": {{ site.url | jsonify }},
+      "email": {{ "mailto:" | append: site.author.email | jsonify }},
+      "sameAs": [{{ site.author.linkedin | jsonify }}, {{ site.author.github | jsonify }}],
+      "address": { "@type": "PostalAddress", "addressLocality": {{ site.author.address.city | jsonify }}, "addressRegion": {{ site.author.address.region | jsonify }}, "addressCountry": {{ site.author.address.country | jsonify }} }
     }
   </script>
   {% if page.layout == "post" %}
@@ -71,7 +71,7 @@
         {% endif %}
         "mainEntityOfPage": { "@type": "WebPage", "@id": {{ page.canonical_url | default: page.url | absolute_url | jsonify }} },
         "image": {{ page.social_image | default: '/assets/images/social-preview-light.png' | absolute_url | jsonify }},
-        "author": { "@type": "Person", "name": {{ page.author | default: "Kirk Tolleshaug" | jsonify }} }
+        "author": { "@type": "Person", "name": {{ page.author | default: site.author.name | jsonify }} }
       }
     </script>
   {% endif %}

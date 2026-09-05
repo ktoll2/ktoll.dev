@@ -74,6 +74,8 @@ _config.yml             Jekyll configuration
 _layouts/               Shared page layouts
 _includes/              Shared head, header, and footer markup
 _templates/             Reusable Markdown and social-preview templates
+_source-assets/         Design-source files (business card, resume icons) kept
+                         in the repo but excluded from the Jekyll build
 blog/
   index.html            Blog index source
   YYYY/MM/DD/slug/      Self-contained post Markdown and assets
@@ -105,3 +107,9 @@ https://ktoll.dev/?personality=on
 ## Deployment
 
 Deploy with GitHub Pages from the `master` branch root. GitHub Pages builds the Jekyll source and deploys its generated output; `_site/` is not committed. The `CNAME` file preserves the `ktoll.dev` custom domain.
+
+A GitHub Actions workflow (`.github/workflows/ci.yml`) runs `make check` on every push and pull request, catching whitespace issues and Jekyll build failures before they reach `master`. It validates only; it does not deploy the site.
+
+## License
+
+All rights reserved. See [LICENSE](LICENSE).

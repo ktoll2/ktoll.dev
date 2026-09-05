@@ -3,10 +3,9 @@ layout: default
 blog_page: true
 title: Blog | Kirk Tolleshaug
 description: Notes on systems, stories, and other things from Kirk Tolleshaug.
-canonical_url: https://ktoll.dev/blog/
 ---
 
-<main class="blog">
+<main class="blog" id="main-content" tabindex="-1">
   <div class="blog-shell">
     <header class="blog-header">
       <p class="section-label">Blog</p>
@@ -14,7 +13,7 @@ canonical_url: https://ktoll.dev/blog/
       <p>Writing on backend engineering, stories, and anything else worth putting into words.</p>
     </header>
 
-    {% assign published_posts = site.pages | where: "blog_post", true | where_exp: "post", "post.published != false" | sort: "date" | reverse %}
+    {% include published-posts.html %}
     {% if published_posts.size > 0 %}
       <div class="blog-body">
         <aside class="blog-sidebar">

@@ -3,3 +3,14 @@ description: Reliable C#/.NET backend systems, versioned APIs, distributed proce
 url: https://ktoll.dev
 baseurl: ""
 markdown: kramdown
+author:
+  name: Kirk Tolleshaug
+  job_title: Senior Backend Software Engineer
+  email: kirk@ktoll.dev
+  linkedin: https://www.linkedin.com/in/ktolleshaug
+  github: https://github.com/ktoll2
+  location: Vancouver, Washington, United States
+  address:
+    city: Vancouver
+    region: WA
+    country: US

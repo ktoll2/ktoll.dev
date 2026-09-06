@@ -1,0 +1,14 @@
+<div class="share-menu">
+  <button class="button button-secondary{% if include.icon_only %} button-icon-only{% endif %} post-share" type="button" aria-haspopup="true" aria-expanded="false" data-share-title="{{ include.title }}" data-share-url="{{ include.url }}">
+    <span class="button-label{% if include.icon_only %} visually-hidden{% endif %}">Share</span>
+    <span class="button-icon button-icon-share" aria-hidden="true"></span>
+  </button>
+  <div class="share-menu-panel" hidden>
+    <p class="share-menu-heading">Share on</p>
+    <a class="share-menu-link" data-network="x" href="#" target="_blank" rel="noopener noreferrer"><span class="button-icon button-icon-x" aria-hidden="true"></span>X</a>
+    <a class="share-menu-link" data-network="facebook" href="#" target="_blank" rel="noopener noreferrer"><span class="button-icon button-icon-facebook" aria-hidden="true"></span>Facebook</a>
+    <a class="share-menu-link" data-network="linkedin" href="#" target="_blank" rel="noopener noreferrer"><span class="button-icon button-icon-linkedin" aria-hidden="true"></span>LinkedIn</a>
+    <a class="share-menu-link" data-network="hn" href="#" target="_blank" rel="noopener noreferrer"><span class="button-icon button-icon-hn" aria-hidden="true"></span>Hacker News</a>
+    <a class="share-menu-link" data-network="email" href="#"><span class="button-icon button-icon-email" aria-hidden="true"></span>Email</a>
+  </div>
+</div>

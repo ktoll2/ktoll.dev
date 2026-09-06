@@ -1,0 +1,29 @@
+{% if page.tags %}
+  {% include published-posts.html %}
+  {% assign other_posts = published_posts | where_exp: "post", "post.url != page.url" %}
+  {% assign related_posts = "" | split: "" %}
+  {% for post in other_posts %}
+    {% assign shared_tags = post.tags | where_exp: "tag", "page.tags contains tag" %}
+    {% if shared_tags.size > 0 %}
+      {% assign related_posts = related_posts | push: post %}
+    {% endif %}
+    {% if related_posts.size >= 3 %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% if related_posts.size > 0 %}
+  <aside class="related-posts" aria-labelledby="related-posts-heading">
+    <p class="section-label" id="related-posts-heading">Related posts</p>
+    <ul class="related-posts-list">
+      {% for post in related_posts %}
+        <li>
+          <a href="{{ post.url | relative_url }}">
+            <span class="related-posts-title">{{ post.title }}</span>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </aside>
+{% endif %}

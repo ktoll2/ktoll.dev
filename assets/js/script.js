@@ -167,6 +167,188 @@ function initPostOutline() {
   postOutline.hidden = false;
 }
 
+function initHeadingPermalinks() {
+  const headings = document.querySelectorAll(".post-content h2[id], .post-content h3[id]");
+
+  headings.forEach((heading) => {
+    const link = document.createElement("a");
+    link.className = "heading-permalink";
+    link.href = `#${heading.id}`;
+    link.setAttribute("aria-label", `Link to this section: ${heading.textContent}`);
+
+    const icon = document.createElement("span");
+    icon.className = "button-icon button-icon-link";
+    icon.setAttribute("aria-hidden", "true");
+    link.append(icon);
+
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      history.replaceState(null, "", `#${heading.id}`);
+      navigator.clipboard?.writeText(`${location.origin}${location.pathname}#${heading.id}`).then(() => {
+        showToast("Link copied to clipboard", link);
+      }).catch(() => {
+        // Clipboard unavailable; the URL hash still updated above.
+      });
+    });
+
+    heading.append(link);
+  });
+}
+
+function initReadingProgress() {
+  const progressBar = document.querySelector(".reading-progress-bar");
+  const postContent = document.querySelector(".post-content");
+
+  if (!progressBar || !postContent) {
+    return;
+  }
+
+  function updateProgress() {
+    const { top, height } = postContent.getBoundingClientRect();
+    const scrollable = height - window.innerHeight;
+    const scrolled = scrollable > 0 ? Math.min(Math.max(-top, 0), scrollable) / scrollable : 0;
+
+    progressBar.style.width = `${scrolled * 100}%`;
+  }
+
+  updateProgress();
+  document.addEventListener("scroll", updateProgress, { passive: true });
+  window.addEventListener("resize", updateProgress);
+}
+
+let toastElement;
+let toastTimeout;
+
+function showToast(message, anchor) {
+  if (!toastElement) {
+    toastElement = document.createElement("div");
+    toastElement.className = "toast";
+    toastElement.setAttribute("role", "status");
+    document.body.append(toastElement);
+  }
+
+  toastElement.textContent = message;
+
+  const gap = 10;
+  const anchorRect = anchor.getBoundingClientRect();
+  const toastRect = toastElement.getBoundingClientRect();
+  const left = Math.min(
+    Math.max(anchorRect.left + anchorRect.width / 2 - toastRect.width / 2, gap),
+    window.innerWidth - toastRect.width - gap
+  );
+  const top = anchorRect.top - toastRect.height - gap >= gap
+    ? anchorRect.top - toastRect.height - gap
+    : anchorRect.bottom + gap;
+
+  toastElement.style.left = `${left}px`;
+  toastElement.style.top = `${top}px`;
+  toastElement.classList.add("is-visible");
+
+  window.clearTimeout(toastTimeout);
+  toastTimeout = window.setTimeout(() => {
+    toastElement.classList.remove("is-visible");
+  }, 2400);
+}
+
+function copyLink(button, url) {
+  if (!navigator.clipboard) {
+    button.hidden = true;
+    return;
+  }
+
+  navigator.clipboard.writeText(url).then(() => {
+    button.classList.add("is-confirmed");
+    showToast("Link copied to clipboard", button);
+
+    window.setTimeout(() => {
+      button.classList.remove("is-confirmed");
+    }, 2000);
+  }).catch(() => {
+    // Clipboard write blocked; no further fallback for this site's audience.
+  });
+}
+
+function buildShareLinks(title, url) {
+  const encodedUrl = encodeURIComponent(url);
+  const encodedTitle = encodeURIComponent(title);
+
+  return {
+    x: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+    hn: `https://news.ycombinator.com/submitlink?u=${encodedUrl}&t=${encodedTitle}`,
+    email: `mailto:?subject=${encodedTitle}&body=${encodedUrl}`
+  };
+}
+
+function closeShareMenu(panel) {
+  panel.hidden = true;
+  panel.closest(".share-menu")?.querySelector(".post-share")?.setAttribute("aria-expanded", "false");
+}
+
+function initShareActions() {
+  document.querySelectorAll(".share-menu").forEach((menu) => {
+    const shareButton = menu.querySelector(".post-share");
+    const panel = menu.querySelector(".share-menu-panel");
+
+    if (!shareButton || !panel) {
+      return;
+    }
+
+    const links = buildShareLinks(shareButton.dataset.shareTitle, shareButton.dataset.shareUrl);
+
+    panel.querySelectorAll("[data-network]").forEach((link) => {
+      link.href = links[link.dataset.network];
+    });
+
+    shareButton.addEventListener("click", () => {
+      if (navigator.share) {
+        navigator.share({
+          title: shareButton.dataset.shareTitle,
+          url: shareButton.dataset.shareUrl
+        }).catch(() => {
+          // User cancelled, or share failed; the dropdown covers this on the next click.
+        });
+        return;
+      }
+
+      const isOpen = !panel.hidden;
+
+      document.querySelectorAll(".share-menu-panel").forEach((otherPanel) => {
+        if (otherPanel !== panel) {
+          closeShareMenu(otherPanel);
+        }
+      });
+
+      panel.hidden = isOpen;
+      shareButton.setAttribute("aria-expanded", String(!isOpen));
+    });
+  });
+
+  document.addEventListener("pointerdown", (event) => {
+    document.querySelectorAll(".share-menu-panel:not([hidden])").forEach((panel) => {
+      if (!panel.closest(".share-menu")?.contains(event.target)) {
+        closeShareMenu(panel);
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      document.querySelectorAll(".share-menu-panel:not([hidden])").forEach(closeShareMenu);
+    }
+  });
+
+  document.querySelectorAll(".post-copy-link").forEach((copyButton) => {
+    if (!navigator.clipboard) {
+      copyButton.hidden = true;
+      return;
+    }
+
+    copyButton.addEventListener("click", () => copyLink(copyButton, copyButton.dataset.copyUrl));
+  });
+}
+
 function initPostAnimations() {
   const animations = document.querySelectorAll(".post-animation");
 
@@ -301,5 +483,8 @@ function initPersonality() {
 initTheme();
 initMobileMenu();
 initPostOutline();
+initHeadingPermalinks();
+initReadingProgress();
+initShareActions();
 initPostAnimations();
 initPersonality();

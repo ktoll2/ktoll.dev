@@ -67,6 +67,8 @@ a { color: inherit; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; clip-path: inset(50%); }
 .skip-link { position: absolute; z-index: 10; top: -100%; left: 16px; padding: 12px 20px; border-radius: 8px; color: var(--on-forest); background: var(--forest); font-size: 14px; font-weight: 700; text-decoration: none; }
 .skip-link:focus { top: 16px; }
+.toast { position: fixed; z-index: 30; padding: 10px 18px; border-radius: 999px; color: var(--on-forest); background: var(--forest); font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; text-align: center; white-space: nowrap; opacity: 0; transform: translateY(6px); transition: opacity 150ms ease, transform 150ms ease; pointer-events: none; }
+.toast.is-visible { opacity: 1; transform: translateY(0); }
 
 .eyebrow, .section-label, .aside-label, .case-kicker { margin: 0; color: var(--forest-light); font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
 .eyebrow > span, .availability > span:first-child { width: 7px; height: 7px; border-radius: 50%; background: #91c9a5; box-shadow: 0 0 0 4px rgba(145, 201, 165, .15); }
@@ -108,17 +110,32 @@ h3 { margin-bottom: 12px; font-size: 25px; line-height: 1.04; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .button { display: inline-flex; align-items: center; gap: 20px; min-height: 50px; padding: 0 18px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; transition: background-color 180ms ease, color 180ms ease; }
 .button span { margin-left: auto; font-size: 17px; }
+.button .button-label { margin-left: 0; font-size: inherit; }
 .button-icon { display: block; width: 17px; height: 17px; background-color: currentColor; }
+.button-icon-only { min-height: 38px; padding: 0 10px; }
+.share-menu { position: relative; }
+.share-menu-panel { position: absolute; z-index: 15; top: calc(100% + 8px); left: 0; display: flex; flex-direction: column; gap: 2px; min-width: 200px; padding: 8px; border: 1px solid var(--control-line); border-radius: 10px; background: var(--panel); box-shadow: 0 12px 28px rgba(0, 0, 0, .22); }
+.share-menu-panel[hidden] { display: none; }
+.share-menu-heading { margin: 2px 0 4px; padding: 0 10px; color: var(--forest-light); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.share-menu-link { display: flex; align-items: center; gap: 12px; padding: 9px 10px; border: 0; border-radius: 6px; color: var(--ink); background: none; font: inherit; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-align: left; text-decoration: none; text-transform: uppercase; cursor: pointer; }
+.share-menu-link:hover, .share-menu-link:focus-visible { color: var(--forest-light); background: var(--soft); }
+.share-menu-link .button-icon { flex-shrink: 0; width: 15px; height: 15px; }
 .button-icon-download { -webkit-mask: url("../images/download.svg") center / contain no-repeat; mask: url("../images/download.svg") center / contain no-repeat; }
 .button-icon-external { -webkit-mask: url("../images/external.svg") center / contain no-repeat; mask: url("../images/external.svg") center / contain no-repeat; }
 .button-icon-email { -webkit-mask: url("../images/resume-email-icon.svg") center / contain no-repeat; mask: url("../images/resume-email-icon.svg") center / contain no-repeat; }
 .button-icon-arrow { -webkit-mask: url("../images/arrow.svg") center / contain no-repeat; mask: url("../images/arrow.svg") center / contain no-repeat; }
 .button-icon-linkedin { -webkit-mask: url("../images/linkedin.svg") center / contain no-repeat; mask: url("../images/linkedin.svg") center / contain no-repeat; transform: translateY(-1px); }
 .button-icon-github { -webkit-mask: url("../images/github.svg") center / contain no-repeat; mask: url("../images/github.svg") center / contain no-repeat; }
+.button-icon-share { -webkit-mask: url("../images/share.svg") center / contain no-repeat; mask: url("../images/share.svg") center / contain no-repeat; }
+.button-icon-link { -webkit-mask: url("../images/link.svg") center / contain no-repeat; mask: url("../images/link.svg") center / contain no-repeat; }
+.button-icon-x { -webkit-mask: url("../images/x.svg") center / contain no-repeat; mask: url("../images/x.svg") center / contain no-repeat; }
+.button-icon-facebook { -webkit-mask: url("../images/facebook.svg") center / contain no-repeat; mask: url("../images/facebook.svg") center / contain no-repeat; }
+.button-icon-hn { -webkit-mask: url("../images/hackernews.svg") center / contain no-repeat; mask: url("../images/hackernews.svg") center / contain no-repeat; }
 .button-primary { color: var(--on-forest); background: var(--forest); }
 .button-primary:hover, .button-primary:focus-visible { background: var(--forest-hover); }
 .button-secondary { border: 1px solid var(--control-line); }
 .button-secondary:hover, .button-secondary:focus-visible { background: var(--soft); }
+button.button { border: 0; color: inherit; background: none; font: inherit; cursor: pointer; }
 
 .impact { border-top: 1px solid var(--line); }
 .section-intro { display: grid; grid-template-columns: minmax(150px, .55fr) minmax(0, 1.45fr); gap: 28px; margin-bottom: 68px; }

@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<div class="reading-progress" aria-hidden="true"><div class="reading-progress-bar"></div></div>
 <main class="post" id="main-content" tabindex="-1">
   <article>
     <header class="post-header">
@@ -9,6 +10,13 @@ layout: default
       <h1>{{ page.title }}</h1>
       {% if page.description %}
         <p class="post-description">{{ page.description }}</p>
+      {% endif %}
+      {% if page.tags %}
+        <ul class="tags" aria-label="Post tags">
+          {% for tag in page.tags %}
+            <li>{{ tag | replace: '-', ' ' }}</li>
+          {% endfor %}
+        </ul>
       {% endif %}
       <div class="post-meta">
         <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
@@ -18,6 +26,11 @@ layout: default
     <div class="post-body">
       <aside class="post-sidebar">
         <a class="post-back" href="{{ '/blog/' | relative_url }}">Back to blog</a>
+        {% assign post_share_url = page.canonical_url | default: page.url | absolute_url %}
+        <div class="post-actions">
+          {% include share-button.html title=page.title url=post_share_url %}
+          <button class="button button-secondary post-copy-link" type="button" data-copy-url="{{ post_share_url }}" aria-live="polite"><span class="button-label">Copy link</span> <span class="button-icon button-icon-link" aria-hidden="true"></span></button>
+        </div>
         <nav class="post-outline" aria-labelledby="post-outline-heading" hidden>
           <p class="section-label" id="post-outline-heading">On this page</p>
           <ol class="post-outline-list"></ol>
@@ -25,6 +38,7 @@ layout: default
       </aside>
       <div class="post-content">
         {{ content }}
+        {% include related-posts.html %}
       </div>
     </div>
   </article>

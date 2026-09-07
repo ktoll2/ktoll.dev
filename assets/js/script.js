@@ -26,6 +26,8 @@ function onMediaQueryChange(query, listener) {
   query.addEventListener("change", listener);
 }
 
+// The "ktoll-theme" key and the #111b17 / #b8bab0 theme-color pair below are
+// also set by the pre-paint inline script in _includes/head.html; keep in sync.
 function initTheme() {
   const themeToggle = document.querySelector(".theme-toggle");
   const themeLabel = themeToggle?.querySelector(".visually-hidden");
@@ -184,11 +186,7 @@ function initHeadingPermalinks() {
     link.addEventListener("click", (event) => {
       event.preventDefault();
       history.replaceState(null, "", `#${heading.id}`);
-      navigator.clipboard?.writeText(`${location.origin}${location.pathname}#${heading.id}`).then(() => {
-        showToast("Link copied to clipboard", link);
-      }).catch(() => {
-        // Clipboard unavailable; the URL hash still updated above.
-      });
+      copyToClipboard(`${location.origin}${location.pathname}#${heading.id}`, link);
     });
 
     heading.append(link);
@@ -250,21 +248,26 @@ function showToast(message, anchor) {
   }, 2400);
 }
 
+function copyToClipboard(text, anchor, onSuccess) {
+  navigator.clipboard?.writeText(text).then(() => {
+    showToast("Link copied to clipboard", anchor);
+    onSuccess?.();
+  }).catch(() => {
+    // Clipboard blocked; any URL-hash update the caller made still stands.
+  });
+}
+
 function copyLink(button, url) {
   if (!navigator.clipboard) {
     button.hidden = true;
     return;
   }
 
-  navigator.clipboard.writeText(url).then(() => {
+  copyToClipboard(url, button, () => {
     button.classList.add("is-confirmed");
-    showToast("Link copied to clipboard", button);
-
     window.setTimeout(() => {
       button.classList.remove("is-confirmed");
     }, 2000);
-  }).catch(() => {
-    // Clipboard write blocked; no further fallback for this site's audience.
   });
 }
 

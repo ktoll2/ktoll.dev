@@ -32,6 +32,7 @@
   --site-width: 1180px;
   --post-width: 800px;
   --content-gutter: 32px;
+  --chrome-height: 186px; /* .site-header min-height 86 + .site-footer min-height 100; keep in sync with header.css / footer.css */
 }
 
 :root[data-theme="dark"] {
@@ -120,17 +121,20 @@ h3 { margin-bottom: 12px; font-size: 25px; line-height: 1.04; }
 .share-menu-link { display: flex; align-items: center; gap: 12px; padding: 9px 10px; border: 0; border-radius: 6px; color: var(--ink); background: none; font: inherit; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-align: left; text-decoration: none; text-transform: uppercase; cursor: pointer; }
 .share-menu-link:hover, .share-menu-link:focus-visible { color: var(--forest-light); background: var(--soft); }
 .share-menu-link .button-icon { flex-shrink: 0; width: 15px; height: 15px; }
-.button-icon-download { -webkit-mask: url("../images/download.svg") center / contain no-repeat; mask: url("../images/download.svg") center / contain no-repeat; }
-.button-icon-external { -webkit-mask: url("../images/external.svg") center / contain no-repeat; mask: url("../images/external.svg") center / contain no-repeat; }
-.button-icon-email { -webkit-mask: url("../images/resume-email-icon.svg") center / contain no-repeat; mask: url("../images/resume-email-icon.svg") center / contain no-repeat; }
-.button-icon-arrow { -webkit-mask: url("../images/arrow.svg") center / contain no-repeat; mask: url("../images/arrow.svg") center / contain no-repeat; }
-.button-icon-linkedin { -webkit-mask: url("../images/linkedin.svg") center / contain no-repeat; mask: url("../images/linkedin.svg") center / contain no-repeat; transform: translateY(-1px); }
-.button-icon-github { -webkit-mask: url("../images/github.svg") center / contain no-repeat; mask: url("../images/github.svg") center / contain no-repeat; }
-.button-icon-share { -webkit-mask: url("../images/share.svg") center / contain no-repeat; mask: url("../images/share.svg") center / contain no-repeat; }
-.button-icon-link { -webkit-mask: url("../images/link.svg") center / contain no-repeat; mask: url("../images/link.svg") center / contain no-repeat; }
-.button-icon-x { -webkit-mask: url("../images/x.svg") center / contain no-repeat; mask: url("../images/x.svg") center / contain no-repeat; }
-.button-icon-facebook { -webkit-mask: url("../images/facebook.svg") center / contain no-repeat; mask: url("../images/facebook.svg") center / contain no-repeat; }
-.button-icon-hn { -webkit-mask: url("../images/hackernews.svg") center / contain no-repeat; mask: url("../images/hackernews.svg") center / contain no-repeat; }
+/* Icon glyphs: each modifier only names its SVG via --icon; the shared rule
+   below applies the mask. Used by both .button-icon-* and .footer-icon-*. */
+[class*="button-icon-"]:not(.button-icon-only), [class*="footer-icon-"] { -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat; }
+.button-icon-download { --icon: url("../images/download.svg"); }
+.button-icon-external { --icon: url("../images/external.svg"); }
+.button-icon-email, .footer-icon-email { --icon: url("../images/resume-email-icon.svg"); }
+.button-icon-arrow { --icon: url("../images/arrow.svg"); }
+.button-icon-linkedin, .footer-icon-linkedin { --icon: url("../images/linkedin.svg"); transform: translateY(-1px); }
+.button-icon-github, .footer-icon-github { --icon: url("../images/github.svg"); }
+.button-icon-share { --icon: url("../images/share.svg"); }
+.button-icon-link { --icon: url("../images/link.svg"); }
+.button-icon-x { --icon: url("../images/x.svg"); }
+.button-icon-facebook { --icon: url("../images/facebook.svg"); }
+.button-icon-hn { --icon: url("../images/hackernews.svg"); }
 .button-primary { color: var(--on-forest); background: var(--forest); }
 .button-primary:hover, .button-primary:focus-visible { background: var(--forest-hover); }
 .button-secondary { border: 1px solid var(--control-line); }
@@ -195,7 +199,7 @@ button.button { border: 0; color: inherit; background: none; font: inherit; curs
 .contact > p:not(.section-label) { max-width: 570px; margin-bottom: 36px; color: var(--copy); font-size: 16px; line-height: 1.7; }
 .contact .contact-note { margin-top: -20px; font-size: 13px; }
 .contact-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-.not-found { display: grid; min-height: calc(100vh - 186px); place-items: center; text-align: center; }
+.not-found { display: grid; min-height: calc(100vh - var(--chrome-height)); place-items: center; text-align: center; }
 .not-found > div { max-width: 720px; }
 .not-found h1 { margin: 18px 0 24px; }
 .not-found p:not(.section-label) { max-width: 480px; margin: 0 auto 36px; color: var(--copy); line-height: 1.7; }
@@ -250,4 +254,65 @@ button.button { border: 0; color: inherit; background: none; font: inherit; curs
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+
+/* ============================================================
+   Site header, wordmark, primary navigation, theme toggle
+   ============================================================ */
+.site-header { position: sticky; top: 0; z-index: 10; display: flex; width: 100%; align-items: center; justify-content: space-between; min-height: 86px; padding: 0 max(var(--content-gutter), calc((100% - var(--site-width)) / 2)); border-bottom: 1px solid var(--line); background: var(--chrome); }
+.wordmark { display: flex; align-items: center; gap: 10px; color: var(--forest); font-family: var(--serif); font-size: 22px; font-weight: 700; letter-spacing: -.04em; line-height: .9; text-decoration: none; }
+.wordmark-icon { width: 44px; height: 44px; flex: none; }
+.wordmark-copy { display: flex; flex-direction: column; }
+.wordmark-subtitle, .wordmark-location { margin-top: 5px; color: var(--muted); font-family: var(--sans); font-size: 8px; font-weight: 700; letter-spacing: .09em; line-height: 1; text-transform: uppercase; }
+.wordmark-location { margin-top: 3px; }
+:root[data-theme="dark"] .wordmark { color: var(--forest-light); }
+.primary-navigation-list { display: flex; align-items: center; gap: clamp(16px, 2.4vw, 32px); margin: 0 0 0 auto; padding: 0; list-style: none; }
+.primary-navigation-list a { color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+.primary-navigation-list a:hover, .primary-navigation-list a:focus-visible { color: var(--forest-light); }
+.menu-toggle { display: none; align-items: center; gap: 8px; padding: 0; border: 0; color: var(--forest-light); background: transparent; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+.menu-toggle-icon { display: grid; width: 18px; gap: 4px; }
+.menu-toggle-icon span { display: block; height: 1px; background: currentColor; }
+.menu-toggle:hover, .menu-toggle:focus-visible { color: var(--forest-light); outline: 2px solid var(--forest-light); outline-offset: 4px; }
+
+.theme-toggle { position: relative; display: flex; width: 54px; height: 26px; align-items: center; justify-content: space-between; padding: 0; border: 1px solid var(--control-line); border-radius: 999px; color: var(--forest-light); background: var(--soft); cursor: pointer; }
+.theme-toggle svg { z-index: 1; width: 12px; margin: 0 7px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.65; }
+.toggle-thumb { position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: var(--panel); box-shadow: 0 2px 5px rgba(0,0,0,.2); transition: transform 180ms ease; }
+.moon-icon { opacity: .58; }
+:root[data-theme="dark"] .sun-icon { opacity: .58; }
+:root[data-theme="dark"] .moon-icon { opacity: 1; }
+:root[data-theme="dark"] .toggle-thumb { transform: translateX(28px); }
+.theme-toggle:hover, .theme-toggle:focus-visible { outline: 2px solid var(--forest-light); outline-offset: 3px; }
+
+@media (max-width: 800px) {
+  .js .menu-toggle { display: inline-flex; margin-left: auto; }
+  .site-header nav { position: absolute; top: 100%; left: 0; display: grid; width: 100%; margin: 0; padding: 8px var(--content-gutter) 20px; border-bottom: 1px solid var(--line); background: var(--chrome); }
+  .js .site-header nav { display: none; }
+  .js .site-header nav.is-open { display: grid; }
+  .primary-navigation-list { display: grid; gap: 0; margin: 0; }
+  .primary-navigation-list .nav-item { margin: 0 -10px; border-bottom: 1px solid var(--line); transition: background-color 160ms ease; }
+  .primary-navigation-list .nav-item:hover, .primary-navigation-list .nav-item:focus-within, .primary-navigation-list .nav-item:active { background: var(--forest-light); }
+  .primary-navigation-list .nav-item a { display: block; padding: 13px 10px; color: var(--ink); font-size: 12px; transition: color 160ms ease; }
+  .primary-navigation-list .nav-item:hover a, .primary-navigation-list .nav-item:focus-within a, .primary-navigation-list .nav-item:active a { color: var(--paper); }
+  .primary-navigation-list .nav-item a:focus-visible { outline: 2px solid var(--forest-light); outline-offset: -2px; }
+  .primary-navigation-list .nav-theme .theme-toggle { margin-top: 14px; }
+}
+
+@media (max-width: 560px) {
+  .site-header { min-height: 70px; }
+}
+
+/* ============================================================
+   Site footer
+   ============================================================ */
+.site-footer { position: relative; z-index: 1; display: flex; width: 100%; align-items: center; justify-content: space-between; min-height: 100px; padding: 0 max(var(--content-gutter), calc((100% - var(--site-width)) / 2)); border-top: 1px solid var(--line); color: var(--muted); background: var(--chrome); font-size: 11px; }
+.site-footer div { display: flex; gap: 20px; }
+.site-footer a { font-weight: 700; text-decoration: none; }
+.footer-social { display: inline-flex; align-items: center; gap: 5px; }
+/* .footer-icon-* glyph masks (linkedin, email, github) share the --icon
+   definitions with .button-icon-* above so the SVG URLs live in one place. */
+.footer-icon { display: block; width: 12px; height: 12px; background-color: currentColor; }
+.site-footer a:hover, .site-footer a:focus-visible { color: var(--forest-light); }
+
+@media (max-width: 560px) {
+  .site-footer { align-items: flex-start; flex-direction: column; justify-content: center; gap: 14px; }
 }

@@ -4,7 +4,6 @@ blog_post: true
 title: Documentation Is How Senior Engineers Scale
 date: 2026-09-19
 permalink: /blog/2026/09/19/documentation-is-how-senior-engineers-scale/
-reading_time: 7
 published: false
 author: Kirk Tolleshaug
 categories:
@@ -20,7 +19,7 @@ social_image: /blog/2026/09/19/documentation-is-how-senior-engineers-scale/socia
 social_image_alt: Documentation Is How Senior Engineers Scale, a blog post by Kirk Tolleshaug.
 ---
 
-<!-- DRAFT: date, slug, reading_time, and social-preview.png are placeholders. Update them and flip published to true when this is ready to release. -->
+<!-- DRAFT: date, slug, and social-preview.png are placeholders. Update them and flip published to true when this is ready to release. -->
 
 A senior engineer's calendar fills up for a predictable reason: they are the fastest path to an answer. Someone hits an unfamiliar part of the system, or needs to know why a decision was made, or wants a second opinion before a risky change, and the shortest route to confidence is "ask the person who already knows." That instinct is reasonable. It is also the reason the same explanation gets given six times in six different meetings.
 

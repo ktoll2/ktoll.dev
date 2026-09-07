@@ -11,16 +11,9 @@ layout: default
       {% if page.description %}
         <p class="post-description">{{ page.description }}</p>
       {% endif %}
-      {% if page.tags %}
-        <ul class="tags" aria-label="Post tags">
-          {% for tag in page.tags %}
-            <li>{{ tag | replace: '-', ' ' }}</li>
-          {% endfor %}
-        </ul>
-      {% endif %}
+      {% include post-tags.html tags=page.tags %}
       <div class="post-meta">
-        <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-        {% include read-time.html reading_time=page.reading_time %}
+        {% include post-meta.html date=page.date content=content %}
       </div>
     </header>
     <div class="post-body">
@@ -29,7 +22,7 @@ layout: default
         {% assign post_share_url = page.canonical_url | default: page.url | absolute_url %}
         <div class="post-actions">
           {% include share-button.html title=page.title url=post_share_url %}
-          <button class="button button-secondary post-copy-link" type="button" data-copy-url="{{ post_share_url }}" aria-live="polite"><span class="button-label">Copy link</span> <span class="button-icon button-icon-link" aria-hidden="true"></span></button>
+          {% include copy-link-button.html url=post_share_url %}
         </div>
         <nav class="post-outline" aria-labelledby="post-outline-heading" hidden>
           <p class="section-label" id="post-outline-heading">On this page</p>

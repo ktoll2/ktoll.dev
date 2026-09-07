@@ -58,42 +58,38 @@ Blog posts live in `blog/YYYY/MM/DD/post-slug/` and use Jekyll front matter in `
 
 ```yaml
 published: false
-reading_time: 4
 ```
 
-Set `reading_time` to the intended whole-minute estimate. Add `last_modified_at` when published content changes so the sitemap can report its modification date. Jekyll excludes unpublished posts from the blog index, post URLs, and sitemap. Change `published` to `true` and push to `master` to release the post.
+Read time is computed from the post body at build time, so no front matter is needed for it. Add `last_modified_at` when published content changes so the sitemap can report its modification date. Jekyll excludes unpublished posts from the blog index, post URLs, and sitemap. Change `published` to `true` and push to `master` to release the post.
 
 Unpublished posts remain visible in this public repository.
 
-Create `blog/YYYY/MM/DD/post-slug/`, then copy `_templates/blog-post-template.md` to its `index.md`. Store all post-specific images and social-preview assets in that same folder. Copy `_templates/blog-social-preview-template.svg` into the folder, customize it, and export a 1200×630 PNG for the post's `social_image` field.
+Create `blog/YYYY/MM/DD/post-slug/`, then copy `_templates/blog-post-template.md` to its `index.md`. Store all post-specific images and social-preview assets in that same folder. Copy `_source-assets/images/blog-social-preview-template.svg` into the folder as `social-preview.svg`, customize it, and export a 1200×630 `social-preview.png` for the post's `social_image` field. The `.svg` stays in the repo as the editable source but is excluded from the build (see `exclude` in `_config.yml`); only the `.png` ships.
 
 ## Structure
 
 ```text
-_config.yml             Jekyll configuration
-_layouts/               Shared page layouts
-_includes/              Shared head, header, and footer markup
-_templates/             Reusable Markdown and social-preview templates
-_source-assets/         Design-source files (business card, resume icons) kept
-                         in the repo but excluded from the Jekyll build
+_config.yml            Jekyll and site configuration
+_layouts/              Page layouts (default, post)
+_includes/             Shared markup: <head>, header, footer, blog partials
+_templates/            Starter file for a new blog post
+_source-assets/        Editable design sources; excluded from the build
 blog/
-  index.html            Blog index source
-  YYYY/MM/DD/slug/      Self-contained post Markdown and assets
-index.html              Homepage source
-404.html                GitHub Pages not-found page
-Gemfile                 Local GitHub Pages/Jekyll dependencies
-Makefile                Local install, build, validation, cleanup, and server commands
-CNAME                   Custom domain configuration
-robots.txt              Crawler policy
-sitemap.xml             Search-engine sitemap
+  index.html           Blog index
+  YYYY/MM/DD/slug/      One self-contained folder per post
+index.html             Homepage
+404.html               Not-found page
+sitemap.xml            Built from the published posts
+robots.txt             Crawler policy
+CNAME                  Custom domain (ktoll.dev)
+Gemfile / Gemfile.lock Ruby dependencies (github-pages gem)
+Makefile               install / build / check / serve / clean
+.github/workflows/     CI: runs "make check" on push and PR
 assets/
-  css/styles.css         Shared site and homepage styles
-  css/header.css         Header, navigation, and menu styles
-  css/footer.css         Footer styles
-  css/blog.css           Blog index and post styles
-  js/script.js           Theme and optional fun-mode behavior
-  images/                Profile, favicon, and social-preview assets
-  documents/             Resume formats and vCard
+  css/                 styles.css site-wide; blog.css on blog and posts
+  js/script.js         Theme toggle, menus, post UX, fun mode
+  images/              Favicon, icon masks, photo, social-preview PNG
+  documents/           Résumé (PDF / DOCX / MD) and vCard
 ```
 
 ## Fun Mode
@@ -107,6 +103,8 @@ https://ktoll.dev/?personality=on
 ## Deployment
 
 Deploy with GitHub Pages from the `master` branch root. GitHub Pages builds the Jekyll source and deploys its generated output; `_site/` is not committed. The `CNAME` file preserves the `ktoll.dev` custom domain.
+
+The site opts out of the default GitHub Pages theme (`theme: null` in `_config.yml`) and ships its own layouts, includes, and CSS. The `exclude` list in `_config.yml` keeps development files (`Gemfile`, `Makefile`, `LICENSE`, `README.md`) and design-source SVGs out of the deployed output.
 
 A GitHub Actions workflow (`.github/workflows/ci.yml`) runs `make check` on every push and pull request, catching whitespace issues and Jekyll build failures before they reach `master`. It validates only; it does not deploy the site.
 

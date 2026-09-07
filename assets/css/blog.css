@@ -1,7 +1,7 @@
 .reading-progress { position: fixed; top: 0; left: 0; z-index: 20; width: 100%; height: 3px; background: transparent; }
 .reading-progress-bar { width: 0%; height: 100%; background: var(--forest-light); transition: width 100ms linear; }
 .blog, .post { position: relative; z-index: 1; width: 100%; padding: clamp(74px, 11vw, 148px) 0; }
-.blog { min-height: calc(100vh - 186px); }
+.blog { min-height: calc(100vh - var(--chrome-height)); }
 .blog-shell, .post article { display: grid; width: min(1440px, calc(100% - (var(--content-gutter) * 2))); grid-template-columns: minmax(180px, 1fr) minmax(0, var(--post-width)) minmax(180px, 1fr); column-gap: clamp(36px, 5vw, 72px); margin: 0 auto; }
 .blog-header, .post-header { grid-column: 2; }
 .blog-header { margin-bottom: 68px; }

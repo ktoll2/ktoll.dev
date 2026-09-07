@@ -1,3 +1,9 @@
-{% if include.reading_time %}
-  <span class="read-time">{{ include.reading_time }} min read</span>
-{% endif %}
+{%- comment -%}
+  include.content may arrive as rendered HTML (post layout) or as raw Markdown
+  (blog index, where posts are not yet converted at render time). markdownify
+  first so both paths count the same prose.
+{%- endcomment -%}
+{%- assign read_time_words = include.content | markdownify | strip_html | number_of_words -%}
+{%- assign read_time_minutes = read_time_words | divided_by: 200.0 | ceil -%}
+{%- if read_time_minutes < 1 -%}{%- assign read_time_minutes = 1 -%}{%- endif -%}
+<span class="read-time">{{ read_time_minutes }} min read</span>

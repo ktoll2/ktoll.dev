@@ -3,6 +3,17 @@ description: Reliable C#/.NET backend systems, versioned APIs, distributed proce
 url: https://ktoll.dev
 baseurl: ""
 markdown: kramdown
+theme: null  # this site ships its own layouts/CSS; disables the default jekyll-theme-primer and its 136 KB assets/css/style.css
+
+exclude:
+  - "blog/**/social-preview.svg"  # post preview sources; only the exported .png ships
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - Makefile
+  - README.md
+  - vendor
+
 author:
   name: Kirk Tolleshaug
   job_title: Senior Backend Software Engineer

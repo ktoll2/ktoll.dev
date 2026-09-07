@@ -1,0 +1,7 @@
+{% if include.tags %}
+  <ul class="tags" aria-label="Post tags">
+    {% for tag in include.tags %}
+      <li>{{ tag | replace: '-', ' ' }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}

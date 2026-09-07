@@ -1,0 +1,13 @@
+{%- comment -%}
+  Poster-framed, self-playing clip (see initPostAnimations in script.js).
+  Place {name}.webm, {name}.mp4, and {name}-still.jpg beside the post's
+  index.md. `label` is the accessible description. `credit` overrides the
+  figcaption; it defaults to the Spaceballs attribution used across this post.
+{%- endcomment -%}
+<figure class="post-media">
+  <video class="post-animation" loop muted playsinline preload="metadata" poster="{{ include.name }}-still.jpg" aria-label="{{ include.label }}">
+    <source src="{{ include.name }}.webm" type="video/webm">
+    <source src="{{ include.name }}.mp4" type="video/mp4">
+  </video>
+  <figcaption>{% if include.credit %}{{ include.credit }}{% else %}<cite>Spaceballs</cite> (1987), directed by Mel Brooks. Copyright © 1987 Metro-Goldwyn-Mayer.{% endif %}</figcaption>
+</figure>

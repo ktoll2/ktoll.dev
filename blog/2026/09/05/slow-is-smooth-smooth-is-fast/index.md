@@ -4,7 +4,6 @@ blog_post: true
 title: Slow Is Smooth, Smooth Is Fast
 date: 2026-09-05
 permalink: /blog/2026/09/05/slow-is-smooth-smooth-is-fast/
-reading_time: 8
 published: true
 author: Kirk Tolleshaug
 categories:
@@ -29,13 +28,7 @@ The goal is not to make every task a ceremony. It is to spend a small, deliberat
 ## The allure of speed
 
 Something new and exciting appears: a capability to build, a customer request to chase, an incident to solve, or a chance to finally replace a frustrating part of the system. The instinct is to engage the hyperjets and go straight to ludicrous speed.
-<figure class="post-media">
-  <video class="post-animation" loop muted playsinline preload="metadata" poster="ludicrousspeedgo-still.jpg" aria-label="Ludicrous speed scene">
-    <source src="ludicrousspeedgo.webm" type="video/webm">
-    <source src="ludicrousspeedgo.mp4" type="video/mp4">
-  </video>
-  <figcaption><cite>Spaceballs</cite> (1987), directed by Mel Brooks. Copyright © 1987 Metro-Goldwyn-Mayer.</figcaption>
-</figure>
+{% include post-video.html name="ludicrousspeedgo" label="Ludicrous speed scene" %}
 
 The excitement is not the problem. The problem is allowing it to crowd out every other consideration. Going fast at all costs rests on a few attractive assumptions:
 
@@ -54,13 +47,7 @@ What follows is not one correction, but a cascade:
 - A missed failure mode becomes an urgent patch layered onto an already unstable change.
 
 Each correction adds more assumptions, more coordination, and more momentum in the wrong direction. Before long, “We can’t stop, we have to slow down first” stops being a joke and becomes the project’s operating condition.
-<figure class="post-media">
-  <video class="post-animation" loop muted playsinline preload="metadata" poster="emergencystop-still.jpg" aria-label="Emergency stop scene">
-    <source src="emergencystop.webm" type="video/webm">
-    <source src="emergencystop.mp4" type="video/mp4">
-  </video>
-  <figcaption><cite>Spaceballs</cite> (1987), directed by Mel Brooks. Copyright © 1987 Metro-Goldwyn-Mayer.</figcaption>
-</figure>
+{% include post-video.html name="emergencystop" label="Emergency stop scene" %}
 
 Speed rarely delivers the results it promises when it promises them. Reality seldom follows a straight path, and charging ahead without accounting for its turns only gets us to the wrong place faster.
 
@@ -98,13 +85,7 @@ The artifact matters less than the confirmation it creates: the people involved 
 
 Good planning also makes quality cheaper, but it does not mean predicting every possible failure. The aim is to identify the pain points most likely to affect users, operators, and the team's ability to deliver.
 
-<figure class="post-media">
-  <video class="post-animation" loop muted playsinline preload="metadata" poster="whatwhatandthewhat-still.jpg" aria-label="Dark Helmet looks confused beside Colonel Sandurz, with the caption: What? What? What?">
-    <source src="whatwhatandthewhat.webm" type="video/webm">
-    <source src="whatwhatandthewhat.mp4" type="video/mp4">
-  </video>
-  <figcaption><cite>Spaceballs</cite> (1987), directed by Mel Brooks. Copyright © 1987 Metro-Goldwyn-Mayer.</figcaption>
-</figure>
+{% include post-video.html name="whatwhatandthewhat" label="Dark Helmet looks confused beside Colonel Sandurz, with the caption: What? What? What?" %}
 
 Before implementation, walk through the unhappy paths that are plausible and costly: retries, partial failures, duplicate messages, stale data, timeouts, authorization boundaries, schema changes, and rollback. Ask where the system is fragile, where a person will be blocked or confused, and what will be hardest to diagnose under pressure. Not every risk needs a large solution, but the important ones deserve an explicit decision.
 
@@ -128,13 +109,7 @@ For many changes, those answers fit in a few paragraphs, a ticket, or a short co
 
 This preparation takes real effort. It may mean bringing people together for a meeting, tracking down an answer from another team, reading unfamiliar code, or waiting for someone to validate an assumption. Those activities can feel slower than opening an editor and starting immediately.
 
-<figure class="post-media">
-  <video class="post-animation" loop muted playsinline preload="metadata" poster="spaceballs-preparing-still.jpg" aria-label="Dark Helmet looks through binoculars beside Colonel Sandurz, with the caption: What are you preparing? Just go!">
-    <source src="spaceballs-preparing.webm" type="video/webm">
-    <source src="spaceballs-preparing.mp4" type="video/mp4">
-  </video>
-  <figcaption><cite>Spaceballs</cite> (1987), directed by Mel Brooks. Copyright © 1987 Metro-Goldwyn-Mayer.</figcaption>
-</figure>
+{% include post-video.html name="spaceballs-preparing" label="Dark Helmet looks through binoculars beside Colonel Sandurz, with the caption: What are you preparing? Just go!" %}
 
 That cost is real, but the cost of proceeding without the answer is greater: interrupted work, conflicting implementations, late changes, and incidents that pull even more people away from their work. A focused conversation now is often cheaper than many fragmented conversations after the work has already begun.
 
@@ -149,10 +124,4 @@ Testing is more complete because failure cases were considered early. Stakeholde
 That is the speed worth optimizing for: not the fastest possible start, but the shortest **reliable** path from an idea to a working, observable, supportable result. Smooth work is not effortless work. It is work whose effort is spent moving forward rather than recovering from **avoidable** friction.
 
 Slow is smooth. Smooth is fast.
-<figure class="post-media">
-  <video class="post-animation" loop muted playsinline preload="metadata" poster="everybodygotthat-still.jpg" aria-label="Dark Helmet addresses the crew and says, Everybody got that? Good!">
-    <source src="everybodygotthat.webm" type="video/webm">
-    <source src="everybodygotthat.mp4" type="video/mp4">
-  </video>
-  <figcaption><cite>Spaceballs</cite> (1987), directed by Mel Brooks. Copyright © 1987 Metro-Goldwyn-Mayer.</figcaption>
-</figure>
+{% include post-video.html name="everybodygotthat" label="Dark Helmet addresses the crew and says, Everybody got that? Good!" %}

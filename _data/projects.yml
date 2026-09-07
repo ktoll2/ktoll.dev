@@ -1,0 +1,33 @@
+# Projects shown in the "Projects" section on the homepage.
+#
+# Each entry:
+#   name:        Repository or project name (required)
+#   description: One-sentence summary (required)
+#   url:         Link, usually the GitHub repo (required)
+#   tags:        List of tech/topic labels, shown verbatim as pills (optional)
+#   featured:    true to render the card full-width, like the featured case study (optional)
+#
+# Order here is the order on the page. Keep the list short and curated.
+
+- name: Tabkeeper
+  description: A Visual Studio 2022 extension that saves and restores pinned document tabs per Git branch.
+  url: https://github.com/ktoll2/Tabkeeper
+  featured: true
+  tags:
+    - C#
+    - Visual Studio SDK
+    - .NET
+
+- name: ai-config
+  description: Reusable AI development configuration — agents, skills, commands, rules, prompts, and tool integrations.
+  url: https://github.com/ktoll2/ai-config
+  tags:
+    - AI-assisted engineering
+    - Developer tooling
+
+- name: ktoll.dev
+  description: This site — a Jekyll static site with hand-written HTML, CSS, and JavaScript, deployed on GitHub Pages.
+  url: https://github.com/ktoll2/ktoll.dev
+  tags:
+    - Jekyll
+    - HTML / CSS / JS

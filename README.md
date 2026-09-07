@@ -66,10 +66,15 @@ Unpublished posts remain visible in this public repository.
 
 Create `blog/YYYY/MM/DD/post-slug/`, then copy `_templates/blog-post-template.md` to its `index.md`. Store all post-specific images and social-preview assets in that same folder. Copy `_source-assets/images/blog-social-preview-template.svg` into the folder as `social-preview.svg`, customize it, and export a 1200×630 `social-preview.png` for the post's `social_image` field. The `.svg` stays in the repo as the editable source but is excluded from the build (see `exclude` in `_config.yml`); only the `.png` ships.
 
+## Projects Section
+
+The homepage Projects section is driven by `_data/projects.yml`. Each entry needs `name`, `description`, and `url`; `tags` (a list of labels) and `featured: true` (renders the card full-width) are optional. List order is page order. The section is hidden entirely when the file has no entries.
+
 ## Structure
 
 ```text
 _config.yml            Jekyll and site configuration
+_data/projects.yml     Curated repo list for the homepage Projects section
 _layouts/              Page layouts (default, post)
 _includes/             Shared markup: <head>, header, footer, blog partials
 _templates/            Starter file for a new blog post

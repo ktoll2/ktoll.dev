@@ -152,7 +152,7 @@ button.button { border: 0; color: inherit; background: none; font: inherit; curs
 .impact-number { margin-bottom: 20px; color: var(--forest-light); font-family: var(--serif); font-size: clamp(31px, 3.5vw, 50px); letter-spacing: -.06em; line-height: 1; }
 .impact-number i { font-family: var(--sans); font-size: .6em; font-style: normal; }
 .impact-grid h3 { font-size: 22px; }
-.impact-grid p:last-child, .case-study > p:not(.case-number):not(.case-kicker), .focus-grid p { margin-bottom: 0; color: var(--copy); font-size: 14px; line-height: 1.65; }
+.impact-grid p:last-child, .case-study > p:not(.case-number):not(.case-kicker), .focus-grid p, .project-card > p { margin-bottom: 0; color: var(--copy); font-size: 14px; line-height: 1.65; }
 
 .experience { background: var(--panel); box-shadow: 0 0 0 100vmax var(--panel); clip-path: inset(0 -100vmax); }
 .experience::before { position: absolute; z-index: 0; right: -390px; bottom: 9%; width: 350px; height: 350px; border: 1px solid var(--motif-line); border-radius: 50%; box-shadow: 0 0 0 42px var(--motif-ring), 0 0 0 84px color-mix(in srgb, var(--motif-ring) 70%, transparent); content: ""; }
@@ -177,6 +177,16 @@ button.button { border: 0; color: inherit; background: none; font: inherit; curs
 .case-study h3 { font-size: clamp(26px, 2.7vw, 40px); }
 .case-study > .tags { margin-top: auto; }
 .case-study:not(.case-study-featured) > .tags { margin-top: 40px; }
+
+.projects { border-bottom: 1px solid var(--line); }
+.projects-grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.project-card { display: flex; min-height: 240px; flex-direction: column; padding: 31px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.project-card-featured { grid-column: span 2; }
+.project-card h3 { margin-bottom: 14px; font-size: 25px; }
+.project-card h3 a { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.project-card h3 a:hover, .project-card h3 a:focus-visible { color: var(--forest-light); }
+.project-card h3 .button-icon { width: 13px; height: 13px; }
+.project-card > .tags { margin-top: auto; padding-top: 24px; }
 
 .focus { border-bottom: 1px solid var(--line); }
 .focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; }
@@ -246,6 +256,8 @@ button.button { border: 0; color: inherit; background: none; font: inherit; curs
   .case-number { margin-bottom: 28px; }
   .case-study h3 { font-size: 29px; }
   .case-study > .tags { margin-top: 28px; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-card, .project-card-featured { grid-column: auto; min-height: 0; padding: 25px; }
   .focus-grid { grid-template-columns: 1fr; gap: 34px; }
   .resume-downloads > div, .resume-download-buttons { display: grid; width: 100%; }
   .resume-downloads .button { justify-content: space-between; }

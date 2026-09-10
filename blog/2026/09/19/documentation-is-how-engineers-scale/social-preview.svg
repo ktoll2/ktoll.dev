@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
-  <title id="title">Documentation Is How Senior Engineers Scale | Kirk Tolleshaug</title>
-  <desc id="description">Documentation is how senior engineers scale past the limits of their own calendar. An engineering article by Kirk Tolleshaug.</desc>
+  <title id="title">Documentation Is How Engineers Scale | Kirk Tolleshaug</title>
+  <desc id="description">Writing replaces the meeting, not the thinking. An engineering article by Kirk Tolleshaug.</desc>
   <rect width="1200" height="630" fill="#b8bab0"/>
   <path d="M0 0h818v630H0z" fill="#c9cbc1"/>
   <path d="M0 100h818M0 530h818" stroke="#849188" stroke-width="2"/>
@@ -10,11 +10,10 @@
     <circle cx="-52" cy="150" r="278" opacity=".45"/>
   </g>
   <text x="82" y="89" fill="#2f6752" font-family="Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="4">KTOLL.DEV  |  BLOG</text>
-  <text x="82" y="222" fill="#173f32" font-family="Georgia, serif" font-size="72" letter-spacing="-4">Documentation Is</text>
-  <text x="82" y="300" fill="#173f32" font-family="Georgia, serif" font-size="72" letter-spacing="-4">How Senior Engineers</text>
-  <text x="82" y="378" fill="#173f32" font-family="Georgia, serif" font-size="72" letter-spacing="-4">Scale</text>
-  <text x="84" y="435" fill="#45534c" font-family="Arial, sans-serif" font-size="24">Writing replaces the meeting, not the thinking.</text>
-  <text x="84" y="507" fill="#2f6752" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">SEP 19, 2026 | 7 MIN READ</text>
+  <text x="82" y="262" fill="#173f32" font-family="Georgia, serif" font-size="72" letter-spacing="-4">Documentation Is</text>
+  <text x="82" y="340" fill="#173f32" font-family="Georgia, serif" font-size="72" letter-spacing="-4">How Engineers Scale</text>
+  <text x="84" y="417" fill="#45534c" font-family="Arial, sans-serif" font-size="24">Writing replaces the meeting, not the thinking.</text>
+  <text x="84" y="474" fill="#2f6752" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">SEP 19, 2026 | 14 MIN READ</text>
   <g transform="translate(862 78)">
     <rect width="258" height="258" rx="34" fill="#173f32"/>
     <g transform="scale(4.03125)">
@@ -24,8 +23,8 @@
   </g>
   <text x="864" y="416" fill="#173f32" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">ENGINEERING PRACTICES</text>
   <text x="864" y="455" fill="#173f32" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">DOCUMENTATION</text>
-  <text x="864" y="494" fill="#173f32" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">MENTORSHIP</text>
-  <text x="864" y="533" fill="#173f32" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">SCALING IMPACT</text>
+  <text x="864" y="494" fill="#173f32" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">SCALING IMPACT</text>
+  <text x="864" y="533" fill="#173f32" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">AI-ASSISTED DEVELOPMENT</text>
   <g transform="translate(78 561) scale(.75)">
     <path fill="#2f6752" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/>
   </g>

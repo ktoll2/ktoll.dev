@@ -1,27 +1,30 @@
 ---
 layout: post
 blog_post: true
-title: Documentation Is How Senior Engineers Scale
+title: Documentation Is How Engineers Scale
 date: 2026-09-19
-permalink: /blog/2026/09/19/documentation-is-how-senior-engineers-scale/
+permalink: /blog/2026/09/19/documentation-is-how-engineers-scale/
 published: false
 author: Kirk Tolleshaug
 categories:
   - engineering-practices
 tags:
   - documentation
-  - communication
-  - mentorship
   - scaling-impact
-description: Writing things down replaces repeated meetings with a reference other people can use without you in the room.
-social_description: Documentation is how senior engineers scale past the limits of their own calendar.
-social_image: /blog/2026/09/19/documentation-is-how-senior-engineers-scale/social-preview.png
-social_image_alt: Documentation Is How Senior Engineers Scale, a blog post by Kirk Tolleshaug.
+  - maintainability
+  - developer-experience
+  - ai-assisted-development
+description: Writing things down turns an answer given once into a reference others can use without you. Kept with the code, maintained like code, and generated where it can be.
+social_description: Write your reasoning down once and it keeps working for whoever needs it next, people and their tools alike.
+social_image: /blog/2026/09/19/documentation-is-how-engineers-scale/social-preview.png
+social_image_alt: Documentation Is How Engineers Scale, a blog post by Kirk Tolleshaug.
 ---
 
-<!-- DRAFT: date, slug, and social-preview.png are placeholders. Update them and flip published to true when this is ready to release. -->
+A senior engineer's calendar fills up for a predictable reason: they are the fastest path to an answer. Someone hits an unfamiliar part of the system, or needs to know why a decision was made, or wants a second opinion before a risky change, and the shortest route to confidence is "ask the person who already knows." 
 
-A senior engineer's calendar fills up for a predictable reason: they are the fastest path to an answer. Someone hits an unfamiliar part of the system, or needs to know why a decision was made, or wants a second opinion before a risky change, and the shortest route to confidence is "ask the person who already knows." That instinct is reasonable. It is also the reason the same explanation gets given six times in six different meetings.
+<!-- gif of frodo asking gandalf about news -->
+
+That instinct is reasonable. It is also the reason the same explanation gets given six times in six different meetings.
 
 Documentation is what breaks that loop. It is not paperwork bolted onto the real work; it is how the answer you already gave once becomes available to the next five people who need it, without you having to be in the room.
 
@@ -31,21 +34,27 @@ It also outlasts you. People change teams, go on leave, or move to other compani
 
 Every recurring meeting exists because some piece of context does not live anywhere durable. A status meeting exists because the plan is not written down where people can check it themselves. A design review gets scheduled twice because the first version of the decision was never captured, so half the room shows up to relitigate it. An onboarding session gets repeated quarter after quarter because the setup steps live only in someone's memory.
 
+<!-- gif of council of elrond -->
+
 None of this is a scheduling problem. It is a context-storage problem, and meetings are the fallback humans reach for when the storage is missing. A meeting is synchronous, expensive, and forgotten within a week unless someone writes it down anyway. Documentation is the same information made asynchronous, cheap to consult, and durable past the moment it was created.
 
 This does not mean every meeting is avoidable, or that documentation replaces judgment, debate, or the kind of conversation where two people actually change their minds. It means most of the meetings that exist purely to transmit information one more time are a sign that the information should have had a home already.
 
 ## Writing is how one person's time becomes many people's leverage
 
-A senior engineer's most limited resource is not skill; it is attention. There are only so many hours to spend explaining the same authentication flow, the same deployment process, the same reason a particular shortcut was rejected two years ago. Every one of those explanations given live, one person at a time, is capped by the number of hours in a day.
+An engineer's most limited resource is not skill; it is attention. There are only so many hours to spend explaining the same authentication flow, the same deployment process, the same reason a particular shortcut was rejected two years ago. Every one of those explanations given live, one person at a time, is capped by the number of hours in a day.
 
-Written down once, the same explanation is capped by nothing. A design doc, a runbook, a well-placed comment explaining a non-obvious constraint, an architecture decision record: each of these turns a single conversation into a resource that keeps paying out long after the person who wrote it has moved to the next problem. That is the actual mechanism behind "senior engineers scale their impact." It is not that they are present in more places at once. It is that their reasoning is available in more places at once, because they wrote it down where someone else could find it.
+Written down once, the same explanation is capped by nothing. A design doc, a runbook, a well-placed comment explaining a non-obvious constraint, an architecture decision record: each of these turns a single conversation into a resource that keeps paying out long after the person who wrote it has moved to the next problem. That is the actual mechanism behind "scaling your impact." It is not that you are present in more places at once. It is that your reasoning is available in more places at once, because you wrote it down where someone else could find it.
 
-This is also why documentation is disproportionately a senior responsibility, not because juniors cannot write, but because a senior engineer usually has more context worth extracting: more of the "why," more of the tradeoffs that were rejected, more of the failure modes only visible in hindsight. Writing that down is not overhead layered onto the job. It is one of the highest-leverage things the job produces.
+This is also why the responsibility falls heaviest on whoever holds the most context, not because other people cannot write, but because that person usually has the most worth extracting: more of the "why," more of the tradeoffs that were rejected, more of the failure modes only visible in hindsight. Writing that down is not overhead layered onto the job. It is one of the highest-leverage things the job produces.
 
 ## Who you are actually writing for
 
-That leverage only shows up if the writing reaches the people who need it, and that starts with being honest about who they are. It is easy to write for the reader who already understands the system, because that reader is the one in your head while you type. That reader does not need the document. The people who do are missing the context you have right now, and none of them will have you on hand to fill the gap:
+That leverage only shows up if the writing reaches the people who need it, and that starts with being honest about who they are. It is easy to write for the reader who already understands the system, because that reader is the one in your head while you type. That reader does not need the document. 
+
+<!-- gif of frodo reading bilbo's book -->
+
+The people who do are missing the context you have right now, and none of them will have you on hand to fill the gap:
 
 - **The next hire, three months from now**, who holds none of the context you are currently carrying and does not yet know which questions to ask.
 - **The engineer on call at 2 a.m.**, staring at an alert for a system they have never touched, who needs the outcome and the next step, not the history.
@@ -63,9 +72,11 @@ Knowing the reader narrows the next question: what actually needs a document. No
 - **The decision and its rejected alternatives**, not just the final answer. Future readers need to know what was already considered and why it did not work, or they will propose it again.
 - **The non-obvious constraint behind a piece of code**: a rate limit imposed by a vendor, a historical incident that shaped a retry policy, a compliance rule that looks arbitrary until you know the reason.
 - **The runbook for anything that will be operated by someone other than its author**, especially under pressure, at an hour when the author is not reachable.
-- **The onboarding path for a system**, so ramping up a new person becomes reading and asking targeted questions rather than shadowing a senior engineer for two weeks.
+- **The onboarding path for a system**, so ramping up a new person becomes reading and asking targeted questions rather than shadowing someone who knows it for two weeks.
 
 The test is simple: if you can imagine explaining this same thing again in three months to someone who was not in the room today, it belongs somewhere durable.
+
+<!-- gif of doors of durin -->
 
 ## Keep the documentation in the repository
 
@@ -89,11 +100,15 @@ Two things routinely fill the space where real documentation should be. Both sit
 
 A home in the repository is necessary but not sufficient. Treating documentation as something you produce once and file away is how it turns into a liability: a page that no longer matches reality is worse than a missing one. A missing page sends someone to ask a person; a wrong page sends them confidently in the wrong direction. Stale documentation does not degrade gracefully. It fails silently, and the reader usually finds out only after acting on it.
 
+<!-- gif of mines of moria -->
+
 Documentation stays useful only when it is maintained the way code is maintained:
 
 - **It changes in the same commit as the code.** If a change makes a document wrong, fixing the document is part of that change, not a follow-up ticket that never gets picked up. Updating the doc in the same pull request also gives the reviewer a chance to catch a mismatch.
 - **It gets deleted when it is dead.** Four contradictory pages about the same subsystem is not four times as documented; it is undocumented with extra steps. Removing what is no longer true is maintenance, not loss.
 - **It is checked for accuracy when someone is already in the area.** Not on a rigid schedule, but when a person touches the code and notices that the page and reality have drifted apart, closing that gap is the work, not a distraction from it.
+
+<!-- gif of rivendell -->
 
 None of this makes documentation a lesser artifact that merely props up the code. The code shows what the system does; for anyone who was not there when it was written, the documentation is the only place the reasoning survives: the approaches that were tried and abandoned, the failure that shaped a design, the constraint that makes an obvious simplification wrong. Losing that is losing part of the system, even when every line still compiles. A short, accurate page that is kept current beats a thorough one that no one trusts.
 
@@ -125,3 +140,5 @@ Every recurring meeting that exists purely to transmit information again is a si
 None of this works without the discipline to actually do it. Structure, tooling, and automation lower the cost of good documentation; they do not remove the need to sit down and write the part only a person knows, or to fix the page when the code moves under it. That habit is the whole thing. The time it costs is small and spent now; the time it saves is large and paid back every time someone finds the answer without needing you.
 
 If you are the person people keep asking, that is a sign your knowledge is valuable, not that your calendar has to absorb the cost of it forever. Write it down, put it where the next person will actually find it, keep it honest as the system changes, and let the tools that now read your repository do some of the upkeep. Your answer keeps working long after the meeting would have ended.
+
+<!-- gif of Gandalf reading Isildur's account in the archives of Minas Tirith. -->

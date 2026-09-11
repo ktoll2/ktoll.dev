@@ -4,7 +4,7 @@ blog_post: true
 title: Documentation Is How Engineers Scale
 date: 2026-09-19
 permalink: /blog/2026/09/19/documentation-is-how-engineers-scale/
-published: false
+published: true
 author: Kirk Tolleshaug
 categories:
   - engineering-practices
@@ -20,9 +20,9 @@ social_image: /blog/2026/09/19/documentation-is-how-engineers-scale/social-previ
 social_image_alt: Documentation Is How Engineers Scale, a blog post by Kirk Tolleshaug.
 ---
 
-A senior engineer's calendar fills up for a predictable reason: they are the fastest path to an answer. Someone hits an unfamiliar part of the system, or needs to know why a decision was made, or wants a second opinion before a risky change, and the shortest route to confidence is "ask the person who already knows." 
+A senior engineer's calendar fills up for a predictable reason: they are the fastest path to an answer. Someone hits an unfamiliar part of the system, or needs to know why a decision was made, or wants a second opinion before a risky change, and the shortest route to confidence is "ask the person who already knows."
 
-<!-- gif of frodo asking gandalf about news -->
+{% include post-video.html name="whatnewsoftheoutsideworld" label="Gandalf visits Bag End and Frodo asks for news of the outside world." credit="<cite>The Lord of the Rings: The Fellowship of the Ring</cite> (2001), directed by Peter Jackson. Copyright © 2001 New Line Cinema." %}
 
 That instinct is reasonable. It is also the reason the same explanation gets given six times in six different meetings.
 
@@ -34,7 +34,7 @@ It also outlasts you. People change teams, go on leave, or move to other compani
 
 Every recurring meeting exists because some piece of context does not live anywhere durable. A status meeting exists because the plan is not written down where people can check it themselves. A design review gets scheduled twice because the first version of the decision was never captured, so half the room shows up to relitigate it. An onboarding session gets repeated quarter after quarter because the setup steps live only in someone's memory.
 
-<!-- gif of council of elrond -->
+{% include post-video.html name="councilofelrond" label="The Council of Elrond debates what to do with the Ring." credit="<cite>The Lord of the Rings: The Fellowship of the Ring</cite> (2001), directed by Peter Jackson. Copyright © 2001 New Line Cinema." %}
 
 None of this is a scheduling problem. It is a context-storage problem, and meetings are the fallback humans reach for when the storage is missing. A meeting is synchronous, expensive, and forgotten within a week unless someone writes it down anyway. Documentation is the same information made asynchronous, cheap to consult, and durable past the moment it was created.
 
@@ -50,9 +50,9 @@ This is also why the responsibility falls heaviest on whoever holds the most con
 
 ## Who you are actually writing for
 
-That leverage only shows up if the writing reaches the people who need it, and that starts with being honest about who they are. It is easy to write for the reader who already understands the system, because that reader is the one in your head while you type. That reader does not need the document. 
+That leverage only shows up if the writing reaches the people who need it, and that starts with being honest about who they are. It is easy to write for the reader who already understands the system, because that reader is the one in your head while you type. That reader does not need the document.
 
-<!-- gif of frodo reading bilbo's book -->
+{% include post-video.html name="thereandbackagain" label="Frodo reads Bilbo's book, There and Back Again." credit="<cite>The Lord of the Rings: The Fellowship of the Ring</cite> (2001), directed by Peter Jackson. Copyright © 2001 New Line Cinema." %}
 
 The people who do are missing the context you have right now, and none of them will have you on hand to fill the gap:
 
@@ -76,7 +76,7 @@ Knowing the reader narrows the next question: what actually needs a document. No
 
 The test is simple: if you can imagine explaining this same thing again in three months to someone who was not in the room today, it belongs somewhere durable.
 
-<!-- gif of doors of durin -->
+{% include post-video.html name="mellon" label="Gandalf speaks the password at the Doors of Durin." credit="<cite>The Lord of the Rings: The Fellowship of the Ring</cite> (2001), directed by Peter Jackson. Copyright © 2001 New Line Cinema." %}
 
 ## Keep the documentation in the repository
 
@@ -100,7 +100,7 @@ Two things routinely fill the space where real documentation should be. Both sit
 
 A home in the repository is necessary but not sufficient. Treating documentation as something you produce once and file away is how it turns into a liability: a page that no longer matches reality is worse than a missing one. A missing page sends someone to ask a person; a wrong page sends them confidently in the wrong direction. Stale documentation does not degrade gracefully. It fails silently, and the reader usually finds out only after acting on it.
 
-<!-- gif of mines of moria -->
+{% include post-video.html name="ruins" label="The Fellowship finds the ruined halls of Moria." credit="<cite>The Lord of the Rings: The Fellowship of the Ring</cite> (2001), directed by Peter Jackson. Copyright © 2001 New Line Cinema." %}
 
 Documentation stays useful only when it is maintained the way code is maintained:
 
@@ -108,7 +108,7 @@ Documentation stays useful only when it is maintained the way code is maintained
 - **It gets deleted when it is dead.** Four contradictory pages about the same subsystem is not four times as documented; it is undocumented with extra steps. Removing what is no longer true is maintenance, not loss.
 - **It is checked for accuracy when someone is already in the area.** Not on a rigid schedule, but when a person touches the code and notices that the page and reality have drifted apart, closing that gap is the work, not a distraction from it.
 
-<!-- gif of rivendell -->
+{% include post-video.html name="rivendell" label="The hidden valley of Rivendell." credit="<cite>The Lord of the Rings: The Fellowship of the Ring</cite> (2001), directed by Peter Jackson. Copyright © 2001 New Line Cinema." %}
 
 None of this makes documentation a lesser artifact that merely props up the code. The code shows what the system does; for anyone who was not there when it was written, the documentation is the only place the reasoning survives: the approaches that were tried and abandoned, the failure that shaped a design, the constraint that makes an obvious simplification wrong. Losing that is losing part of the system, even when every line still compiles. A short, accurate page that is kept current beats a thorough one that no one trusts.
 
@@ -131,7 +131,7 @@ Generation covers what the code can already describe about itself. The rest stil
 - **Finding what has gone stale.** Asked to compare a document against the current code, an assistant is good at spotting the paragraph that no longer matches a function signature, a renamed field, or a changed default.
 - **Keeping the mechanical parts current.** Configuration references, parameter lists, environment setup steps: the pieces that rot fastest are the ones a tool can regenerate or verify on each change.
 
-Two caveats matter. First, an assistant can draft and check, but a person still has to verify: it will state a plausible but incorrect reason for a decision, and only someone with the context can catch that. Second, the value runs both ways. Teams increasingly point AI assistants at their own repositories to answer questions and make changes, and those assistants can only work from what is written down. Good documentation used to scale your reasoning to other people; now it scales your reasoning to the tools those people use as well. The constraint you never wrote down is the one an assistant will violate on your behalf.
+Two caveats matter. First, an assistant can produce a draft, but a person still has to check it: it will state a plausible but incorrect reason for a decision, and only someone with the context can catch that. Second, assistants are not only writers of documentation anymore; they are readers of it too. Teams increasingly point AI assistants at their own repositories to answer questions and make changes, and those assistants can only work from what is written down. Good documentation used to scale your reasoning to other people; now it scales your reasoning to the tools those people use as well. The constraint you never wrote down is the one an assistant will violate on your behalf.
 
 ## What to carry forward
 
@@ -141,4 +141,4 @@ None of this works without the discipline to actually do it. Structure, tooling,
 
 If you are the person people keep asking, that is a sign your knowledge is valuable, not that your calendar has to absorb the cost of it forever. Write it down, put it where the next person will actually find it, keep it honest as the system changes, and let the tools that now read your repository do some of the upkeep. Your answer keeps working long after the meeting would have ended.
 
-<!-- gif of Gandalf reading Isildur's account in the archives of Minas Tirith. -->
+{% include post-video.html name="accountofisildur" label="Gandalf reads Isildur's account in the archives of Minas Tirith." credit="<cite>The Lord of the Rings: The Fellowship of the Ring</cite> (2001), directed by Peter Jackson. Copyright © 2001 New Line Cinema." %}

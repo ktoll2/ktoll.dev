@@ -1,4 +1,4 @@
-.PHONY: build check clean clean-build install serve
+.PHONY: build check clean clean-build install serve serve-drafts
 
 BUNDLE_PATH ?= $(HOME)/.local/share/ktoll.dev-bundle
 
@@ -24,3 +24,10 @@ clean-build: clean build
 serve:
 	bundle exec jekyll clean
 	bundle exec jekyll serve --livereload
+
+# Local-only preview that also renders future-dated and published:false posts.
+# --future/--unpublished are Jekyll build flags, not front matter, so nothing
+# here affects what actually ships when the site is deployed for real.
+serve-drafts:
+	bundle exec jekyll clean
+	bundle exec jekyll serve --livereload --future --unpublished

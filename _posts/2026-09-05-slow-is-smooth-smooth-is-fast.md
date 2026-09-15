@@ -1,10 +1,7 @@
 ---
 layout: post
-blog_post: true
 title: Slow Is Smooth, Smooth Is Fast
 date: 2026-09-05
-permalink: /blog/2026/09/05/slow-is-smooth-smooth-is-fast/
-published: true
 author: Kirk Tolleshaug
 categories:
   - engineering-practices
@@ -15,7 +12,7 @@ tags:
   - reliability
 description: Taking time to clarify the work, align the people involved, and surface failure modes makes delivery faster where it matters.
 social_description: Deliberate planning reduces coordination overhead, defects, and rework, creating the fastest reliable path to production.
-social_image: /blog/2026/09/05/slow-is-smooth-smooth-is-fast/social-preview.png
+social_image: /assets/blog/slow-is-smooth-smooth-is-fast/social-preview.png
 social_image_alt: Slow Is Smooth, Smooth Is Fast, a blog post by Kirk Tolleshaug.
 ---
 

@@ -4,15 +4,26 @@ url: https://ktoll.dev
 baseurl: ""
 markdown: kramdown
 theme: null  # this site ships its own layouts/CSS; disables the default jekyll-theme-primer and its 136 KB assets/css/style.css
+permalink: /blog/:year/:month/:day/:title/  # single source of truth for post URLs; :year/:month/:day/:title already come from each _posts/YYYY-MM-DD-slug.md filename, so no per-post permalink override is needed
 
 exclude:
-  - "blog/**/social-preview.svg"  # post preview sources; only the exported .png ships
+  - "assets/blog/**/social-preview.svg"  # post preview sources; only the exported .png ships
   - Gemfile
   - Gemfile.lock
   - LICENSE
   - Makefile
   - README.md
   - vendor
+
+# `future` is intentionally left unset (defaults to false): only posts dated on or before the
+# build's current date are ever written to _site. A post only needs `published: false` set
+# explicitly when it should stay hidden regardless of its date.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      published: true
 
 author:
   name: Kirk Tolleshaug

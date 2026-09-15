@@ -1,9 +1,7 @@
 ---
 layout: post
-blog_post: true
 title: Documentation Is How Engineers Scale
 date: 2026-09-19
-permalink: /blog/2026/09/19/documentation-is-how-engineers-scale/
 published: false
 author: Kirk Tolleshaug
 categories:
@@ -16,7 +14,7 @@ tags:
   - ai-assisted-development
 description: Writing things down turns an answer given once into a reference others can use without you. Kept with the code, maintained like code, and generated where it can be.
 social_description: Write your reasoning down once and it keeps working for whoever needs it next, people and their tools alike.
-social_image: /blog/2026/09/19/documentation-is-how-engineers-scale/social-preview.png
+social_image: /assets/blog/documentation-is-how-engineers-scale/social-preview.png
 social_image_alt: Documentation Is How Engineers Scale, a blog post by Kirk Tolleshaug.
 ---
 

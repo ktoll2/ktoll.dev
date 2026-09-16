@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tabkeeper: Pinned Tabs That Follow the Branch"
-date: 2026-09-17
+date: 2026-09-16
 published: true
 author: Kirk Tolleshaug
 categories:

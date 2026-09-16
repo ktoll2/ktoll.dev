@@ -69,15 +69,15 @@ The project is MIT-licensed, with a `.vsix` published on every release, and list
   </li>
   <li style="display:flex;align-items:center;gap:0.6em;">
     <img src="/assets/images/visual-studio.svg" width="20" height="20" alt="" style="flex:none;">
-    <a href="TODO-MARKETPLACE-LINK-VS">Visual Studio Marketplace</a>
+    <a href="https://marketplace.visualstudio.com/items?itemName=KirkTolleshaug.Tabkeeper">Visual Studio Marketplace</a>
   </li>
   <li style="display:flex;align-items:center;gap:0.6em;">
     <img src="/assets/images/vscode.svg" width="20" height="20" alt="" style="flex:none;">
-    <a href="TODO-MARKETPLACE-LINK-VSCODE">VS Code Marketplace</a>
+    <a href="https://marketplace.visualstudio.com/items?itemName=KirkTolleshaug.TabkeeperVSC">VS Code Marketplace</a>
   </li>
   <li style="display:flex;align-items:center;gap:0.6em;">
     <img src="/assets/images/openvsx.png" width="20" height="20" alt="" style="flex:none;">
-    <a href="TODO-MARKETPLACE-LINK-OPENVSX">Open VSX</a>
+    <a href="https://open-vsx.org/extension/KirkTolleshaug/TabkeeperVSC">Open VSX</a>
   </li>
 </ul>
 

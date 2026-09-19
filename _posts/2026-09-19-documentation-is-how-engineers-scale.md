@@ -2,7 +2,7 @@
 layout: post
 title: Documentation Is How Engineers Scale
 date: 2026-09-19
-published: false
+published: true
 author: Kirk Tolleshaug
 categories:
   - engineering-practices

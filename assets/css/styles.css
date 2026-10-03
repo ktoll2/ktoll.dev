@@ -130,6 +130,7 @@ h3 { margin-bottom: 12px; font-size: 25px; line-height: 1.04; }
 .button-icon-arrow { --icon: url("../images/arrow.svg"); }
 .button-icon-linkedin, .footer-icon-linkedin { --icon: url("../images/linkedin.svg"); transform: translateY(-1px); }
 .button-icon-github, .footer-icon-github { --icon: url("../images/github.svg"); }
+.button-icon-rss, .footer-icon-rss { --icon: url("../images/rss.svg"); }
 .button-icon-share { --icon: url("../images/share.svg"); }
 .button-icon-link { --icon: url("../images/link.svg"); }
 .button-icon-x { --icon: url("../images/x.svg"); }

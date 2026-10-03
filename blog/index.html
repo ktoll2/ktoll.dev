@@ -19,6 +19,7 @@ description: Notes on systems, stories, and other things from Kirk Tolleshaug.
         <aside class="blog-sidebar">
           <nav class="blog-tree" aria-labelledby="blog-tree-heading">
             <p class="section-label" id="blog-tree-heading">Posts</p>
+            {% include rss-link.html %}
             {% assign posts_by_year = published_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
             <ol class="blog-tree-years">
               {% for year in posts_by_year %}

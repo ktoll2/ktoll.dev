@@ -45,9 +45,11 @@
 .post-back:hover, .post-back:focus-visible { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 .post-actions { display: flex; flex-direction: column; gap: 10px; margin-bottom: 26px; }
 .post-actions .share-menu { width: 100%; }
-.post-actions .button:not(.button-icon-only) { width: 100%; justify-content: space-between; }
-.post-actions .button { min-height: 42px; padding: 0 14px; font-size: 10px; }
-.post-actions .button-icon { width: 15px; height: 15px; }
+.post-actions .button:not(.button-icon-only), .blog-tree .button { width: 100%; justify-content: space-between; }
+.post-actions button.button-secondary { border: 1px solid var(--control-line); }
+.post-actions .button, .blog-tree .button { min-height: 42px; padding: 0 14px; font-size: 10px; font-weight: 400; }
+.post-actions .button-icon, .blog-tree .button-icon { width: 15px; height: 15px; }
+.blog-tree .button { margin-top: 14px; }
 .post-copy-link.is-confirmed { color: var(--forest-light); border-color: var(--forest-light); }
 .post-outline { max-width: 260px; margin: 0; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .post-outline-list, .post-outline-list-nested { margin: 0; list-style: none; }

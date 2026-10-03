@@ -45,7 +45,8 @@
   <meta name="twitter:image:alt" content="{{ social_image_alt }}">
   <title>{{ page.title | default: site.title }}</title>
   <link rel="canonical" href="{{ canonical_url }}">
-  <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.author.name }} | Blog" href="{{ '/feed.xml' | relative_url }}">
+  <link rel="icon"href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
   {% if page.blog_page or page.layout == "post" %}
     <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">

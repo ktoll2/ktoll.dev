@@ -63,10 +63,11 @@
 .post-outline a { color: var(--copy); font-size: 13px; font-weight: 700; line-height: 1.45; text-decoration: none; }
 .post-outline a:hover, .post-outline a:focus-visible { color: var(--forest-light); text-decoration: underline; text-underline-offset: 3px; }
 .post-content { max-width: var(--post-width); grid-column: 2; grid-row: 2; color: var(--copy); font-size: 17px; line-height: 1.8; }
-.post-content h2, .post-content h3 { position: relative; margin: 52px 0 18px; color: var(--ink); scroll-margin-top: 110px; }
+.post-content h2, .post-content h3 { position: relative; max-width: none; margin: 52px 0 18px; color: var(--ink); scroll-margin-top: 110px; }
 .post-content h2 { font-size: clamp(31px, 3.8vw, 48px); }
 .post-content h3 { font-size: 28px; }
-.heading-permalink { display: inline-flex; margin-left: 10px; vertical-align: middle; opacity: .35; transition: opacity 150ms ease; }
+/* Hangs in the left margin, centered on the heading's first line. The right padding bridges the gap to the heading so hover is not lost on the way to the icon. */
+.heading-permalink { position: absolute; top: 0; left: -26px; display: flex; height: 1lh; align-items: center; padding-right: 11px; opacity: 0; transition: opacity 150ms ease; }
 .heading-permalink .button-icon { width: 15px; height: 15px; background-color: var(--forest-light); }
 .heading-permalink:hover, .heading-permalink:focus-visible, h2:hover .heading-permalink, h3:hover .heading-permalink { opacity: 1; }
 .post-content p, .post-content ul, .post-content ol { margin-bottom: 26px; }
@@ -93,6 +94,11 @@
   .post-content { max-width: 100%; }
   .post-content a { color: #000; text-decoration: underline; }
   .post-content a[href^="http"]::after { color: #444; font-size: .85em; content: " (" attr(href) ")"; }
+}
+
+/* Below this width the content gutter is narrower than the hanging icon. */
+@media (max-width: 800px) {
+  .heading-permalink { display: none; }
 }
 
 @media (max-width: 1080px) {

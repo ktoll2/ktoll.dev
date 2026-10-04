@@ -189,7 +189,7 @@ function initHeadingPermalinks() {
       copyToClipboard(`${location.origin}${location.pathname}#${heading.id}`, link);
     });
 
-    heading.append(link);
+    heading.prepend(link);
   });
 }
 
